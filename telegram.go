@@ -44,15 +44,14 @@ func (tn *TelegramNotifier) NotifyStockChange(change StockChange) error {
 
 	// Format message with Markdown
 	message := fmt.Sprintf(
-		"*━━━ STOCK ALERT ━━━*\n\n"+
+		"*STOCK ALERT*\n\n"+
 		"*Product:* [%s](%s)\n"+
 		"*Variant:* `%s`\n"+
 		"*Price:* *$%s*\n"+
 		"*SKU:* `%s`\n"+
 		"*Product ID:* `%d`\n"+
 		"*Variant ID:* `%d`\n\n"+
-		"*Transition:* OUT OF STOCK → IN STOCK\n\n"+
-		"━━━━━━━━━━━━━━━━━━━━",
+		"*Transition:* OUT OF STOCK → IN STOCK",
 		escapeMarkdown(change.ProductTitle),
 		productURL,
 		escapeMarkdown(change.VariantTitle),
@@ -95,7 +94,7 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 
 	// Build message
 	var sb strings.Builder
-	sb.WriteString("*━━━ STOCK ALERT ━━━*\n\n")
+	sb.WriteString("*STOCK ALERT*\n\n")
 	sb.WriteString(fmt.Sprintf("*Detection:* %d item(s) transitioned to IN STOCK\n\n", len(newStock)))
 
 	for i, change := range newStock {
@@ -120,7 +119,6 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 		))
 	}
 
-	sb.WriteString("━━━━━━━━━━━━━━━━━━━━\n")
 	sb.WriteString("State change detected via polling endpoint")
 
 	msg := tgbotapi.NewMessage(tn.chatID, sb.String())
@@ -172,7 +170,7 @@ func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants i
 	}
 
 	var sb strings.Builder
-	sb.WriteString("*━━━ Stock Monitor Status ━━━*\n\n")
+	sb.WriteString("*STOCK MONITOR STATUS*\n\n")
 	sb.WriteString(fmt.Sprintf("*Endpoint:* `%s`\n", tn.shopURL))
 	sb.WriteString(fmt.Sprintf("*Poll Interval:* `%s`\n", pollInterval))
 	sb.WriteString(fmt.Sprintf("*Products:* %d (%d variants tracked)\n", len(products), totalVariants))
@@ -193,7 +191,6 @@ func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants i
 		sb.WriteString("_No items currently available_\n\n")
 	}
 
-	sb.WriteString("━━━━━━━━━━━━━━━━━━━━\n")
 	sb.WriteString("Monitor initialized • ETag caching enabled")
 
 	msg := tgbotapi.NewMessage(tn.chatID, sb.String())
