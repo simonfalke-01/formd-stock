@@ -44,12 +44,12 @@ func (tn *TelegramNotifier) NotifyStockChange(change StockChange) error {
 
 	// Format message with Markdown
 	message := fmt.Sprintf(
-		"🚨 *STOCK ALERT* 🚨\n\n"+
-		"*Product:* %s\n"+
-		"*Variant:* %s\n"+
-		"*Price:* $%s\n"+
-		"*SKU:* %s\n\n"+
-		"[🛒 Buy Now](%s)",
+		"*STOCK ALERT*\n\n"+
+		"Product: %s\n"+
+		"Variant: %s\n"+
+		"Price: $%s\n"+
+		"SKU: %s\n\n"+
+		"[Purchase Link](%s)",
 		escapeMarkdown(change.ProductTitle),
 		escapeMarkdown(change.VariantTitle),
 		change.VariantPrice,
@@ -90,8 +90,8 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 
 	// Build message
 	var sb strings.Builder
-	sb.WriteString("🚨 *STOCK ALERT* 🚨\n\n")
-	sb.WriteString(fmt.Sprintf("*%d item(s) now in stock:*\n\n", len(newStock)))
+	sb.WriteString("*STOCK ALERT*\n\n")
+	sb.WriteString(fmt.Sprintf("%d item(s) now available:\n\n", len(newStock)))
 
 	for i, change := range newStock {
 		productURL := fmt.Sprintf("%s/products/%s",
@@ -100,14 +100,16 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 		)
 
 		sb.WriteString(fmt.Sprintf(
-			"%d\\. *%s*\n"+
+			"%d\\. %s\n"+
 			"   Variant: %s\n"+
 			"   Price: $%s\n"+
-			"   [Buy Now](%s)\n\n",
+			"   SKU: %s\n"+
+			"   [Purchase Link](%s)\n\n",
 			i+1,
 			escapeMarkdown(change.ProductTitle),
 			escapeMarkdown(change.VariantTitle),
 			change.VariantPrice,
+			change.VariantSKU,
 			productURL,
 		))
 	}
@@ -128,6 +130,50 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 // SendMessage sends a plain text message
 func (tn *TelegramNotifier) SendMessage(text string) error {
 	msg := tgbotapi.NewMessage(tn.chatID, text)
+	_, err := tn.bot.Send(msg)
+	return err
+}
+
+// SendStatusReport sends an initial status report
+func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants int) error {
+	var inStock, outOfStock int
+	var inStockItems []string
+
+	for _, product := range products {
+		for _, variant := range product.Variants {
+			if variant.Available {
+				inStock++
+				inStockItems = append(inStockItems, fmt.Sprintf("  - %s (%s) - $%s",
+					escapeMarkdown(product.Title),
+					escapeMarkdown(variant.Title),
+					variant.Price,
+				))
+			} else {
+				outOfStock++
+			}
+		}
+	}
+
+	var sb strings.Builder
+	sb.WriteString("*Stock Monitor Status Report*\n\n")
+	sb.WriteString(fmt.Sprintf("Monitoring: %d products (%d variants)\n", len(products), totalVariants))
+	sb.WriteString(fmt.Sprintf("In Stock: %d\n", inStock))
+	sb.WriteString(fmt.Sprintf("Out of Stock: %d\n\n", outOfStock))
+
+	if len(inStockItems) > 0 {
+		sb.WriteString("Currently Available:\n")
+		for _, item := range inStockItems {
+			sb.WriteString(item + "\n")
+		}
+	} else {
+		sb.WriteString("No items currently in stock\\.\n")
+	}
+
+	sb.WriteString("\nMonitoring active\\.")
+
+	msg := tgbotapi.NewMessage(tn.chatID, sb.String())
+	msg.ParseMode = "Markdown"
+
 	_, err := tn.bot.Send(msg)
 	return err
 }
