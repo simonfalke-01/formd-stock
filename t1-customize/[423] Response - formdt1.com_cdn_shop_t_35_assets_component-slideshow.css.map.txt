@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1803
+Connection: keep-alive
+CF-RAY: 98fe0564fd25fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-slideshow.css.map>; rel="canonical"
+Server-Timing: imagery;dur=141.998, imageryFetch;dur=136.757
+Server-Timing: cfRequestDuration;dur=18.000126
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 6d35042c-7898-4db6-9eeb-475c1f46863a-1759191840
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Tue, 30 Sep 2025 00:24:00 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=AqKaf3f%2FDoxTcJ8bn7Jxf13%2FQHYDZ0oSMfXyjwHZ1b4Wpv2w8h%2FqORNYl1JjNwi5hf0w6vn2qzQwBTkXL%2FpTC0DxI21XtIMJYH%2BTYcCA9EaAa0Qo00QgyKY%2F4rwN"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-slideshow.css?v=17933591812325749411745916367"
+  ],
+  "sourcesContent": [
+    "slideshow-component {\n  position: relative;\n  display: flex;\n  flex-direction: column;\n}\n\nslideshow-component .slideshow.banner {\n  flex-direction: row;\n  flex-wrap: nowrap;\n  margin: 0;\n  gap: 0;\n  overflow-y: hidden;\n}\n\n.slideshow__slide {\n  padding: 0;\n  position: relative;\n  display: flex;\n  flex-direction: column;\n  visibility: visible;\n}\n\n@media screen and (max-width: 749px) {\n  .slideshow--placeholder.banner--mobile-bottom.banner--adapt_image .slideshow__media,\n  .slideshow--placeholder.banner--adapt_image:not(.banner--mobile-bottom) {\n    height: 28rem;\n  }\n}\n\n@media screen and (min-width: 750px) {\n  .slideshow--placeholder.banner--adapt_image {\n    height: 56rem;\n  }\n}\n\n.slideshow__text.banner__box {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  max-width: 54.5rem;\n}\n\n.slideshow__text > * {\n  max-width: 100%;\n}\n\n@media screen and (max-width: 749px) {\n  slideshow-component.page-width .slideshow__text {\n    border-right: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));\n    border-left: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));\n  }\n\n  .banner--mobile-bottom .slideshow__text.banner__box {\n    max-width: 100%;\n  }\n\n  .banner--mobile-bottom .slideshow__text-wrapper {\n    flex-grow: 1;\n  }\n\n  .banner--mobile-bottom .slideshow__text.banner__box {\n    height: 100%;\n  }\n\n  .banner--mobile-bottom .slideshow__text .button {\n    flex-grow: 0;\n  }\n\n  .slideshow__text.slideshow__text-mobile--left {\n    align-items: flex-start;\n    text-align: left;\n  }\n\n  .slideshow__text.slideshow__text-mobile--right {\n    align-items: flex-end;\n    text-align: right;\n  }\n}\n\n@media screen and (min-width: 750px) {\n  .slideshow__text.slideshow__text--left {\n    align-items: flex-start;\n    text-align: left;\n  }\n\n  .slideshow__text.slideshow__text--right {\n    align-items: flex-end;\n    text-align: right;\n  }\n}\n\n.slideshow:not(.banner--mobile-bottom) .slideshow__text-wrapper {\n  height: 100%;\n}\n\n@media screen and (min-width: 750px) {\n  .slideshow__text-wrapper.banner__content {\n    height: 100%;\n    padding: 5rem;\n  }\n}\n\n.slideshow__controls {\n  border: 0.1rem solid rgba(var(--color-foreground), 0.08);\n}\n\n.slideshow__controls--top {\n  order: 2;\n  z-index: 1;\n}\n\n@media screen and (max-width: 749px) {\n  .slideshow__controls--border-radius-mobile {\n    border-bottom-right-radius: var(--text-boxes-radius);\n    border-bottom-left-radius: var(--text-boxes-radius);\n  }\n}\n\n.spaced-section--full-width:last-child slideshow-component:not(.page-width) .slideshow__controls {\n  border-bottom: none;\n}\n\n@media screen and (min-width: 750px) {\n  .slideshow__controls {\n    position: relative;\n  }\n}\n\nslideshow-component:not(.page-width) .slider-buttons {\n  border-right: 0;\n  border-left: 0;\n}\n\n.slideshow__control-wrapper {\n  display: flex;\n}\n\n.slideshow__autoplay {\n  position: absolute;\n  right: 0;\n  border-left: none;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n@media screen and (max-width: 749px) {\n  slideshow-component.page-width .slideshow__autoplay {\n    right: 1.5rem;\n  }\n}\n\n@media screen and (min-width: 750px) {\n  .slideshow__autoplay.slider-button {\n    position: inherit;\n    margin-left: 0.6rem;\n    padding: 0 0 0 0.6rem;\n    border-left: 0.1rem solid rgba(var(--color-foreground), 0.08);\n  }\n}\n\n.slideshow__autoplay .icon.icon-play,\n.slideshow__autoplay .icon.icon-pause {\n  display: block;\n  position: absolute;\n  opacity: 1;\n  transform: scale(1);\n  transition: transform 150ms ease, opacity 150ms ease;\n  width: 0.8rem;\n  height: 1.2rem;\n}\n\n.slideshow__autoplay .icon.icon-play {\n  height: 1rem;\n}\n\n.slideshow__autoplay path {\n  fill: rgba(var(--color-foreground), 0.75);\n}\n\n.slideshow__autoplay:hover path {\n  fill: rgb(var(--color-foreground));\n}\n\n@media screen and (forced-colors: active) {\n  .slideshow__autoplay path,\n  .slideshow__autoplay:hover path {\n    fill: CanvasText;\n  }\n}\n\n.slideshow__autoplay:hover .svg-wrapper {\n  transform: scale(1.1);\n}\n\n.slideshow__autoplay--paused .icon-pause,\n.slideshow__autoplay:not(.slideshow__autoplay--paused) .icon-play {\n  visibility: hidden;\n  opacity: 0;\n  transform: scale(0.8);\n}\n"
+  ],
+  "mappings": "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",
+  "names": []
+}

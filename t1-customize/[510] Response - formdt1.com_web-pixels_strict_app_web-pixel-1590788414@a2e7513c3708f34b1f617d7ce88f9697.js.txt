@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: text/javascript; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+CF-RAY: 98fe05687f3ef91a-SIN
+x-sorting-hat-podid: 317
+x-sorting-hat-shopid: 82998395198
+vary: Accept-Encoding,Accept
+x-frame-options: DENY
+x-shopid: 82998395198
+x-shardid: 317
+x-robots-tag: noindex, nofollow
+cache-control: max-age=31536000, public
+strict-transport-security: max-age=7889238
+x-request-id: ef7d7661-b19a-4e40-8339-d42b7f44b048-1760661546
+server-timing: processing;dur=242, spanner_session;desc="count=1";dur=221.14, verdict_flag_enabled;desc="count=14";dur=0.845, _y;desc="40cf4c2b-e0fc-4a9f-a371-6220b6eecc09", _s;desc="388c62df-5e95-4c3f-8afb-4d303c6cb20e", _cmp;desc="3.AMPS_MY10___ECrf2BpBRS-NVDPvp-05Hg"
+Server-Timing: cfRequestDuration;dur=21.000147
+content-security-policy: frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=strict_app_pixel_script_response&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=web_pixels&source%5Bsection%5D=services&source%5Buuid%5D=ef7d7661-b19a-4e40-8339-d42b7f44b048-1760661546; report-to shopify-csp
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+x-xss-protection: 1; mode=block
+reporting-endpoints: shopify-csp="/csp-report?source%5Baction%5D=strict_app_pixel_script_response&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=web_pixels&source%5Bsection%5D=services&source%5Buuid%5D=ef7d7661-b19a-4e40-8339-d42b7f44b048-1760661546"
+x-dc: gcp-asia-southeast1,gcp-us-east1,gcp-us-east1
+content-encoding: gzip
+Alt-Svc: h3=":443"; ma=86400
+CF-Cache-Status: HIT
+Age: 23951
+Last-Modified: Fri, 17 Oct 2025 00:39:06 GMT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=vEkbhYWDb4OvoxuTol0WamcAvMlOB%2FUxRWK%2Bh8%2BlbzwZlCW1jqqFndFLKuthLbDehMl22uTEai2Tyy3NLWbshuDIZBv%2BfuW9OgUMTmCIoSR6Hg7sxmouNLQ8Mb76"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+
+(()=>{var W=Object.create;var I=Object.defineProperty;var X=Object.getOwnPropertyDescriptor;var j=Object.getOwnPropertyNames;var J=Object.getPrototypeOf,Q=Object.prototype.hasOwnProperty;var b=(o,e)=>()=>(o&&(e=o(o=0)),e);var z=(o,e)=>()=>(e||o((e={exports:{}}).exports,e),e.exports);var B=(o,e,r,c)=>{if(e&&typeof e=="object"||typeof e=="function")for(let t of j(e))!Q.call(o,t)&&t!==r&&I(o,t,{get:()=>e[t],enumerable:!(c=X(e,t))||c.enumerable});return o};var G=(o,e,r)=>(r=o!=null?W(J(o)):{},B(e||!o||!o.__esModule?I(r,"default",{value:o,enumerable:!0}):r,o));var f=(o,e,r)=>new Promise((c,t)=>{var d=_=>{try{u(r.next(_))}catch(h){t(h)}},S=_=>{try{u(r.throw(_))}catch(h){t(h)}},u=_=>_.done?c(_.value):Promise.resolve(_.value).then(d,S);u((r=r.apply(o,e)).next())});var N,A=b(()=>{N="WebPixel::Render"});var E,D=b(()=>{A();E=o=>shopify.extend(N,o)});var L=b(()=>{D()});var R=b(()=>{L()});var F=z(s=>{R();var P=["gfp_ref","ref","aff","wpam_id","click_id"],O="dcode";E(c=>f(s,[c],function*({analytics:o,browser:e,settings:r}){let t=(r==null?void 0:r.first_touch_or_last)==="first_touch"||(r==null?void 0:r.first_touch_or_last)==="first_touch_nonblocking",d=(r==null?void 0:r.first_touch_or_last)==="first_touch",S=r==null?void 0:r.use_local_storage,u=(r==null?void 0:r.cookie_duration)>-1?r==null?void 0:r.cookie_duration:7*24*60*60,_=(r==null?void 0:r.noref_cookie_identifiers)||["noref"],h=r.shop,m={get:a=>f(s,null,function*(){let i=yield e.localStorage.getItem(a);return i||e.cookie.get(a)}),set:(a,i)=>f(s,null,function*(){yield Promise.all([e.localStorage.setItem(a,i),e.cookie.set(a,i)])})},C=(yield m.get("gfp_api_server"))||(r==null?void 0:r.api_server)||"https://api.goaffpro.com",v=()=>f(s,null,function*(){let a=["ref","source",O,"discount_code","sitestripe","gfp_v_id","gfp_ref_expires"];yield Promise.all(a.map(i=>m.set(i,"")))});function p(a){return f(this,null,function*(){if(u){let i=yield m.get("gfp_ref_expires");if(i&&new Date(i).getTime()<Date.now())return yield v(),""}return yield m.get(a)})}function T(a,i){return f(this,null,function*(){if(a==="ref"&&_.indexOf(i)>-1)return yield v();a==="ref"&&u&&(yield m.set("gfp_ref_expires",String(Date.now()+u*1e3))),yield m.set(a,i)})}o.subscribe("page_viewed",a=>f(s,null,function*(){let i=a.context.document.location.href,l=H(i),g=yield p("ref");l?l!==g&&!t&&(yield T("ref",l)):!g&&d&&(yield T("ref","organic"));let[k,w,y,x]=yield Promise.all([p("sub_id"),p("ref"),p("gfp_v_id"),p(O)]);if(!w&&!x)return;let n=new URL(C+"/shop");k&&n.searchParams.append("sub_id",k),w&&n.searchParams.append("ref",w),x&&n.searchParams.append("discount_code",x),n.searchParams.append("shop",h),n.searchParams.append("location",i),n.searchParams.append("navigator",a.context.navigator.userAgent),n.searchParams.append("referrer",a.context.document.referrer),y&&n.searchParams.append("visit_id",y),n.searchParams.append("from_shopify_pixel","1")})),o.subscribe("checkout_completed",a=>f(s,null,function*(){let i=a.data,l=a.context,g={id:i.checkout.order.id},[k,w,y,x]=yield Promise.all([p("sub_id"),p("ref"),p("gfp_v_id"),p(O)]);fetch(C+"/order_complete",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({sub_id:k,from_shopify_pixel:!0,ref:w,discount_code:x,visit_id:y,shop:h,location:l.document.location.href,navigator:l.navigator.userAgent,referrer:l.document.referrer,order_id:g.id,data:g})}).then(n=>f(s,null,function*(){if(n.status===420)return v();yield T("gfp_v_id","")}))}))}));function H(o){let e=new URL(o);return U(P,e.search)||U(P,e.hash.substring(1))||K(P,e.href)||P.indexOf("hash")>-1&&e.hash.substring(1)||P.indexOf("subdomain")>-1&&e.host.split(".")[0]}function U(o,e){if(!(!o||o.length===0)&&e.length>0){let r=new URLSearchParams(e.toLowerCase());for(let c of o)if(r.get(c))return r.get(c).trim()}}function K(o,e){let r=o.filter(function(c){return c.startsWith("regexp:")}).map(function(c){return c.substring(7)});for(let c=0;c<r.length;c++){let t=r[c],d=e.match(new RegExp(t,"i"));if(d&&d.length>0)return d[1]}}});var cr=G(F());})();

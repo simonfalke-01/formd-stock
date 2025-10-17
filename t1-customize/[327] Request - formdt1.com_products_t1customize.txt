@@ -1,0 +1,21 @@
+GET /products/t1customize HTTP/1.1
+Host: formdt1.com
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+sec-ch-ua: "Chromium";v="141", "Not?A_Brand";v="8"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "macOS"
+Upgrade-Insecure-Requests: 1
+DNT: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Referer: https://formdt1.com/collections/all
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: localization=SG; cart_currency=USD; _shopify_y=56b0e67c-53f8-4cf9-b2ec-37c96ddd9112; gw-clientId=AIAB1EUE337TS4RCN1A3984Z; gw-subId=TS9837Z3EBMUL42WJG7ZI9BA; gw-vapid-public=BO7EeH6iGNAFYzbu9hy6QIToDd0_JPU7PR4m2VdiFqduArIhZt3ejdppaIsLlQuiLbyMJ06jlLWdtF-tJSX8L0w; _shopify_analytics=:AZnxA5XHAAEAlCYAeDk0ozeEFZMFdV_pkQw8pgOveVGx6QKB8fdtYiFQFgW4jQ:; _shopify_essential=:AZmgKyJLAAEAVi8YZhcVMF2Fc8MzT4sawrw2GDqA3ABJxCycwr-X2fqmSdhxlGYpNieuZOM6BWA4rSydY5txSvudv2BHjYw5g_KYcPDlcYm3cHoD0VJOOMVGiJZj5GT832gKHAx2t7U41pWZ20ZR0J8QxMim-TV5l86MUBR1dZcPtHVVwVJdpdCJbx4y2wBv5O2u47RzDiVhs1rgniELFm3yOKpXngug4L7uYCfnAlj0Zk19LaH4C4aztUF4rjFGm_fKqZZ0-wILQ8J0ayDNSZN1MkXfYLqDSOul-29Md0R4v4hZLk48WHmnt9WuB47e4kSLCGSw-kS8-VscxbF1804-6_pqJ4Ub1R3rIjLRSNsNzUJe_7NbqSI0ISboS0sBSABQpv2_s-caT8DbIBwEdT2zH7HMahLBL8NfINfIMpw:; _shopify_s=fe38cfd9-8a8b-4f03-ad91-c25dbc2af2af; keep_alive=eyJ2IjoyLCJ0cyI6MTc2MDY4NTQ5MTMwOSwiZW52Ijp7IndkIjowLCJ1YSI6MSwiY3YiOjEsImJyIjoxfSwiYmh2Ijp7Im1hIjo0LCJjYSI6MCwia2EiOjAsInNhIjowLCJrYmEiOjAsInRhIjowLCJ0IjoyMDAsIm5tIjoxLCJtcyI6MC41LCJtaiI6MS4zOSwibXNwIjoxLjA4LCJ2YyI6MCwiY3AiOjAsInJjIjowLCJraiI6MCwia2kiOjAsInNzIjowLCJzaiI6MCwic3NtIjowLCJzcCI6MCwidHMiOjAsInRqIjowLCJ0cCI6MCwidHNtIjowfSwic2VzIjp7InAiOjI1LCJzIjoxNzU5MzI4ODA2MjE4LCJkIjoxMzU2NjI1fX0%3D
+

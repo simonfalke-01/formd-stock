@@ -1,0 +1,47 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 2156
+Connection: keep-alive
+CF-RAY: 98fe05673fb45fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Sat, 11 Oct 2025 02:57:38 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/media-gallery.js.map>; rel="canonical"
+Server-Timing: imagery;dur=121.762, imageryFetch;dur=113.122
+Server-Timing: cfRequestDuration;dur=25.000095
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: a37622ce-704b-446a-a247-8973958bb779-1760151458
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=GZDJXqGreyW7h43DC6JqWpZ9UHzKbd1mlA5eqeqD1AWTYBRGmsjm%2BqSNoXkDh1eYqzksKHP594JeG%2FAcRWkHomwJvlSPIJqZMi3fY21XpkEjdCeM57nqPOwV2yBm"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/media-gallery.js?v=53998976194532824491745916367"
+  ],
+  "sourcesContent": [
+    "if (!customElements.get('media-gallery')) {\n  customElements.define(\n    'media-gallery',\n    class MediaGallery extends HTMLElement {\n      constructor() {\n        super();\n        this.elements = {\n          liveRegion: this.querySelector('[id^=\"GalleryStatus\"]'),\n          viewer: this.querySelector('[id^=\"GalleryViewer\"]'),\n          thumbnails: this.querySelector('[id^=\"GalleryThumbnails\"]'),\n        };\n        this.mql = window.matchMedia('(min-width: 750px)');\n        if (!this.elements.thumbnails) return;\n\n        this.elements.viewer.addEventListener('slideChanged', debounce(this.onSlideChanged.bind(this), 500));\n        this.elements.thumbnails.querySelectorAll('[data-target]').forEach((mediaToSwitch) => {\n          mediaToSwitch\n            .querySelector('button')\n            .addEventListener('click', this.setActiveMedia.bind(this, mediaToSwitch.dataset.target, false));\n        });\n        if (this.dataset.desktopLayout.includes('thumbnail') && this.mql.matches) this.removeListSemantic();\n      }\n\n      onSlideChanged(event) {\n        const thumbnail = this.elements.thumbnails.querySelector(\n          `[data-target=\"${event.detail.currentElement.dataset.mediaId}\"]`\n        );\n        this.setActiveThumbnail(thumbnail);\n      }\n\n      setActiveMedia(mediaId, prepend) {\n        const activeMedia =\n          this.elements.viewer.querySelector(`[data-media-id=\"${mediaId}\"]`) ||\n          this.elements.viewer.querySelector('[data-media-id]');\n        if (!activeMedia) {\n          return;\n        }\n        this.elements.viewer.querySelectorAll('[data-media-id]').forEach((element) => {\n          element.classList.remove('is-active');\n        });\n        activeMedia?.classList?.add('is-active');\n\n        if (prepend) {\n          activeMedia.parentElement.firstChild !== activeMedia && activeMedia.parentElement.prepend(activeMedia);\n\n          if (this.elements.thumbnails) {\n            const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target=\"${mediaId}\"]`);\n            activeThumbnail.parentElement.firstChild !== activeThumbnail && activeThumbnail.parentElement.prepend(activeThumbnail);\n          }\n\n          if (this.elements.viewer.slider) this.elements.viewer.resetPages();\n        }\n\n        this.preventStickyHeader();\n        window.setTimeout(() => {\n          if (!this.mql.matches || this.elements.thumbnails) {\n            activeMedia.parentElement.scrollTo({ left: activeMedia.offsetLeft });\n          }\n          const activeMediaRect = activeMedia.getBoundingClientRect();\n          // Don't scroll if the image is already in view\n          if (activeMediaRect.top > -0.5) return;\n          const top = activeMediaRect.top + window.scrollY;\n          window.scrollTo({ top: top, behavior: 'smooth' });\n        });\n        this.playActiveMedia(activeMedia);\n\n        if (!this.elements.thumbnails) return;\n        const activeThumbnail = this.elements.thumbnails.querySelector(`[data-target=\"${mediaId}\"]`);\n        this.setActiveThumbnail(activeThumbnail);\n        this.announceLiveRegion(activeMedia, activeThumbnail.dataset.mediaPosition);\n      }\n\n      setActiveThumbnail(thumbnail) {\n        if (!this.elements.thumbnails || !thumbnail) return;\n\n        this.elements.thumbnails\n          .querySelectorAll('button')\n          .forEach((element) => element.removeAttribute('aria-current'));\n        thumbnail.querySelector('button').setAttribute('aria-current', true);\n        if (this.elements.thumbnails.isSlideVisible(thumbnail, 10)) return;\n\n        this.elements.thumbnails.slider.scrollTo({ left: thumbnail.offsetLeft });\n      }\n\n      announceLiveRegion(activeItem, position) {\n        const image = activeItem.querySelector('.product__modal-opener--image img');\n        if (!image) return;\n        image.onload = () => {\n          this.elements.liveRegion.setAttribute('aria-hidden', false);\n          this.elements.liveRegion.innerHTML = window.accessibilityStrings.imageAvailable.replace('[index]', position);\n          setTimeout(() => {\n            this.elements.liveRegion.setAttribute('aria-hidden', true);\n          }, 2000);\n        };\n        image.src = image.src;\n      }\n\n      playActiveMedia(activeItem) {\n        window.pauseAllMedia();\n        const deferredMedia = activeItem.querySelector('.deferred-media');\n        if (deferredMedia) deferredMedia.loadContent(false);\n      }\n\n      preventStickyHeader() {\n        this.stickyHeader = this.stickyHeader || document.querySelector('sticky-header');\n        if (!this.stickyHeader) return;\n        this.stickyHeader.dispatchEvent(new Event('preventHeaderReveal'));\n      }\n\n      removeListSemantic() {\n        if (!this.elements.viewer.slider) return;\n        this.elements.viewer.slider.setAttribute('role', 'presentation');\n        this.elements.viewer.sliderItems.forEach((slide) => slide.setAttribute('role', 'presentation'));\n      }\n    }\n  );\n}\n"
+  ],
+  "mappings": "AAAK,eAAe,IAAI,eAAe,GACrC,eAAe,OACb,gBACA,cAA2B,WAAY,CACrC,aAAc,CACZ,MAAM,EACN,KAAK,SAAW,CACd,WAAY,KAAK,cAAc,uBAAuB,EACtD,OAAQ,KAAK,cAAc,uBAAuB,EAClD,WAAY,KAAK,cAAc,2BAA2B,CAC5D,EACA,KAAK,IAAM,OAAO,WAAW,oBAAoB,EAC5C,KAAK,SAAS,aAEnB,KAAK,SAAS,OAAO,iBAAiB,eAAgB,SAAS,KAAK,eAAe,KAAK,IAAI,EAAG,GAAG,CAAC,EACnG,KAAK,SAAS,WAAW,iBAAiB,eAAe,EAAE,QAAS,eAAkB,CACpF,cACG,cAAc,QAAQ,EACtB,iBAAiB,QAAS,KAAK,eAAe,KAAK,KAAM,cAAc,QAAQ,OAAQ,EAAK,CAAC,CAClG,CAAC,EACG,KAAK,QAAQ,cAAc,SAAS,WAAW,GAAK,KAAK,IAAI,SAAS,KAAK,mBAAmB,EACpG,CAEA,eAAe,MAAO,CACpB,MAAM,UAAY,KAAK,SAAS,WAAW,cACzC,iBAAiB,MAAM,OAAO,eAAe,QAAQ,OAAO,IAC9D,EACA,KAAK,mBAAmB,SAAS,CACnC,CAEA,eAAe,QAAS,QAAS,CAC/B,MAAM,YACJ,KAAK,SAAS,OAAO,cAAc,mBAAmB,OAAO,IAAI,GACjE,KAAK,SAAS,OAAO,cAAc,iBAAiB,EACtD,GAAI,CAAC,YACH,OAOF,GALA,KAAK,SAAS,OAAO,iBAAiB,iBAAiB,EAAE,QAAS,SAAY,CAC5E,QAAQ,UAAU,OAAO,WAAW,CACtC,CAAC,EACD,aAAa,WAAW,IAAI,WAAW,EAEnC,QAAS,CAGX,GAFA,YAAY,cAAc,aAAe,aAAe,YAAY,cAAc,QAAQ,WAAW,EAEjG,KAAK,SAAS,WAAY,CAC5B,MAAMA,iBAAkB,KAAK,SAAS,WAAW,cAAc,iBAAiB,OAAO,IAAI,EAC3FA,iBAAgB,cAAc,aAAeA,kBAAmBA,iBAAgB,cAAc,QAAQA,gBAAe,CACvH,CAEI,KAAK,SAAS,OAAO,QAAQ,KAAK,SAAS,OAAO,WAAW,CACnE,CAeA,GAbA,KAAK,oBAAoB,EACzB,OAAO,WAAW,IAAM,EAClB,CAAC,KAAK,IAAI,SAAW,KAAK,SAAS,aACrC,YAAY,cAAc,SAAS,CAAE,KAAM,YAAY,UAAW,CAAC,EAErE,MAAM,gBAAkB,YAAY,sBAAsB,EAE1D,GAAI,gBAAgB,IAAM,IAAM,OAChC,MAAM,IAAM,gBAAgB,IAAM,OAAO,QACzC,OAAO,SAAS,CAAE,IAAU,SAAU,QAAS,CAAC,CAClD,CAAC,EACD,KAAK,gBAAgB,WAAW,EAE5B,CAAC,KAAK,SAAS,WAAY,OAC/B,MAAM,gBAAkB,KAAK,SAAS,WAAW,cAAc,iBAAiB,OAAO,IAAI,EAC3F,KAAK,mBAAmB,eAAe,EACvC,KAAK,mBAAmB,YAAa,gBAAgB,QAAQ,aAAa,CAC5E,CAEA,mBAAmB,UAAW,CACxB,CAAC,KAAK,SAAS,YAAc,CAAC,YAElC,KAAK,SAAS,WACX,iBAAiB,QAAQ,EACzB,QAAS,SAAY,QAAQ,gBAAgB,cAAc,CAAC,EAC/D,UAAU,cAAc,QAAQ,EAAE,aAAa,eAAgB,EAAI,EAC/D,MAAK,SAAS,WAAW,eAAe,UAAW,EAAE,GAEzD,KAAK,SAAS,WAAW,OAAO,SAAS,CAAE,KAAM,UAAU,UAAW,CAAC,EACzE,CAEA,mBAAmB,WAAY,SAAU,CACvC,MAAM,MAAQ,WAAW,cAAc,mCAAmC,EACrE,QACL,MAAM,OAAS,IAAM,CACnB,KAAK,SAAS,WAAW,aAAa,cAAe,EAAK,EAC1D,KAAK,SAAS,WAAW,UAAY,OAAO,qBAAqB,eAAe,QAAQ,UAAW,QAAQ,EAC3G,WAAW,IAAM,CACf,KAAK,SAAS,WAAW,aAAa,cAAe,EAAI,CAC3D,EAAG,GAAI,CACT,EACA,MAAM,IAAM,MAAM,IACpB,CAEA,gBAAgB,WAAY,CAC1B,OAAO,cAAc,EACrB,MAAM,cAAgB,WAAW,cAAc,iBAAiB,EAC5D,eAAe,cAAc,YAAY,EAAK,CACpD,CAEA,qBAAsB,CACpB,KAAK,aAAe,KAAK,cAAgB,SAAS,cAAc,eAAe,EAC1E,KAAK,cACV,KAAK,aAAa,cAAc,IAAI,MAAM,qBAAqB,CAAC,CAClE,CAEA,oBAAqB,CACd,KAAK,SAAS,OAAO,SAC1B,KAAK,SAAS,OAAO,OAAO,aAAa,OAAQ,cAAc,EAC/D,KAAK,SAAS,OAAO,YAAY,QAAS,OAAU,MAAM,aAAa,OAAQ,cAAc,CAAC,EAChG,CACF,CACF",
+  "names": [
+    "activeThumbnail"
+  ]
+}

@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/javascript
+Content-Length: 1113
+Connection: keep-alive
+CF-RAY: 98fe0563b91240fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/media-gallery.js>; rel="canonical"
+Server-Timing: imagery;dur=114.760, imageryFetch;dur=108.368
+Server-Timing: cfRequestDuration;dur=22.000074
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 94fc4ebf-2895-4359-86de-d77b15e34012-1750448953
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Fri, 20 Jun 2025 19:49:14 GMT
+CF-Cache-Status: HIT
+Age: 2117184
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=25ulqiSG9qaOH22F6rfaP3IEjL%2Fd4ZaFhM7dEwRw1u7ySqTKca6uMfa4Fua8v8SbPE3n9AtwfQlvSpSlsmE7QPUWLsMeK20HSG0PyF0NwZHVy%2BCy1qY3Mmj%2FIQe1"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+customElements.get("media-gallery")||customElements.define("media-gallery",class extends HTMLElement{constructor(){super(),this.elements={liveRegion:this.querySelector('[id^="GalleryStatus"]'),viewer:this.querySelector('[id^="GalleryViewer"]'),thumbnails:this.querySelector('[id^="GalleryThumbnails"]')},this.mql=window.matchMedia("(min-width: 750px)"),this.elements.thumbnails&&(this.elements.viewer.addEventListener("slideChanged",debounce(this.onSlideChanged.bind(this),500)),this.elements.thumbnails.querySelectorAll("[data-target]").forEach(mediaToSwitch=>{mediaToSwitch.querySelector("button").addEventListener("click",this.setActiveMedia.bind(this,mediaToSwitch.dataset.target,!1))}),this.dataset.desktopLayout.includes("thumbnail")&&this.mql.matches&&this.removeListSemantic())}onSlideChanged(event){const thumbnail=this.elements.thumbnails.querySelector(`[data-target="${event.detail.currentElement.dataset.mediaId}"]`);this.setActiveThumbnail(thumbnail)}setActiveMedia(mediaId,prepend){const activeMedia=this.elements.viewer.querySelector(`[data-media-id="${mediaId}"]`)||this.elements.viewer.querySelector("[data-media-id]");if(!activeMedia)return;if(this.elements.viewer.querySelectorAll("[data-media-id]").forEach(element=>{element.classList.remove("is-active")}),activeMedia?.classList?.add("is-active"),prepend){if(activeMedia.parentElement.firstChild!==activeMedia&&activeMedia.parentElement.prepend(activeMedia),this.elements.thumbnails){const activeThumbnail2=this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);activeThumbnail2.parentElement.firstChild!==activeThumbnail2&&activeThumbnail2.parentElement.prepend(activeThumbnail2)}this.elements.viewer.slider&&this.elements.viewer.resetPages()}if(this.preventStickyHeader(),window.setTimeout(()=>{(!this.mql.matches||this.elements.thumbnails)&&activeMedia.parentElement.scrollTo({left:activeMedia.offsetLeft});const activeMediaRect=activeMedia.getBoundingClientRect();if(activeMediaRect.top>-.5)return;const top=activeMediaRect.top+window.scrollY;window.scrollTo({top,behavior:"smooth"})}),this.playActiveMedia(activeMedia),!this.elements.thumbnails)return;const activeThumbnail=this.elements.thumbnails.querySelector(`[data-target="${mediaId}"]`);this.setActiveThumbnail(activeThumbnail),this.announceLiveRegion(activeMedia,activeThumbnail.dataset.mediaPosition)}setActiveThumbnail(thumbnail){!this.elements.thumbnails||!thumbnail||(this.elements.thumbnails.querySelectorAll("button").forEach(element=>element.removeAttribute("aria-current")),thumbnail.querySelector("button").setAttribute("aria-current",!0),!this.elements.thumbnails.isSlideVisible(thumbnail,10)&&this.elements.thumbnails.slider.scrollTo({left:thumbnail.offsetLeft}))}announceLiveRegion(activeItem,position){const image=activeItem.querySelector(".product__modal-opener--image img");image&&(image.onload=()=>{this.elements.liveRegion.setAttribute("aria-hidden",!1),this.elements.liveRegion.innerHTML=window.accessibilityStrings.imageAvailable.replace("[index]",position),setTimeout(()=>{this.elements.liveRegion.setAttribute("aria-hidden",!0)},2e3)},image.src=image.src)}playActiveMedia(activeItem){window.pauseAllMedia();const deferredMedia=activeItem.querySelector(".deferred-media");deferredMedia&&deferredMedia.loadContent(!1)}preventStickyHeader(){this.stickyHeader=this.stickyHeader||document.querySelector("sticky-header"),this.stickyHeader&&this.stickyHeader.dispatchEvent(new Event("preventHeaderReveal"))}removeListSemantic(){this.elements.viewer.slider&&(this.elements.viewer.slider.setAttribute("role","presentation"),this.elements.viewer.sliderItems.forEach(slide=>slide.setAttribute("role","presentation")))}});
+//# sourceMappingURL=/cdn/shop/t/35/assets/media-gallery.js.map?v=53998976194532824491745916367

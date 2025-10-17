@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 393
+Connection: keep-alive
+CF-RAY: 98fe05629b175fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-newsletter.css>; rel="canonical"
+Server-Timing: imagery;dur=51.464, imageryFetch;dur=48.115
+Server-Timing: cfRequestDuration;dur=23.000002
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 10d6a40d-1e06-430a-b4f5-5e57739015a2-1752319115
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Sat, 12 Jul 2025 11:18:35 GMT
+CF-Cache-Status: HIT
+Age: 34652
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=5Crk6HqQZ9t4ZmUYKItqTOBAu0Fdxet%2BqX0Wj4y08uVFdWtn0DJekbldOsu5gb6aiXYzZyXTw6XoPN39a%2Fp2G7P%2F7G%2BFOLWPLTtogck0AJtdKvU3KZVBV0mUKFGv"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.newsletter-form{display:flex;flex-direction:column;justify-content:center;align-items:center;width:100%;position:relative}@media screen and (min-width: 750px){.newsletter-form{align-items:flex-start;margin:0 auto;max-width:36rem}}.newsletter-form__field-wrapper{width:100%}.newsletter-form__field-wrapper .field__input{padding-right:5rem}.newsletter-form__field-wrapper .field{z-index:0}.newsletter-form__message{justify-content:center;margin-bottom:0}.newsletter-form__message--success{margin-top:2rem}@media screen and (min-width: 750px){.newsletter-form__message{justify-content:flex-start}}.newsletter-form__button{width:4.4rem;margin:0;right:var(--inputs-border-width);top:0;height:100%;z-index:2}.newsletter-form__button:focus-visible{box-shadow:0 0 0 .3rem rgb(var(--color-background)),0 0 0 .4rem rgba(var(--color-foreground));background-color:rgb(var(--color-background))}.newsletter-form__button:focus{box-shadow:0 0 0 .3rem rgb(var(--color-background)),0 0 0 .4rem rgba(var(--color-foreground));background-color:rgb(var(--color-background))}.newsletter-form__button:not(:focus-visible):not(.focused){box-shadow:inherit;background-color:inherit}.newsletter-form__button .icon{width:1.5rem}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-newsletter.css.map?v=4727253280200485261745916367 */

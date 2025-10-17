@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 294
+Connection: keep-alive
+CF-RAY: 98fe0561fd77fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-swatch.css>; rel="canonical"
+Server-Timing: imagery;dur=98.854, imageryFetch;dur=95.794
+Server-Timing: cfRequestDuration;dur=23.999929
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: f538d8c0-3231-418c-b57b-32a8515536b2-1758716015
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Wed, 24 Sep 2025 12:13:35 GMT
+CF-Cache-Status: HIT
+Age: 451779
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=M6m%2F152FPIupIccwjAGvx1g%2BQGpGNN4WaP%2FJwxLlJywj9bB3FR8ssERK8eiLh1h1uPouuGmGN72a4xvuiG6PEAQTVUuh058PZrzqsp5eHbraxWauYZHNbYFi2gI4"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.swatch{--swatch--size: var(--swatch-input--size, 4.4rem);--swatch--border-radius: var(--swatch-input--border-radius, 50%);display:block;width:var(--swatch--size);max-width:100%;aspect-ratio:1 / 1;background:var(--swatch--background);background-position:var(--swatch-focal-point, initial);background-size:cover;background-origin:border-box;border:.1rem solid rgba(var(--color-foreground),.15);border-radius:var(--swatch--border-radius)}.swatch--square{--swatch--border-radius: var(--swatch-input--border-radius, .2rem)}.swatch--unavailable{border-style:dashed;border-color:rgba(var(--color-foreground),.5)}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-swatch.css.map?v=6811383713633888781745916367 */

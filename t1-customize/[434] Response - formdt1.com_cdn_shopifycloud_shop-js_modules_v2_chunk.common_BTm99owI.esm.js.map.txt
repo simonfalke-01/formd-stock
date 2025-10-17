@@ -1,0 +1,30 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/octet-stream
+Content-Length: 468146
+Connection: keep-alive
+CF-RAY: 98fe05655f63f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, must-revalidate
+Age: 108358
+last-modified: Thu, 16 Oct 2025 01:11:40 GMT
+Link: <https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/chunk.common_BTm99owI.esm.js.map>; rel="canonical"
+Server-Timing: imagery;dur=114.263, imageryFetch;dur=114.020
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Request-Id: 79970b4b-e9f4-433b-8856-0516b3918756-1760577100
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=skvobk%2Fd4Nne%2F3DNrjISkXUR5Hqwvvv3q%2B5XR2FYl72FhxskosyVdtadba7fQO%2B4quMuYyX5KRgV0sofeMiURBiyVsuwP1LP8gJ3y51Nfn8VU%2FQyN7HoLEixkQ6t"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+<Data Binary>

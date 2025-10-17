@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1344
+Connection: keep-alive
+CF-RAY: 98fe056668c8fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Fri, 17 Oct 2025 07:14:07 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/collapsible-content.css.map>; rel="canonical"
+Server-Timing: imagery;dur=78.703, imageryFetch;dur=74.631
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 8079c18c-0090-45b1-bece-3dc512ba6776-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=5KAtF8oOZQ9%2Bh2odPXZfRMk8DLUqvf1GxTDz%2B0zsvYoxRvg6f19p927gQu3nPzwGnnvAVc6ShWzxNQ5OF3X1a9JY2tQgT4OLs%2FSX86MrJrddrMkf%2FJg9R92wGAFf"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/collapsible-content.css?v=113829722280668215821745916367"
+  ],
+  "sourcesContent": [
+    ".collapsible-content {\n  position: relative;\n  z-index: 0;\n}\n\n.collapsible-section-layout {\n  padding-bottom: 5rem;\n  padding-top: 5rem;\n}\n\n@media screen and (min-width: 750px) {\n  .collapsible-section-layout {\n    padding-bottom: 7rem;\n    padding-top: 7rem;\n  }\n}\n\n/* Needed for gradient continuity with or without animation so that transparent PNG images come up as we would expect */\n.collapsible-content__media {\n  background: transparent;\n}\n\n.collapsible-content__media--small {\n  height: 19.4rem;\n}\n\n.collapsible-content__media--large {\n  height: 43.5rem;\n}\n\n@media screen and (min-width: 750px) {\n  .collapsible-content__media--small {\n    height: 31.4rem;\n  }\n\n  .collapsible-content__media--large {\n    height: 69.5rem;\n  }\n}\n\n@media screen and (min-width: 750px) {\n  .collapsible-content__grid--reverse {\n    flex-direction: row-reverse;\n  }\n}\n\n.collapsible-content-wrapper-narrow {\n  margin: 0 auto;\n  padding-right: 1.5rem;\n  padding-left: 1.5rem;\n  max-width: 73.4rem;\n}\n\n.collapsible-content__header {\n  word-break: break-word;\n}\n\n.collapsible-content__heading {\n  margin-bottom: 2rem;\n  margin-top: 0;\n}\n\n@media screen and (min-width: 750px) {\n  .collapsible-content__heading {\n    margin-bottom: 3rem;\n  }\n}\n\n.collapsible-none-layout .accordion + .accordion {\n  border-top: 0;\n}\n\n.collapsible-row-layout .accordion:not(:first-child):not(.color-scheme-1) {\n  margin-top: 1rem;\n}\n\n.caption-with-letter-spacing + h2 {\n  margin-top: 1rem;\n}\n\n@media screen and (min-width: 750px) {\n  .collapsible-content .accordion {\n    margin-top: 0;\n  }\n}\n\n.collapsible-row-layout .accordion {\n  border: var(--text-boxes-border-width) solid rgba(var(--color-foreground), var(--text-boxes-border-opacity));\n  margin-bottom: 1.5rem;\n  /* Needed for gradient continuity with or without animation, the transform scopes the gradient to its container which happens already when animation are turned on */\n  transform: perspective(0);\n}\n\n.collapsible-row-layout .accordion summary,\n.collapsible-row-layout .accordion .accordion__content {\n  padding: 1.5rem;\n}\n\n.collapsible-row-layout .accordion .accordion__content {\n  padding-top: 0;\n}\n\n.collapsible-content summary:hover {\n  background: rgba(var(--color-foreground), 0.04);\n}\n\n.collapsible-content summary:hover .accordion__title {\n  text-decoration: underline;\n  text-underline-offset: 0.3rem;\n}\n\n/* check for flexbox gap in older Safari versions */\n@supports not (inset: 10px) {\n  @media screen and (min-width: 750px) {\n    .collapsible-content__grid:not(.collapsible-content__grid--reverse) .grid__item:last-child,\n    .collapsible-content__grid--reverse .collapsible-content__grid-item {\n      padding-left: 5rem;\n      padding-right: 0;\n    }\n  }\n\n  @media screen and (min-width: 990px) {\n    .collapsible-content__grid:not(.collapsible-content__grid--reverse) .grid__item:last-child,\n    .collapsible-content__grid--reverse .collapsible-content__grid-item {\n      padding-left: 7rem;\n    }\n  }\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,oBACC,SAAU,SACV,QAAS,CACX,CAEA,CAAC,2BACC,eAAgB,KAChB,YAAa,IACf,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAND,2BAOG,eAAgB,KAChB,YAAa,IACf,CACF,CAGA,CAAC,2BACC,WAAY,WACd,CAEA,CAAC,kCACC,OAAQ,OACV,CAEA,CAAC,kCACC,OAAQ,OACV,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CATD,kCAUG,OAAQ,OACV,CAEA,CATD,kCAUG,OAAQ,OACV,CACF,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAAC,mCACC,eAAgB,WAClB,CACF,CAEA,CAAC,mCA9CD,OA+CU,EAAE,KACV,cAAe,OACf,aAAc,OACd,UAAW,OACb,CAEA,CAAC,4BACC,WAAY,UACd,CAEA,CAAC,6BACC,cAAe,KACf,WAAY,CACd,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAND,6BAOG,cAAe,IACjB,CACF,CAEA,CAAC,wBAAwB,CAAC,SAAU,CAAE,CAAZ,UACxB,WAAY,CACd,CAEA,CAAC,uBAAuB,CAJE,SAIQ,KAAK,aAAa,KAAK,CAAC,gBACxD,WAAY,IACd,CAEA,CAAC,2BAA4B,CAAE,GAC7B,WAAY,IACd,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAjFD,oBAiFsB,CAbG,UActB,WAAY,CACd,CACF,CAEA,CAdC,uBAcuB,CAlBE,UAmBxB,OAAQ,IAAI,2BAA2B,MAAM,KAAK,IAAI,mBAAmB,CAAE,IAAI,8BAC/E,cAAe,OAEf,UAAW,YAAY,EACzB,CAEA,CArBC,uBAqBuB,CAzBE,UAyBS,QACnC,CAtBC,uBAsBuB,CA1BE,UA0BS,CAAC,mBA9FpC,QA+FW,MACX,CAEA,CA1BC,uBA0BuB,CA9BE,UA8BS,CAJC,mBAKlC,YAAa,CACf,CAEA,CAtGC,oBAsGoB,OAAO,OAC1B,WAAY,KAAK,IAAI,mBAAmB,CAAE,IAC5C,CAEA,CA1GC,oBA0GoB,OAAO,OAAO,CAAC,iBAClC,gBAAiB,UACjB,sBAAuB,KACzB,CAGA,UAAU,IAAI,CAAC,KAAK,EAAE,MACpB,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAAC,yBAAyB,KAAK,CAzEhC,oCAyEqE,CAAC,UAAU,YAC/E,CA1ED,mCA0EqC,CAAC,+BACnC,aAAc,KACd,cAAe,CACjB,CACF,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CARC,yBAQyB,KAAK,CAjFhC,oCAiFqE,CARC,UAQU,YAC/E,CAlFD,mCAkFqC,CARC,+BASnC,aAAc,IAChB,CACF,CACF",
+  "names": []
+}

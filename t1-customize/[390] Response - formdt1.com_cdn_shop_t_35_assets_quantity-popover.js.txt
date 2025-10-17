@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/javascript
+Content-Length: 677
+Connection: keep-alive
+CF-RAY: 98fe05636f06ce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/quantity-popover.js>; rel="canonical"
+Server-Timing: imagery;dur=193.505, imageryFetch;dur=110.472
+Server-Timing: cfRequestDuration;dur=17.999887
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 9f695282-9846-400e-913a-11dfb0989567-1757585082
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+Last-Modified: Thu, 11 Sep 2025 10:04:43 GMT
+CF-Cache-Status: HIT
+Age: 20008
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=StFBYhYQsbs4G3m6swWNKvQ61SFGpgzaCSOntvhvTlcBeOJ2qtlVQ1C8rcfZRe8r%2B6lI8fcI5PpHdlRWvasaFL7pigeLKgpTc7b5ikBVkQMt5k8yIxegJKm39bqM"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+customElements.get("quantity-popover")||customElements.define("quantity-popover",class extends HTMLElement{constructor(){super(),this.mql=window.matchMedia("(min-width: 990px)"),this.mqlTablet=window.matchMedia("(min-width: 750px)"),this.infoButtonDesktop=this.querySelector(".quantity-popover__info-button--icon-only"),this.infoButtonMobile=this.querySelector(".quantity-popover__info-button--icon-with-label"),this.popoverInfo=this.querySelector(".quantity-popover__info"),this.closeButton=this.querySelector(".button-close"),this.eventMouseEnterHappened=!1,this.closeButton&&this.closeButton.addEventListener("click",this.closePopover.bind(this)),this.popoverInfo&&this.infoButtonDesktop&&this.mqlTablet.matches&&this.popoverInfo.addEventListener("mouseleave",this.closePopover.bind(this)),this.infoButtonDesktop&&(this.infoButtonDesktop.addEventListener("click",this.togglePopover.bind(this)),this.infoButtonDesktop.addEventListener("focusout",this.closePopover.bind(this))),this.infoButtonMobile&&this.infoButtonMobile.addEventListener("click",this.togglePopover.bind(this)),this.infoButtonDesktop&&this.mqlTablet.matches&&(this.infoButtonDesktop.addEventListener("mouseenter",this.togglePopover.bind(this)),this.infoButtonDesktop.addEventListener("mouseleave",this.closePopover.bind(this)))}togglePopover(event){if(event.preventDefault(),event.type==="mouseenter"&&(this.eventMouseEnterHappened=!0),event.type==="click"&&this.eventMouseEnterHappened)return;const button=this.infoButtonDesktop&&this.mql.matches?this.infoButtonDesktop:this.infoButtonMobile,isExpanded=button.getAttribute("aria-expanded")==="true";(this.mql.matches&&!isExpanded||event.type==="click")&&(button.setAttribute("aria-expanded",!isExpanded),this.popoverInfo.toggleAttribute("hidden"),button.classList.toggle("quantity-popover__info-button--open"),this.infoButtonDesktop.classList.add("quantity-popover__info-button--icon-only--animation")),button.getAttribute("aria-expanded")==="true"&&event.type!=="mouseenter"&&(button.focus(),button.addEventListener("keyup",e=>{e.key==="Escape"&&this.closePopover(e)}))}closePopover(event){event.preventDefault();const isButtonChild=this.infoButtonDesktop.contains(event.relatedTarget),isPopoverChild=this.popoverInfo.contains(event.relatedTarget),button=this.infoButtonDesktop&&this.mql.matches?this.infoButtonDesktop:this.infoButtonMobile;!isButtonChild&&!isPopoverChild&&(button.setAttribute("aria-expanded","false"),button.classList.remove("quantity-popover__info-button--open"),this.popoverInfo.setAttribute("hidden",""),this.infoButtonDesktop.classList.remove("quantity-popover__info-button--icon-only--animation")),this.eventMouseEnterHappened=!1}});
+//# sourceMappingURL=/cdn/shop/t/35/assets/quantity-popover.js.map?v=987015268078116491745916367

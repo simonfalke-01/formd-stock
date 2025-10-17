@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: text/javascript; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+CF-RAY: 98fe05687a52ce0e-SIN
+x-sorting-hat-podid: 317
+x-sorting-hat-shopid: 82998395198
+vary: Accept-Encoding,Accept
+x-frame-options: DENY
+x-shopid: 82998395198
+x-shardid: 317
+x-robots-tag: noindex, nofollow
+cache-control: max-age=31536000, public
+strict-transport-security: max-age=7889238
+x-request-id: 0006612e-9d10-48f5-9d67-a4f7e60af7d2-1760661546
+server-timing: processing;dur=241, spanner_session;desc="count=1";dur=219.25, verdict_flag_enabled;desc="count=14";dur=1.19, _y;desc="40cf4c2b-e0fc-4a9f-a371-6220b6eecc09", _s;desc="388c62df-5e95-4c3f-8afb-4d303c6cb20e", _cmp;desc="3.AMPS_MY10___ECrf2BpBRS-NVDPvp-05Hg"
+Server-Timing: cfRequestDuration;dur=26.000023
+content-security-policy: frame-ancestors 'none'; report-uri /csp-report?source%5Baction%5D=strict_app_pixel_script_response&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=web_pixels&source%5Bsection%5D=services&source%5Buuid%5D=0006612e-9d10-48f5-9d67-a4f7e60af7d2-1760661546; report-to shopify-csp
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+x-xss-protection: 1; mode=block
+reporting-endpoints: shopify-csp="/csp-report?source%5Baction%5D=strict_app_pixel_script_response&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=web_pixels&source%5Bsection%5D=services&source%5Buuid%5D=0006612e-9d10-48f5-9d67-a4f7e60af7d2-1760661546"
+x-dc: gcp-asia-southeast1,gcp-us-east1,gcp-us-east1
+content-encoding: gzip
+Alt-Svc: h3=":443"; ma=86400
+CF-Cache-Status: HIT
+Age: 23950
+Last-Modified: Fri, 17 Oct 2025 00:39:07 GMT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=GBZKEv94L0HSphgt%2Fpd5%2BkM9RCFynnPtHJox74sPoInZWouZtdbHr7MTUlChQXJE1VsJJu8Dz3m%2BSlJeFA9eAEbwcztzJGHgsS02bP5GhmqSMrqgE1b1Iej4XU09"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+
+(()=>{var _=Object.create;var k=Object.defineProperty;var b=Object.getOwnPropertyDescriptor;var P=Object.getOwnPropertyNames;var x=Object.getPrototypeOf,E=Object.prototype.hasOwnProperty;var l=(e,t)=>()=>(e&&(t=e(e=0)),t);var N=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports);var O=(e,t,o,n)=>{if(t&&typeof t=="object"||typeof t=="function")for(let c of P(t))!E.call(e,c)&&c!==o&&k(e,c,{get:()=>t[c],enumerable:!(n=b(t,c))||n.enumerable});return e};var S=(e,t,o)=>(o=e!=null?_(x(e)):{},O(t||!e||!e.__esModule?k(o,"default",{value:e,enumerable:!0}):o,e));var u=(e,t,o)=>new Promise((n,c)=>{var r=i=>{try{a(o.next(i))}catch(s){c(s)}},h=i=>{try{a(o.throw(i))}catch(s){c(s)}},a=i=>i.done?n(i.value):Promise.resolve(i.value).then(r,h);a((o=o.apply(e,t)).next())});var g,m=l(()=>{g="WebPixel::Render"});var p,w=l(()=>{m();p=e=>shopify.extend(g,e)});var y=l(()=>{w()});var I=l(()=>{y()});var T=N(d=>{I();p(c=>u(d,[c],function*({init:e,analytics:t,browser:o,settings:n}){let r=a=>{try{return a()}catch(i){return}},h=a=>a.location.href.includes("checkout")||a.location.href.includes("thank_you")||a.location.href.includes("orders");t.subscribe("grow_app_s_d",a=>u(d,null,function*(){let i=a.customData;yield o.cookie.set(`${i.n}=${i.v};max-age=${i.a};path=/`)})),t.subscribe("grow_app_c_d",a=>u(d,null,function*(){let i=a.customData;yield o.cookie.set(`${i.n}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`)})),t.subscribe("grow_app_r_nc",a=>u(d,null,function*(){yield o.cookie.set(`${a.n}=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;`)})),t.subscribe("all_events",a=>u(d,null,function*(){let i=yield o.cookie.get("gw-subId"),s=r(()=>a.data.checkout.order.id);if(h(a.context.window)&&s){let f=(yield o.cookie.get("gw-notifications-clicked"))?JSON.parse(yield o.cookie.get("gw-notifications-clicked")):[];f.length&&(yield fetch("https://cartbite-app-api.staqlab.com/grow/api/workflows/event",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({clientId:n.accountID,notificationWorkFlowUniqueId:null,subscriberUniqueId:i,eventData:{amount:r(()=>a.data.checkout.subtotalPrice.amount),name:"purchase",notificationsClicked:f,checkoutToken:r(()=>a.data.checkout.token),orderStatusUrl:r(()=>a.context.window.location.href),orderId:s}})}),yield o.cookie.set("gw-notifications-clicked=[]; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;"))}}))}))});var F=S(T());})();

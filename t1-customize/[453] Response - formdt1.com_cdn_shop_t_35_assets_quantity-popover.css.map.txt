@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1634
+Connection: keep-alive
+CF-RAY: 98fe05660e955fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Tue, 14 Oct 2025 15:18:59 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/quantity-popover.css.map>; rel="canonical"
+Server-Timing: imagery;dur=89.873, imageryFetch;dur=83.179
+Server-Timing: cfRequestDuration;dur=22.000074
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: fa621703-f74f-4248-bdac-820081ce9e89-1760455139
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=STWR9YbeWcpvlk62%2FWMikBP6QPR0KeYogtfJ11mqOLnW0S7Vj7XMr757NmvTdjMpTX3j209ul0Rch1u54ACJXqb%2FJyjqoGRf9fv32N6Ew0VEbiGK5yLVEJKHVi16"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/quantity-popover.css?v=129068967981937647381745916367"
+  ],
+  "sourcesContent": [
+    "quantity-popover {\n  position: relative;\n  display: block;\n}\n\nquantity-popover volume-pricing li:nth-child(odd) {\n  background: rgba(var(--color-foreground), 0.03);\n}\n\nquantity-popover volume-pricing li {\n  font-size: 1.2rem;\n  letter-spacing: 0.06rem;\n  padding: 0.6rem 0.8rem;\n  display: flex;\n  justify-content: space-between;\n}\n\n.quantity-popover__info.global-settings-popup {\n  width: 100%;\n  z-index: 3;\n  position: absolute;\n  background-color: rgb(var(--color-background));\n  max-width: 36rem;\n}\n\n.quantity-popover__info .button-close,\n.variant-remove-total quick-order-list-remove-all-button .button,\n.quick-order-list-total__confirmation quick-order-list-remove-all-button .button,\nquantity-popover quick-order-list-remove-button .button {\n  --shadow-opacity: 0;\n  --border-opacity: 0;\n}\n\n.quantity-popover__info-button {\n  display: flex;\n  align-items: center;\n  margin: 0 0.4rem 0 0;\n  min-width: 1.5rem;\n  min-height: 1.5rem;\n  --shadow-opacity: 0;\n  --border-opacity: 0;\n}\n\n.quantity-popover__info-button--icon-with-label {\n  text-align: left;\n}\n\n.quantity-popover__info-button--icon-with-label svg {\n  flex-shrink: 0;\n  width: 15px;\n  height: 14px;\n}\n\n.quantity-popover__info-button--open {\n  text-decoration: underline;\n}\n\n.quantity-popover__info-button span {\n  padding-left: 1rem;\n}\n\n.quantity-popover__info-button--icon-only--animation svg {\n  transform: scale(1.25);\n}\n\n.quantity-popover__info-button--icon-only svg {\n  transition: transform var(--duration-default) ease;\n  width: 15px;\n  height: 14px;\n}\n\n@media screen and (max-width: 989px) {\n  .quantity-popover__info.global-settings-popup {\n    left: 0;\n    top: 100%;\n  }\n\n  .quantity-popover__info-button {\n    padding-left: 0;\n  }\n}\n\n.quantity-popover__info .quantity__rules {\n  margin-top: 1.2rem;\n  margin-bottom: 1rem;\n}\n\n.quantity-popover__info .volume-pricing-label {\n  display: block;\n  margin-left: 1.2rem;\n  margin-top: 1.2rem;\n  font-size: 1.2rem;\n}\n\n.quantity-popover__info .button {\n  width: 3.2rem;\n  height: 3.2rem;\n  position: absolute;\n  top: 0.4rem;\n  right: 0;\n  padding: 0 1.2rem 0 0;\n  display: flex;\n  justify-content: flex-end;\n}\n\n.quantity-popover__info .volume-pricing-label ~ .button {\n  top: -0.2rem;\n}\n\n.quantity-popover__info .button .icon {\n  width: 1.5rem;\n  height: 1.5rem;\n}\n\nquantity-popover volume-pricing {\n  margin-top: 1.2rem;\n  display: block;\n}\n\nquantity-popover .quantity__rules span:first-of-type {\n  display: block;\n}\n\n.quantity-popover-container {\n  display: flex;\n  padding: 0.5rem 0.5rem 0.5rem 0;\n}\n\n.quantity-popover-container:not(.quantity-popover-container--hover) {\n  align-items: center;\n}\n\n@media screen and (min-width: 990px) {\n  .quantity-popover-container--empty {\n    margin-right: 2.7rem;\n  }\n\n  .quantity-popover__info.global-settings-popup {\n    width: 20rem;\n  }\n\n  .quantity-popover-container {\n    width: auto;\n    max-width: 20rem;\n  }\n\n  .quantity-popover__info.global-settings-popup {\n    transform: translateX(-100%);\n    top: 0.5rem;\n  }\n}\n\nquantity-popover .quantity {\n  background: rgb(var(--color-background));\n}\n\nquantity-popover .quantity__rules {\n  margin-left: 0.8rem;\n}\n\nquantity-popover .quantity__rules .divider:nth-child(2)::before {\n  content: none;\n}\n\nquantity-popover .quantity__button:not(:focus-visible):not(.focused),\nquantity-popover .quantity__input:not(:focus-visible):not(.focused) {\n  background-color: initial;\n}\n"
+  ],
+  "mappings": "AAAA,iBACE,SAAU,SACV,QAAS,KACX,CAEA,iBAAiB,eAAe,EAAE,gBAChC,WAAY,KAAK,IAAI,mBAAmB,CAAE,IAC5C,CAEA,iBAAiB,eAAe,GAC9B,UAAW,OACX,eAAgB,OAXlB,QAYW,MAAO,MAChB,QAAS,KACT,gBAAiB,aACnB,CAEA,CAAC,sBAAsB,CAAC,sBACtB,MAAO,KACP,QAAS,EACT,SAAU,SACV,iBAAkB,IAAI,IAAI,qBAC1B,UAAW,KACb,CAEA,CARC,uBAQuB,CAAC,aACzB,CAAC,qBAAqB,mCAAmC,CAAC,OAC1D,CAAC,qCAAqC,mCAAmC,CADf,OAE1D,iBAAiB,+BAA+B,CAFU,OAGxD,kBAAkB,EAClB,kBAAkB,CACpB,CAEA,CAAC,8BACC,QAAS,KACT,YAAa,OAnCf,OAoCU,EAAE,MAAO,EAAE,EACnB,UAAW,OACX,WAAY,OACZ,kBAAkB,EAClB,kBAAkB,CACpB,CAEA,CAAC,+CACC,WAAY,IACd,CAEA,CAJC,+CAI+C,IAC9C,YAAa,EACb,MAAO,KACP,OAAQ,IACV,CAEA,CAAC,oCACC,gBAAiB,SACnB,CAEA,CAxBC,8BAwB8B,KAC7B,aAAc,IAChB,CAEA,CAAC,oDAAoD,IACnD,UAAW,MAAM,KACnB,CAEA,CAAC,yCAAyC,IACxC,WAAY,UAAU,IAAI,oBAAoB,KAC9C,MAAO,KACP,OAAQ,IACV,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAvDD,sBAuDwB,CAvDD,sBAwDpB,KAAM,EACN,IAAK,IACP,CAEA,CA5CD,8BA6CG,aAAc,CAChB,CACF,CAEA,CAjEC,uBAiEuB,CAAC,gBACvB,WAAY,OACZ,cAAe,IACjB,CAEA,CAtEC,uBAsEuB,CAAC,qBACvB,QAAS,MACT,YAAa,OACb,WAAY,OACZ,UAAW,MACb,CAEA,CA7EC,uBA6EuB,CApEkC,OAqExD,MAAO,OACP,OAAQ,OACR,SAAU,SACV,IAAK,MACL,MAAO,EAnGT,QAoGW,EAAE,OAAO,EAAE,EACpB,QAAS,KACT,gBAAiB,QACnB,CAEA,CAxFC,uBAwFuB,CAlBC,oBAkBqB,CAAE,CA/EU,OAgFxD,IAAK,MACP,CAEA,CA5FC,uBA4FuB,CAnFkC,OAmF1B,CAAC,KAC/B,MAAO,OACP,OAAQ,MACV,CAEA,iBAAiB,eACf,WAAY,OACZ,QAAS,KACX,CAEA,iBAAiB,CArCQ,gBAqCS,IAAI,eACpC,QAAS,KACX,CAEA,CAAC,2BACC,QAAS,KA5HX,QA6HW,MAAO,MAAO,MAAO,CAChC,CAEA,CALC,0BAK0B,KAAK,CAAC,mCAC/B,YAAa,MACf,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAAC,kCACC,aAAc,MAChB,CAEA,CAxHD,sBAwHwB,CAxHD,sBAyHpB,MAAO,KACT,CAEA,CAlBD,2BAmBG,MAAO,KACP,UAAW,KACb,CAEA,CAjID,sBAiIwB,CAjID,sBAkIpB,UAAW,UAAW,OACtB,IAAK,KACP,CACF,CAEA,iBAAiB,CAAC,SAChB,WAAY,IAAI,IAAI,oBACtB,CAEA,iBAAiB,CA1EQ,gBA2EvB,YAAa,KACf,CAEA,iBAAiB,CA9EQ,gBA8ES,CAAC,OAAO,aAAa,QACrD,QAAS,IACX,CAEA,iBAAiB,CAAC,gBAAgB,KAAK,eAAe,KAAK,CAAC,SAC5D,iBAAiB,CAAC,eAAe,KAAK,eAAe,KAAK,CADE,SAE1D,iBAAkB,OACpB",
+  "names": []
+}

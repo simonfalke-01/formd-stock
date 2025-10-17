@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1928
+Connection: keep-alive
+CF-RAY: 98fe05676bf240fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/cart-drawer.js.map>; rel="canonical"
+Server-Timing: imagery;dur=124.453, imageryFetch;dur=114.030
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 8aff6601-cd6c-44f7-bd89-94ae447562db-1760269938
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Sun, 12 Oct 2025 11:52:19 GMT
+CF-Cache-Status: HIT
+Age: 251
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Ybl%2BstSCIzZ8xwdnf8SHRuDrKJg0mC9XYrIM5ECDMOzc%2B8wNNnLVRb4yqN69JZ5D2Gbf0Z4Pw28ad72kGh4tQjmPKmc80BHEfRWv12jj%2FAk9ue9gbDsQYnj2T0AO"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/cart-drawer.js?v=169981311261118214701745916367"
+  ],
+  "sourcesContent": [
+    "class CartDrawer extends HTMLElement {\n  constructor() {\n    super();\n\n    this.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());\n    this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));\n    this.setHeaderCartIconAccessibility();\n  }\n\n  setHeaderCartIconAccessibility() {\n    const cartLink = document.querySelector('#cart-icon-bubble');\n    if (!cartLink) return;\n\n    cartLink.setAttribute('role', 'button');\n    cartLink.setAttribute('aria-haspopup', 'dialog');\n    cartLink.addEventListener('click', (event) => {\n      event.preventDefault();\n      this.open(cartLink);\n    });\n    cartLink.addEventListener('keydown', (event) => {\n      if (event.code.toUpperCase() === 'SPACE') {\n        event.preventDefault();\n        this.open(cartLink);\n      }\n    });\n  }\n\n  open(triggeredBy) {\n    if (triggeredBy) this.setActiveElement(triggeredBy);\n    const cartDrawerNote = this.querySelector('[id^=\"Details-\"] summary');\n    if (cartDrawerNote && !cartDrawerNote.hasAttribute('role')) this.setSummaryAccessibility(cartDrawerNote);\n    // here the animation doesn't seem to always get triggered. A timeout seem to help\n    setTimeout(() => {\n      this.classList.add('animate', 'active');\n    });\n\n    this.addEventListener(\n      'transitionend',\n      () => {\n        const containerToTrapFocusOn = this.classList.contains('is-empty')\n          ? this.querySelector('.drawer__inner-empty')\n          : document.getElementById('CartDrawer');\n        const focusElement = this.querySelector('.drawer__inner') || this.querySelector('.drawer__close');\n        trapFocus(containerToTrapFocusOn, focusElement);\n      },\n      { once: true }\n    );\n\n    document.body.classList.add('overflow-hidden');\n  }\n\n  close() {\n    this.classList.remove('active');\n    removeTrapFocus(this.activeElement);\n    document.body.classList.remove('overflow-hidden');\n  }\n\n  setSummaryAccessibility(cartDrawerNote) {\n    cartDrawerNote.setAttribute('role', 'button');\n    cartDrawerNote.setAttribute('aria-expanded', 'false');\n\n    if (cartDrawerNote.nextElementSibling.getAttribute('id')) {\n      cartDrawerNote.setAttribute('aria-controls', cartDrawerNote.nextElementSibling.id);\n    }\n\n    cartDrawerNote.addEventListener('click', (event) => {\n      event.currentTarget.setAttribute('aria-expanded', !event.currentTarget.closest('details').hasAttribute('open'));\n    });\n\n    cartDrawerNote.parentElement.addEventListener('keyup', onKeyUpEscape);\n  }\n\n  renderContents(parsedState) {\n    this.querySelector('.drawer__inner').classList.contains('is-empty') &&\n      this.querySelector('.drawer__inner').classList.remove('is-empty');\n    this.productId = parsedState.id;\n    this.getSectionsToRender().forEach((section) => {\n      const sectionElement = section.selector\n        ? document.querySelector(section.selector)\n        : document.getElementById(section.id);\n\n      if (!sectionElement) return;\n      sectionElement.innerHTML = this.getSectionInnerHTML(parsedState.sections[section.id], section.selector);\n    });\n\n    setTimeout(() => {\n      this.querySelector('#CartDrawer-Overlay').addEventListener('click', this.close.bind(this));\n      this.open();\n    });\n  }\n\n  getSectionInnerHTML(html, selector = '.shopify-section') {\n    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;\n  }\n\n  getSectionsToRender() {\n    return [\n      {\n        id: 'cart-drawer',\n        selector: '#CartDrawer',\n      },\n      {\n        id: 'cart-icon-bubble',\n      },\n    ];\n  }\n\n  getSectionDOM(html, selector = '.shopify-section') {\n    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector);\n  }\n\n  setActiveElement(element) {\n    this.activeElement = element;\n  }\n}\n\ncustomElements.define('cart-drawer', CartDrawer);\n\nclass CartDrawerItems extends CartItems {\n  getSectionsToRender() {\n    return [\n      {\n        id: 'CartDrawer',\n        section: 'cart-drawer',\n        selector: '.drawer__inner',\n      },\n      {\n        id: 'cart-icon-bubble',\n        section: 'cart-icon-bubble',\n        selector: '.shopify-section',\n      },\n    ];\n  }\n}\n\ncustomElements.define('cart-drawer-items', CartDrawerItems);\n"
+  ],
+  "mappings": "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",
+  "names": []
+}

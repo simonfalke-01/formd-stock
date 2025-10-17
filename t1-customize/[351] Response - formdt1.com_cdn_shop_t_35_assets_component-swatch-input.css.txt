@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 583
+Connection: keep-alive
+CF-RAY: 98fe0561fa695fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-swatch-input.css>; rel="canonical"
+Server-Timing: imagery;dur=74.199, imageryFetch;dur=70.388
+Server-Timing: cfRequestDuration;dur=21.000147
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 58834d4d-6dce-4252-ae19-4082e165bea4-1758716015
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Wed, 24 Sep 2025 12:13:35 GMT
+CF-Cache-Status: HIT
+Age: 1400804
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=sOC1BAS%2B9a1334iHurUdtU6iB3Po%2FyDeP2VB2VqoOV038TQ2z3TnHt7gKywsguMphra8n93QsBaDyAsPYwLaue8AKyRWGhEjWFzrQLRvTtfba6C1qoB5DNXCqsdY"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.swatch-input__input+.swatch-input__label{--swatch-input--border-radius: 50%;display:inline-block;max-width:100%;border-radius:var(--swatch-input--border-radius);cursor:pointer;outline-offset:.2rem;outline-color:transparent;outline-style:solid;transition-property:outline-color,outline-width,box-shadow;transition-duration:var(--duration-short);transition-timing-function:ease;forced-color-adjust:none}.swatch-input__input+.swatch-input__label.swatch-input__label--square{--swatch-input--border-radius: .2rem}.swatch-input__input:active+.swatch-input__label,.swatch-input__input:checked+.swatch-input__label{outline:.1rem solid rgb(var(--color-foreground))}.swatch-input__input+.swatch-input__label:hover,.swatch-input__input:hover+.swatch-input__label{outline:.2rem solid rgba(var(--color-foreground),.4)}.swatch-input__input:focus-visible+.swatch-input__label{outline:.2rem solid rgba(var(--color-foreground),.5);box-shadow:0 0 0 .2rem rgb(var(--color-background)),0 0 .1rem .5rem rgba(var(--color-foreground),.25)}.swatch-input__input:active:focus-visible+.swatch-input__label,.swatch-input__input:checked:focus-visible+.swatch-input__label{outline:.1rem solid rgb(var(--color-foreground));box-shadow:0 0 0 .2rem rgb(var(--color-background)),0 0 .1rem .4rem rgba(var(--color-foreground),.25)}.swatch-input__input.visually-disabled:not(:active):not(:checked)+.swatch-input__label{transition:none}.swatch-input__input.visually-disabled:not(:active):not(:checked)+.swatch-input__label:hover{outline:none}.swatch-input__input:disabled+.swatch-input__label{pointer-events:none}.swatch-input__input:disabled+.swatch-input__label>.swatch,.swatch-input__input.visually-disabled+.swatch-input__label>.swatch{position:relative;overflow:hidden}.swatch-input__input:disabled+.swatch-input__label>.swatch,.swatch-input__input.visually-disabled+.swatch-input__label>.swatch{opacity:.4}.swatch-input__input:disabled+.swatch-input__label>.swatch:after,.swatch-input__input.visually-disabled+.swatch-input__label>.swatch:after{--diagonal--size: calc(var(--swatch-input--size) * 1.414);--crossed-line--size: .1rem;content:"";position:absolute;bottom:calc(var(--crossed-line--size) * -.5);left:0;width:var(--diagonal--size);height:var(--crossed-line--size);background-color:rgb(var(--color-foreground));transform:rotate(-45deg);transform-origin:left}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-swatch-input.css.map?v=61683592951238328641745916367 */

@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/css
+Content-Length: 46
+Connection: keep-alive
+CF-RAY: 98fe05700b66f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Age: 144843
+vary: accept-encoding
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/Section.ClWBj0Dy.css>; rel="canonical"
+Server-Timing: imagery;dur=78.692, imageryFetch;dur=78.520
+Server-Timing: cfRequestDuration;dur=13.999939
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="Section.*.css", id="ClWBj0Dy"
+X-Content-Type-Options: nosniff
+X-Request-Id: 37382a25-80c2-4f07-8e4c-f5ad8daa58ae-1760535746
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+last-modified: Wed, 15 Oct 2025 13:42:26 GMT
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=7G25GfQrJGc87NtuWtUle71mWX5%2FAQvRE22rXHPOd9Ymvinkia4Dbmm3tTwlwIItP%2FCy%2B6MvSagVAnwxd3H4F9VJ2QcZ78UyM2SwqLLVXjuljRRJK45%2BBJ0lL1KX"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+._0AAq3:empty{display:none}._0AAq3:empty+.gfFXW{display:none}

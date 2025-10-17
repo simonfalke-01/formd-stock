@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 496
+Connection: keep-alive
+CF-RAY: 98fe056dad62f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Age: 27598
+vary: accept-encoding
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/StackedMerchandisePreview.D_x9_Ac0.js>; rel="canonical"
+Server-Timing: imagery;dur=94.207, imageryFetch;dur=81.900
+Server-Timing: cfRequestDuration;dur=20.999908
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="StackedMerchandisePreview.*.js", id="D_x9_Ac0"
+X-Content-Type-Options: nosniff
+X-Request-Id: ddc3cc07-4178-4e11-aa5d-2acf9eeeb419-1760654447
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+last-modified: Thu, 16 Oct 2025 22:40:47 GMT
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=WwX1BmlVQnaJibLD%2FxrLsbiS00uQH%2F8R1SH9jZ0WhDFYss1VTYK5vpHErh8hRjn%2Bq2voAdPkkmW4Gj0p7l3TLqKPLlDxda2F%2Bi%2B%2B6rRvCK88Zxk9KWbY41vesQRS"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{l as d,a as e,S as h,P as b,m as T,n as o}from"./app.PV_iB4eS.js";function B({merchandiseItem:s,hideBadge:l,size:u="small"}){const{lineItems:{quantityPosition:i="thumbnailBadge"}}=d(),{title:r,quantity:a,image:n}=s,m=a!==1&&i==="thumbnailBadge"?a:void 0;return e(b,{size:u,alt:n?.altText||r,source:n?h.default(n.one).when({resolution:1},n.one).when({resolution:2},n.two).when({resolution:4},n.four):void 0,totalItems:l?void 0:m})}var t={Container:"_17k99eh0",PrimaryThumbnail:"_17k99eh1",EmptyThumbnailBox:"_17k99eh2"};const S=.8125,R=.625;function y({merchandiseItem:s,merchandiseLinesLength:l}){const{global:{cornerRadius:u="base"},merchandiseThumbnail:{cornerRadius:i=u}}=d(),{blockSize:r,inlineSize:a}=T("small"),n=r*S,c=r*R;return e(o,{minBlockSize:r,minInlineSize:a,cornerRadius:i,children:e("div",{className:t.Container,children:[e(o,{className:t.PrimaryThumbnail,cornerRadius:i,children:e(B,{merchandiseItem:s,hideBadge:!0})}),l>=2&&e(o,{disableGlobalBranding:!0,className:t.EmptyThumbnailBox,cornerRadius:i,children:e(o,{disableGlobalBranding:!0,minBlockSize:n,minInlineSize:a,cornerRadius:i})}),l>=3&&e(o,{disableGlobalBranding:!0,className:t.EmptyThumbnailBox,cornerRadius:i,children:e(o,{disableGlobalBranding:!0,minBlockSize:c,minInlineSize:a,cornerRadius:i})})]})})}export{B as M,y as S};

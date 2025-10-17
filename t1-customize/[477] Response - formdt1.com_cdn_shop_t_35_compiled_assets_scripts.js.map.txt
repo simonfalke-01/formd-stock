@@ -1,0 +1,47 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1800
+Connection: keep-alive
+CF-RAY: 98fe0566df685fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Fri, 17 Oct 2025 07:14:07 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/compiled_assets/scripts.js.map>; rel="canonical"
+Server-Timing: imagery;dur=143.383, imageryFetch;dur=134.778
+Server-Timing: cfRequestDuration;dur=22.999763
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 17783fd5-628c-4daa-aaed-e7b8d3b2b6a7-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bT9lQd%2BaqIuqjx48E1y1iAEOrLCIfE4lTSLOWWGuNbgFnJpHvLWHKYRH5tqfTYSnc%2FBfJYw32rBf7OUWqHGxJbBNUAN%2B2vZq7Pj%2FCVZH2n8xSXK4rseGRfkqM%2B%2F6"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/compiled_assets/scripts.js?6670="
+  ],
+  "sourcesContent": [
+    "(function() {\n  var __sections__ = {};\n  (function() {\n    for(var i = 0, s = document.getElementById('sections-script').getAttribute('data-sections').split(','); i < s.length; i++)\n      __sections__[s[i]] = true;\n    })();\n    (function() {\n  if (!__sections__[\"header\"]) return;\n  try {\n    \n  class StickyHeader extends HTMLElement {\n    constructor() {\n      super();\n    }\n\n    connectedCallback() {\n      this.header = document.querySelector('.section-header');\n      this.headerIsAlwaysSticky = this.getAttribute('data-sticky-type') === 'always' || this.getAttribute('data-sticky-type') === 'reduce-logo-size';\n      this.headerBounds = {};\n\n      this.setHeaderHeight();\n\n      window.matchMedia('(max-width: 990px)').addEventListener('change', this.setHeaderHeight.bind(this));\n\n      if (this.headerIsAlwaysSticky) {\n        this.header.classList.add('shopify-section-header-sticky');\n      };\n\n      this.currentScrollTop = 0;\n      this.preventReveal = false;\n      this.predictiveSearch = this.querySelector('predictive-search');\n\n      this.onScrollHandler = this.onScroll.bind(this);\n      this.hideHeaderOnScrollUp = () => this.preventReveal = true;\n\n      this.addEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);\n      window.addEventListener('scroll', this.onScrollHandler, false);\n\n      this.createObserver();\n    }\n\n    setHeaderHeight() {\n      document.documentElement.style.setProperty('--header-height', `${this.header.offsetHeight}px`);\n    }\n\n    disconnectedCallback() {\n      this.removeEventListener('preventHeaderReveal', this.hideHeaderOnScrollUp);\n      window.removeEventListener('scroll', this.onScrollHandler);\n    }\n\n    createObserver() {\n      let observer = new IntersectionObserver((entries, observer) => {\n        this.headerBounds = entries[0].intersectionRect;\n        observer.disconnect();\n      });\n\n      observer.observe(this.header);\n    }\n\n    onScroll() {\n      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;\n\n      if (this.predictiveSearch && this.predictiveSearch.isOpen) return;\n\n      if (scrollTop > this.currentScrollTop && scrollTop > this.headerBounds.bottom) {\n        this.header.classList.add('scrolled-past-header');\n        if (this.preventHide) return;\n        requestAnimationFrame(this.hide.bind(this));\n      } else if (scrollTop < this.currentScrollTop && scrollTop > this.headerBounds.bottom) {\n        this.header.classList.add('scrolled-past-header');\n        if (!this.preventReveal) {\n          requestAnimationFrame(this.reveal.bind(this));\n        } else {\n          window.clearTimeout(this.isScrolling);\n\n          this.isScrolling = setTimeout(() => {\n            this.preventReveal = false;\n          }, 66);\n\n          requestAnimationFrame(this.hide.bind(this));\n        }\n      } else if (scrollTop <= this.headerBounds.top) {\n        this.header.classList.remove('scrolled-past-header');\n        requestAnimationFrame(this.reset.bind(this));\n      }\n\n      this.currentScrollTop = scrollTop;\n    }\n\n    hide() {\n      if (this.headerIsAlwaysSticky) return;\n      this.header.classList.add('shopify-section-header-hidden', 'shopify-section-header-sticky');\n      this.closeMenuDisclosure();\n      this.closeSearchModal();\n    }\n\n    reveal() {\n      if (this.headerIsAlwaysSticky) return;\n      this.header.classList.add('shopify-section-header-sticky', 'animate');\n      this.header.classList.remove('shopify-section-header-hidden');\n    }\n\n    reset() {\n      if (this.headerIsAlwaysSticky) return;\n      this.header.classList.remove('shopify-section-header-hidden', 'shopify-section-header-sticky', 'animate');\n    }\n\n    closeMenuDisclosure() {\n      this.disclosures = this.disclosures || this.header.querySelectorAll('header-menu');\n      this.disclosures.forEach(disclosure => disclosure.close());\n    }\n\n    closeSearchModal() {\n      this.searchModal = this.searchModal || this.header.querySelector('details-modal');\n      this.searchModal.close(false);\n    }\n  }\n\n  customElements.define('sticky-header', StickyHeader);\n\n  } catch(e) { console.error(e); }\n})();\n})();\n"
+  ],
+  "mappings": "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",
+  "names": [
+    "observer"
+  ]
+}

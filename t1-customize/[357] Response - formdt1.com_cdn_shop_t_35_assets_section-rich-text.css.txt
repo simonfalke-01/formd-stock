@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 420
+Connection: keep-alive
+CF-RAY: 98fe05621811f91a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/section-rich-text.css>; rel="canonical"
+Server-Timing: imagery;dur=73.370, imageryFetch;dur=70.937
+Server-Timing: cfRequestDuration;dur=28.000116
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: ce6d015e-b82c-4802-ad7f-3460885d31c2-1752321659
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Sat, 12 Jul 2025 12:00:59 GMT
+CF-Cache-Status: HIT
+Age: 34851
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=qEDq2FrpGCo892Tp3uhy%2FlWsTvJubFytDdJhyOqGBLb032OMi5dkPULCtrUjByLTdfLOzSXuVXScznd22kFpwMp36nH4NqAk4PaEYlJKsLq5w71Hir5bqXUZUYvb"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.rich-text{z-index:1}.rich-text__wrapper{display:flex;justify-content:center;width:calc(100% - 4rem / var(--font-body-scale))}.rich-text:not(.rich-text--full-width) .rich-text__wrapper{margin:auto;width:calc(100% - 8rem / var(--font-body-scale))}.rich-text__blocks{width:100%}@media screen and (min-width: 750px){.rich-text__wrapper{width:100%}.rich-text__wrapper--left{justify-content:flex-start}.rich-text__wrapper--right{justify-content:flex-end}.rich-text__blocks{max-width:50rem}}@media screen and (min-width: 990px){.rich-text__blocks{max-width:78rem}}.rich-text__blocks *{overflow-wrap:break-word}.rich-text__blocks>*{margin-top:0;margin-bottom:0}.rich-text__blocks>*+*{margin-top:2rem}.rich-text__blocks>*+a{margin-top:3rem}.rich-text__buttons{display:inline-flex;justify-content:center;flex-wrap:wrap;gap:1rem;width:100%;max-width:45rem;word-break:break-word}.rich-text__buttons--multiple>*{flex-grow:1;min-width:22rem}.rich-text__buttons+.rich-text__buttons{margin-top:1rem}.rich-text__blocks.left .rich-text__buttons{justify-content:flex-start}.rich-text__blocks.right .rich-text__buttons{justify-content:flex-end}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/section-rich-text.css.map?v=155250126305810049721745916367 */

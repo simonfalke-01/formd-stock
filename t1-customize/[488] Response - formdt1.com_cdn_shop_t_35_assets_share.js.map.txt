@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 996
+Connection: keep-alive
+CF-RAY: 98fe05673f86ce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 249
+last-modified: Wed, 15 Oct 2025 15:14:58 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/share.js.map>; rel="canonical"
+Server-Timing: imagery;dur=139.109, imageryFetch;dur=133.540
+Server-Timing: cfRequestDuration;dur=15.999794
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 9c81367a-f1f4-4860-b30d-27ce9b26a15a-1760541298
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kJHnPkxQ609Zf74FPRYmLBWfS4VN5%2FtsS2f3kQOL%2FeoOyS8lvxspmILiizuD9iQGIbq2umIiRuiF6pDHt%2BJQ%2BYTM5GIR%2BrcxRNaxMydQZAWBie1SBxis6RYziwdt"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/share.js?v=13024540447964430191745916367"
+  ],
+  "sourcesContent": [
+    "if (!customElements.get('share-button')) {\n  customElements.define(\n    'share-button',\n    class ShareButton extends DetailsDisclosure {\n      constructor() {\n        super();\n\n        this.elements = {\n          shareButton: this.querySelector('button'),\n          shareSummary: this.querySelector('summary'),\n          closeButton: this.querySelector('.share-button__close'),\n          successMessage: this.querySelector('[id^=\"ShareMessage\"]'),\n          urlInput: this.querySelector('input'),\n        };\n        this.urlToShare = this.elements.urlInput ? this.elements.urlInput.value : document.location.href;\n\n        if (navigator.share) {\n          this.mainDetailsToggle.setAttribute('hidden', '');\n          this.elements.shareButton.classList.remove('hidden');\n          this.elements.shareButton.addEventListener('click', () => {\n            navigator.share({ url: this.urlToShare, title: document.title });\n          });\n        } else {\n          this.mainDetailsToggle.addEventListener('toggle', this.toggleDetails.bind(this));\n          this.mainDetailsToggle\n            .querySelector('.share-button__copy')\n            .addEventListener('click', this.copyToClipboard.bind(this));\n          this.mainDetailsToggle.querySelector('.share-button__close').addEventListener('click', this.close.bind(this));\n        }\n      }\n\n      toggleDetails() {\n        if (!this.mainDetailsToggle.open) {\n          this.elements.successMessage.classList.add('hidden');\n          this.elements.successMessage.textContent = '';\n          this.elements.closeButton.classList.add('hidden');\n          this.elements.shareSummary.focus();\n        }\n      }\n\n      copyToClipboard() {\n        navigator.clipboard.writeText(this.elements.urlInput.value).then(() => {\n          this.elements.successMessage.classList.remove('hidden');\n          this.elements.successMessage.textContent = window.accessibilityStrings.shareSuccess;\n          this.elements.closeButton.classList.remove('hidden');\n          this.elements.closeButton.focus();\n        });\n      }\n\n      updateUrl(url) {\n        this.urlToShare = url;\n        this.elements.urlInput.value = url;\n      }\n    }\n  );\n}\n"
+  ],
+  "mappings": "AAAK,eAAe,IAAI,cAAc,GACpC,eAAe,OACb,eACA,cAA0B,iBAAkB,CAC1C,aAAc,CACZ,MAAM,EAEN,KAAK,SAAW,CACd,YAAa,KAAK,cAAc,QAAQ,EACxC,aAAc,KAAK,cAAc,SAAS,EAC1C,YAAa,KAAK,cAAc,sBAAsB,EACtD,eAAgB,KAAK,cAAc,sBAAsB,EACzD,SAAU,KAAK,cAAc,OAAO,CACtC,EACA,KAAK,WAAa,KAAK,SAAS,SAAW,KAAK,SAAS,SAAS,MAAQ,SAAS,SAAS,KAExF,UAAU,OACZ,KAAK,kBAAkB,aAAa,SAAU,EAAE,EAChD,KAAK,SAAS,YAAY,UAAU,OAAO,QAAQ,EACnD,KAAK,SAAS,YAAY,iBAAiB,QAAS,IAAM,CACxD,UAAU,MAAM,CAAE,IAAK,KAAK,WAAY,MAAO,SAAS,KAAM,CAAC,CACjE,CAAC,IAED,KAAK,kBAAkB,iBAAiB,SAAU,KAAK,cAAc,KAAK,IAAI,CAAC,EAC/E,KAAK,kBACF,cAAc,qBAAqB,EACnC,iBAAiB,QAAS,KAAK,gBAAgB,KAAK,IAAI,CAAC,EAC5D,KAAK,kBAAkB,cAAc,sBAAsB,EAAE,iBAAiB,QAAS,KAAK,MAAM,KAAK,IAAI,CAAC,EAEhH,CAEA,eAAgB,CACT,KAAK,kBAAkB,OAC1B,KAAK,SAAS,eAAe,UAAU,IAAI,QAAQ,EACnD,KAAK,SAAS,eAAe,YAAc,GAC3C,KAAK,SAAS,YAAY,UAAU,IAAI,QAAQ,EAChD,KAAK,SAAS,aAAa,MAAM,EAErC,CAEA,iBAAkB,CAChB,UAAU,UAAU,UAAU,KAAK,SAAS,SAAS,KAAK,EAAE,KAAK,IAAM,CACrE,KAAK,SAAS,eAAe,UAAU,OAAO,QAAQ,EACtD,KAAK,SAAS,eAAe,YAAc,OAAO,qBAAqB,aACvE,KAAK,SAAS,YAAY,UAAU,OAAO,QAAQ,EACnD,KAAK,SAAS,YAAY,MAAM,CAClC,CAAC,CACH,CAEA,UAAU,IAAK,CACb,KAAK,WAAa,IAClB,KAAK,SAAS,SAAS,MAAQ,GACjC,CACF,CACF",
+  "names": []
+}

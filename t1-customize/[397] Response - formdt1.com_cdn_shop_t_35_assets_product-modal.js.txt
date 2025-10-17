@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/javascript
+Content-Length: 441
+Connection: keep-alive
+CF-RAY: 98fe0563a96ffe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/product-modal.js>; rel="canonical"
+Server-Timing: imagery;dur=126.331, imageryFetch;dur=123.675
+Server-Timing: cfRequestDuration;dur=19.000053
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: f3101c04-b03b-4712-aacc-5ac1bc805add-1756926408
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Wed, 03 Sep 2025 19:06:48 GMT
+CF-Cache-Status: HIT
+Age: 20008
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=WWsUEcdqYk3bSiuHePPexAxxekN2Wnx8FaSV2YOj%2BJfrdAbDBl3n73tU1xvVtDEVfgF%2Ff83rp4tUj%2BbAqgij94%2FC5RpOC6idkBNRZPuBKwZGRNRSOCSKhZM06ozZ"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+customElements.get("product-modal")||customElements.define("product-modal",class extends ModalDialog{constructor(){super()}hide(){super.hide()}show(opener){super.show(opener),this.showActiveMedia()}showActiveMedia(){this.querySelectorAll(`[data-media-id]:not([data-media-id="${this.openedBy.getAttribute("data-media-id")}"])`).forEach(element=>{element.classList.remove("active")});const activeMedia=this.querySelector(`[data-media-id="${this.openedBy.getAttribute("data-media-id")}"]`),activeMediaTemplate=activeMedia.querySelector("template"),activeMediaContent=activeMediaTemplate?activeMediaTemplate.content:null;activeMedia.classList.add("active"),activeMedia.scrollIntoView();const container=this.querySelector('[role="document"]');container.scrollLeft=(activeMedia.width-container.clientWidth)/2,activeMedia.nodeName=="DEFERRED-MEDIA"&&activeMediaContent&&activeMediaContent.querySelector(".js-youtube")&&activeMedia.loadContent()}});
+//# sourceMappingURL=/cdn/shop/t/35/assets/product-modal.js.map?v=116616134454508949461745916367

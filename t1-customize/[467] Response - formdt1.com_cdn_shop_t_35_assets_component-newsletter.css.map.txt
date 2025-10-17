@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 780
+Connection: keep-alive
+CF-RAY: 98fe05668e06ce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-newsletter.css.map>; rel="canonical"
+Server-Timing: imagery;dur=79.073, imageryFetch;dur=74.443
+Server-Timing: cfRequestDuration;dur=15.000105
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: cc6fdd4c-fec1-4f80-baf3-9b138dc6936c-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Fri, 17 Oct 2025 07:14:07 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=xlPuV529i29OnmqUdnPzmNDIlf5AiimmtlhPuRyXSEbOm62fogKx%2FoRFY4FL2XLvA5A%2FGfapGDsKuc9h3GHP8lqyk9BKVRiIWVX66nJnlWgkA9nCcSrZO9FzlRRj"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-newsletter.css?v=4727253280200485261745916367"
+  ],
+  "sourcesContent": [
+    ".newsletter-form {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  position: relative;\n}\n\n@media screen and (min-width: 750px) {\n  .newsletter-form {\n    align-items: flex-start;\n    margin: 0 auto;\n    max-width: 36rem;\n  }\n}\n\n.newsletter-form__field-wrapper {\n  width: 100%;\n}\n\n.newsletter-form__field-wrapper .field__input {\n  padding-right: 5rem;\n}\n\n.newsletter-form__field-wrapper .field {\n  z-index: 0;\n}\n\n.newsletter-form__message {\n  justify-content: center;\n  margin-bottom: 0;\n}\n\n.newsletter-form__message--success {\n  margin-top: 2rem;\n}\n\n@media screen and (min-width: 750px) {\n  .newsletter-form__message {\n    justify-content: flex-start;\n  }\n}\n\n.newsletter-form__button {\n  width: 4.4rem;\n  margin: 0;\n  right: var(--inputs-border-width);\n  top: 0;\n  height: 100%;\n  z-index: 2;\n}\n\n.newsletter-form__button:focus-visible {\n  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.4rem rgba(var(--color-foreground));\n  background-color: rgb(var(--color-background));\n}\n\n.newsletter-form__button:focus {\n  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)), 0 0 0 0.4rem rgba(var(--color-foreground));\n  background-color: rgb(var(--color-background));\n}\n\n.newsletter-form__button:not(:focus-visible):not(.focused) {\n  box-shadow: inherit;\n  background-color: inherit;\n}\n\n.newsletter-form__button .icon {\n  width: 1.5rem;\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,gBACC,QAAS,KACT,eAAgB,OAChB,gBAAiB,OACjB,YAAa,OACb,MAAO,KACP,SAAU,QACZ,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAVD,gBAWG,YAAa,WAXjB,OAYY,EAAE,KACV,UAAW,KACb,CACF,CAEA,CAAC,+BACC,MAAO,IACT,CAEA,CAJC,+BAI+B,CAAC,aAC/B,cAAe,IACjB,CAEA,CARC,+BAQ+B,CAAC,MAC/B,QAAS,CACX,CAEA,CAAC,yBACC,gBAAiB,OACjB,cAAe,CACjB,CAEA,CAAC,kCACC,WAAY,IACd,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAVD,yBAWG,gBAAiB,UACnB,CACF,CAEA,CAAC,wBACC,MAAO,OA7CT,OA8CU,EACR,MAAO,IAAI,uBACX,IAAK,EACL,OAAQ,KACR,QAAS,CACX,CAEA,CATC,uBASuB,eACtB,WAAY,EAAE,EAAE,EAAE,MAAO,IAAI,IAAI,oBAAoB,CAAE,EAAE,EAAE,EAAE,MAAO,KAAK,IAAI,qBAC7E,iBAAkB,IAAI,IAAI,oBAC5B,CAEA,CAdC,uBAcuB,OACtB,WAAY,EAAE,EAAE,EAAE,MAAO,IAAI,IAAI,oBAAoB,CAAE,EAAE,EAAE,EAAE,MAAO,KAAK,IAAI,qBAC7E,iBAAkB,IAAI,IAAI,oBAC5B,CAEA,CAnBC,uBAmBuB,KAAK,eAAe,KAAK,CAAC,SAChD,WAAY,QACZ,iBAAkB,OACpB,CAEA,CAxBC,wBAwBwB,CAAC,KACxB,MAAO,MACT",
+  "names": []
+}

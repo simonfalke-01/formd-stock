@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: font/woff2
+Content-Length: 12140
+Connection: keep-alive
+Server: cloudflare
+CF-Ray: 98fe05644cb5f91a-SIN
+CF-Cache-Status: HIT
+Accept-Ranges: bytes
+Access-Control-Allow-Origin: *
+Age: 885404
+Cache-Control: max-age=2629800, immutable
+Last-Modified: Thu, 04 Sep 2025 14:14:50 GMT
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+Content-Security-Policy-Report-Only: sandbox allow-scripts; report-to csp-reports
+Reporting-Endpoints: csp-reports="https://security-reports.shopifysvc.com/reporting-api?source_app=cdn-shopify-fonts&policy_id=aab9a444-ea1a-4369-a32b-f5a658701a14"
+Server-Timing: imagery;dur=79.789, imageryFetch;dur=79.471
+Server-Timing: cfRequestDuration;dur=12.000084
+Server-Timing: ipv6
+Server-Timing: cfRequestDuration;dur=33.000231
+Timing-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Dc: gcp-us-east1,gcp-us-east1
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+X-Request-Id: d3d9996e-7064-4bde-a656-a5cb3c51274a-1756995290
+X-Xss-Protection: 1; mode=block
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=aHv52fsvW22vayYwPprsMOMqDpp2G3LkbfWAuCCQEfSytdg9WYpWm%2BZcBtR5anKwU2zXOFw%2BbOflZwiFlI1J%2Fk1GTOJYWe6Lgs6YZE3nsYA08Gk93FQu9XWxju%2F3"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+alt-svc: h3=":443"; ma=86400
+
+<Data Binary>

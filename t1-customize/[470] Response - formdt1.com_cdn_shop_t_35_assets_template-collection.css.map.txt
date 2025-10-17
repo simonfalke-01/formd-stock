@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 962
+Connection: keep-alive
+CF-RAY: 98fe05669a2ff91a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Sat, 11 Oct 2025 02:57:38 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/template-collection.css.map>; rel="canonical"
+Server-Timing: imagery;dur=81.631, imageryFetch;dur=77.585
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 060b6a22-450d-4328-ad19-cc68386c7b45-1760151458
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=kXD1bfaBwHOxZJLMl7Ti4aK3bOCX1jPuN0IcadzuIpVGNCo4mRtvqg3Cme6N4arN1XLDx9tW%2BKqyJXgMNva5H0W48ffZBb7uwxevWMiQIxlPIBTS63skLVgs%2FEFx"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/template-collection.css?v=58558206033505836701745916367"
+  ],
+  "sourcesContent": [
+    "@media screen and (max-width: 749px) {\n  .collection .grid__item:only-child {\n    flex: 0 0 100%;\n    max-width: 100%;\n  }\n}\n\n@media screen and (max-width: 989px) {\n  .collection .slider.slider--tablet {\n    margin-bottom: 1.5rem;\n  }\n}\n\n.collection .loading-overlay {\n  position: absolute;\n  z-index: 1;\n  width: 1.8rem;\n}\n\n@media screen and (max-width: 749px) {\n  .collection .loading-overlay {\n    top: 0;\n    right: 0;\n  }\n}\n\n@media screen and (min-width: 750px) {\n  .collection .loading-overlay {\n    left: 0;\n  }\n}\n\n.collection .loading-overlay {\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: none;\n  width: 100%;\n  padding: 0 1.5rem;\n  opacity: 0.7;\n}\n\n@media screen and (min-width: 750px) {\n  .collection .loading-overlay {\n    padding-left: 5rem;\n    padding-right: 5rem;\n  }\n}\n\n.collection.loading .loading-overlay {\n  display: block;\n}\n\n.collection--empty .title-wrapper {\n  margin-top: 10rem;\n  margin-bottom: 15rem;\n}\n\n@media screen and (max-width: 989px) {\n  .collection .slider--tablet.product-grid {\n    scroll-padding-left: 1.5rem;\n  }\n}\n\n.collection__description > * {\n  margin: 0;\n}\n\n.collection__title.title-wrapper {\n  margin-bottom: 2.5rem;\n}\n\n.collection__title .title:not(:only-child) {\n  margin-bottom: 1rem;\n}\n\n@media screen and (min-width: 990px) {\n  .collection__title--desktop-slider .title {\n    margin-bottom: 2.5rem;\n  }\n\n  .collection__title.title-wrapper--self-padded-tablet-down {\n    padding: 0 5rem;\n  }\n\n  .collection slider-component:not(.page-width-desktop) {\n    padding: 0;\n  }\n\n  .collection--full-width slider-component:not(.slider-component-desktop) {\n    padding: 0 1.5rem;\n    max-width: none;\n  }\n}\n\n.collection__view-all a:not(.link) {\n  margin-top: 1rem;\n}\n"
+  ],
+  "mappings": "AAAA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAAC,WAAW,CAAC,UAAU,YACrB,KAAM,EAAE,EAAE,KACV,UAAW,IACb,CACF,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAPC,WAOW,CAAC,MAAM,CAAC,eAClB,cAAe,MACjB,CACF,CAEA,CAZG,WAYS,CAAC,gBACX,SAAU,SACV,QAAS,EACT,MAAO,MACT,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAnBC,WAmBW,CAPD,gBAQT,IAAK,EACL,MAAO,CACT,CACF,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CA1BC,WA0BW,CAdD,gBAeT,KAAM,CACR,CACF,CAEA,CA/BG,WA+BS,CAnBC,gBAoBX,IAAK,EACL,MAAO,EACP,OAAQ,EACR,KAAM,EACN,QAAS,KACT,MAAO,KAtCT,QAuCW,EAAE,OACX,QAAS,EACX,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CA3CC,WA2CW,CA/BD,gBAgCT,aAAc,KACd,cAAe,IACjB,CACF,CAEA,CAjDG,UAiDQ,CAAC,QAAQ,CArCP,gBAsCX,QAAS,KACX,CAEA,CAAC,kBAAkB,CAAC,cAClB,WAAY,MACZ,cAAe,KACjB,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CA3DC,WA2DW,CApDQ,cAoDO,CAAC,aAC1B,oBAAqB,MACvB,CACF,CAEA,CAAC,uBAAwB,CAAE,EAjE3B,OAkEU,CACV,CAEA,CAAC,iBAAiB,CAfE,cAgBlB,cAAe,MACjB,CAEA,CAJC,kBAIkB,CAAC,KAAK,KAAK,aAC5B,cAAe,IACjB,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAAC,kCAAkC,CALjB,MAMhB,cAAe,MACjB,CAEA,CAbD,iBAamB,CAAC,uCAlFrB,QAmFa,EAAE,IACb,CAEA,CArFC,WAqFW,gBAAgB,KAAK,CAAC,oBAtFpC,QAuFa,CACX,CAEA,CAAC,uBAAuB,gBAAgB,KAAK,CAAC,0BA1FhD,QA2Fa,EAAE,OACX,UAAW,IACb,CACF,CAEA,CAAC,qBAAqB,CAAC,KAAK,CAAC,MAC3B,WAAY,IACd",
+  "names": []
+}

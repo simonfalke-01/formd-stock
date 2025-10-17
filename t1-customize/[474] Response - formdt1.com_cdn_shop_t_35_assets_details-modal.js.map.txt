@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 952
+Connection: keep-alive
+CF-RAY: 98fe0566b982fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/details-modal.js.map>; rel="canonical"
+Server-Timing: imagery;dur=160.784, imageryFetch;dur=155.090
+Server-Timing: cfRequestDuration;dur=18.000126
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 5dc2ae27-e7ba-46b4-b705-3774ab867b1a-1760151458
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Sat, 11 Oct 2025 02:57:38 GMT
+CF-Cache-Status: HIT
+Age: 415558
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=avlmLAmsI5HbQf5SL6EifYfG1zHTRWTbZM%2F8OVHSdO42%2BjZGsgEu3%2F6TtHbVILHZE9lwIUVTcv1fZiE%2FZoZQLMM3OI%2BGzNhIQL43Hldp%2FSwKPH56hTC%2FAe%2FdBi04"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/details-modal.js?v=25581673532751508451745916367"
+  ],
+  "sourcesContent": [
+    "class DetailsModal extends HTMLElement {\n  constructor() {\n    super();\n    this.detailsContainer = this.querySelector('details');\n    this.summaryToggle = this.querySelector('summary');\n\n    this.detailsContainer.addEventListener('keyup', (event) => event.code.toUpperCase() === 'ESCAPE' && this.close());\n    this.summaryToggle.addEventListener('click', this.onSummaryClick.bind(this));\n    this.querySelector('button[type=\"button\"]').addEventListener('click', this.close.bind(this));\n\n    this.summaryToggle.setAttribute('role', 'button');\n  }\n\n  isOpen() {\n    return this.detailsContainer.hasAttribute('open');\n  }\n\n  onSummaryClick(event) {\n    event.preventDefault();\n    event.target.closest('details').hasAttribute('open') ? this.close() : this.open(event);\n  }\n\n  onBodyClick(event) {\n    if (!this.contains(event.target) || event.target.classList.contains('modal-overlay')) this.close(false);\n  }\n\n  open(event) {\n    this.onBodyClickEvent = this.onBodyClickEvent || this.onBodyClick.bind(this);\n    event.target.closest('details').setAttribute('open', true);\n    document.body.addEventListener('click', this.onBodyClickEvent);\n    document.body.classList.add('overflow-hidden');\n\n    trapFocus(\n      this.detailsContainer.querySelector('[tabindex=\"-1\"]'),\n      this.detailsContainer.querySelector('input:not([type=\"hidden\"])')\n    );\n  }\n\n  close(focusToggle = true) {\n    removeTrapFocus(focusToggle ? this.summaryToggle : null);\n    this.detailsContainer.removeAttribute('open');\n    document.body.removeEventListener('click', this.onBodyClickEvent);\n    document.body.classList.remove('overflow-hidden');\n  }\n}\n\ncustomElements.define('details-modal', DetailsModal);\n"
+  ],
+  "mappings": "AAAA,MAAM,qBAAqB,WAAY,CACrC,aAAc,CACZ,MAAM,EACN,KAAK,iBAAmB,KAAK,cAAc,SAAS,EACpD,KAAK,cAAgB,KAAK,cAAc,SAAS,EAEjD,KAAK,iBAAiB,iBAAiB,QAAU,OAAU,MAAM,KAAK,YAAY,IAAM,UAAY,KAAK,MAAM,CAAC,EAChH,KAAK,cAAc,iBAAiB,QAAS,KAAK,eAAe,KAAK,IAAI,CAAC,EAC3E,KAAK,cAAc,uBAAuB,EAAE,iBAAiB,QAAS,KAAK,MAAM,KAAK,IAAI,CAAC,EAE3F,KAAK,cAAc,aAAa,OAAQ,QAAQ,CAClD,CAEA,QAAS,CACP,OAAO,KAAK,iBAAiB,aAAa,MAAM,CAClD,CAEA,eAAe,MAAO,CACpB,MAAM,eAAe,EACrB,MAAM,OAAO,QAAQ,SAAS,EAAE,aAAa,MAAM,EAAI,KAAK,MAAM,EAAI,KAAK,KAAK,KAAK,CACvF,CAEA,YAAY,MAAO,EACb,CAAC,KAAK,SAAS,MAAM,MAAM,GAAK,MAAM,OAAO,UAAU,SAAS,eAAe,IAAG,KAAK,MAAM,EAAK,CACxG,CAEA,KAAK,MAAO,CACV,KAAK,iBAAmB,KAAK,kBAAoB,KAAK,YAAY,KAAK,IAAI,EAC3E,MAAM,OAAO,QAAQ,SAAS,EAAE,aAAa,OAAQ,EAAI,EACzD,SAAS,KAAK,iBAAiB,QAAS,KAAK,gBAAgB,EAC7D,SAAS,KAAK,UAAU,IAAI,iBAAiB,EAE7C,UACE,KAAK,iBAAiB,cAAc,iBAAiB,EACrD,KAAK,iBAAiB,cAAc,4BAA4B,CAClE,CACF,CAEA,MAAM,YAAc,GAAM,CACxB,gBAAgB,YAAc,KAAK,cAAgB,IAAI,EACvD,KAAK,iBAAiB,gBAAgB,MAAM,EAC5C,SAAS,KAAK,oBAAoB,QAAS,KAAK,gBAAgB,EAChE,SAAS,KAAK,UAAU,OAAO,iBAAiB,CAClD,CACF,CAEA,eAAe,OAAO,gBAAiB,YAAY",
+  "names": []
+}

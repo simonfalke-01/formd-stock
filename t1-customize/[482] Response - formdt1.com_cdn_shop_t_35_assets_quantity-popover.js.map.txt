@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1305
+Connection: keep-alive
+CF-RAY: 98fe0566fe645f2b-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/quantity-popover.js.map>; rel="canonical"
+Server-Timing: imagery;dur=93.752, imageryFetch;dur=87.238
+Server-Timing: cfRequestDuration;dur=19.999981
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 8a372552-b638-49b3-aeb5-797db0ec1049-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+Last-Modified: Fri, 17 Oct 2025 07:14:07 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=HK7KT6qQhGKHdtXGCvsC67DZ98r404UQiy3erjD9omLXQ7wrxEgyVQyDo77sqYtqxK1pCkDGRDJ%2FfIANZbx6NneUAsGPkorG6ZW4p6gSTquaqmQL4POvhVlfhzpp"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/quantity-popover.js?v=987015268078116491745916367"
+  ],
+  "sourcesContent": [
+    "if (!customElements.get('quantity-popover')) {\n  customElements.define(\n    'quantity-popover',\n    class QuantityPopover extends HTMLElement {\n      constructor() {\n        super();\n        this.mql = window.matchMedia('(min-width: 990px)');\n        this.mqlTablet = window.matchMedia('(min-width: 750px)');\n        this.infoButtonDesktop = this.querySelector('.quantity-popover__info-button--icon-only');\n        this.infoButtonMobile = this.querySelector('.quantity-popover__info-button--icon-with-label');\n        this.popoverInfo = this.querySelector('.quantity-popover__info');\n        this.closeButton = this.querySelector('.button-close');\n        this.eventMouseEnterHappened = false;\n\n        if (this.closeButton) {\n          this.closeButton.addEventListener('click', this.closePopover.bind(this));\n        }\n\n        if (this.popoverInfo && this.infoButtonDesktop && this.mqlTablet.matches) {\n          this.popoverInfo.addEventListener('mouseleave', this.closePopover.bind(this));\n        }\n\n        if (this.infoButtonDesktop) {\n          this.infoButtonDesktop.addEventListener('click', this.togglePopover.bind(this));\n          this.infoButtonDesktop.addEventListener('focusout', this.closePopover.bind(this));\n        }\n\n        if (this.infoButtonMobile) {\n          this.infoButtonMobile.addEventListener('click', this.togglePopover.bind(this));\n        }\n\n        if (this.infoButtonDesktop && this.mqlTablet.matches) {\n          this.infoButtonDesktop.addEventListener('mouseenter', this.togglePopover.bind(this));\n          this.infoButtonDesktop.addEventListener('mouseleave', this.closePopover.bind(this));\n        }\n      }\n\n      togglePopover(event) {\n        event.preventDefault();\n        if (event.type === 'mouseenter') {\n          this.eventMouseEnterHappened = true;\n        }\n\n        if (event.type === 'click' && this.eventMouseEnterHappened) return;\n\n        const button = this.infoButtonDesktop && this.mql.matches ? this.infoButtonDesktop : this.infoButtonMobile;\n        const isExpanded = button.getAttribute('aria-expanded') === 'true';\n\n        if ((this.mql.matches && !isExpanded) || event.type === 'click') {\n          button.setAttribute('aria-expanded', !isExpanded);\n\n          this.popoverInfo.toggleAttribute('hidden');\n\n          button.classList.toggle('quantity-popover__info-button--open');\n\n          this.infoButtonDesktop.classList.add('quantity-popover__info-button--icon-only--animation');\n        }\n\n        const isOpen = button.getAttribute('aria-expanded') === 'true';\n\n        if (isOpen && event.type !== 'mouseenter') {\n          button.focus();\n          button.addEventListener('keyup', (e) => {\n            if (e.key === 'Escape') {\n              this.closePopover(e);\n            }\n          });\n        }\n      }\n\n      closePopover(event) {\n        event.preventDefault();\n        const isButtonChild = this.infoButtonDesktop.contains(event.relatedTarget);\n        const isPopoverChild = this.popoverInfo.contains(event.relatedTarget);\n\n        const button = this.infoButtonDesktop && this.mql.matches ? this.infoButtonDesktop : this.infoButtonMobile;\n\n        if (!isButtonChild && !isPopoverChild) {\n          button.setAttribute('aria-expanded', 'false');\n          button.classList.remove('quantity-popover__info-button--open');\n          this.popoverInfo.setAttribute('hidden', '');\n          this.infoButtonDesktop.classList.remove('quantity-popover__info-button--icon-only--animation');\n        }\n\n        this.eventMouseEnterHappened = false;\n      }\n    }\n  );\n}\n"
+  ],
+  "mappings": "AAAK,eAAe,IAAI,kBAAkB,GACxC,eAAe,OACb,mBACA,cAA8B,WAAY,CACxC,aAAc,CACZ,MAAM,EACN,KAAK,IAAM,OAAO,WAAW,oBAAoB,EACjD,KAAK,UAAY,OAAO,WAAW,oBAAoB,EACvD,KAAK,kBAAoB,KAAK,cAAc,2CAA2C,EACvF,KAAK,iBAAmB,KAAK,cAAc,iDAAiD,EAC5F,KAAK,YAAc,KAAK,cAAc,yBAAyB,EAC/D,KAAK,YAAc,KAAK,cAAc,eAAe,EACrD,KAAK,wBAA0B,GAE3B,KAAK,aACP,KAAK,YAAY,iBAAiB,QAAS,KAAK,aAAa,KAAK,IAAI,CAAC,EAGrE,KAAK,aAAe,KAAK,mBAAqB,KAAK,UAAU,SAC/D,KAAK,YAAY,iBAAiB,aAAc,KAAK,aAAa,KAAK,IAAI,CAAC,EAG1E,KAAK,oBACP,KAAK,kBAAkB,iBAAiB,QAAS,KAAK,cAAc,KAAK,IAAI,CAAC,EAC9E,KAAK,kBAAkB,iBAAiB,WAAY,KAAK,aAAa,KAAK,IAAI,CAAC,GAG9E,KAAK,kBACP,KAAK,iBAAiB,iBAAiB,QAAS,KAAK,cAAc,KAAK,IAAI,CAAC,EAG3E,KAAK,mBAAqB,KAAK,UAAU,UAC3C,KAAK,kBAAkB,iBAAiB,aAAc,KAAK,cAAc,KAAK,IAAI,CAAC,EACnF,KAAK,kBAAkB,iBAAiB,aAAc,KAAK,aAAa,KAAK,IAAI,CAAC,EAEtF,CAEA,cAAc,MAAO,CAMnB,GALA,MAAM,eAAe,EACjB,MAAM,OAAS,eACjB,KAAK,wBAA0B,IAG7B,MAAM,OAAS,SAAW,KAAK,wBAAyB,OAE5D,MAAM,OAAS,KAAK,mBAAqB,KAAK,IAAI,QAAU,KAAK,kBAAoB,KAAK,iBACpF,WAAa,OAAO,aAAa,eAAe,IAAM,QAEvD,KAAK,IAAI,SAAW,CAAC,YAAe,MAAM,OAAS,WACtD,OAAO,aAAa,gBAAiB,CAAC,UAAU,EAEhD,KAAK,YAAY,gBAAgB,QAAQ,EAEzC,OAAO,UAAU,OAAO,qCAAqC,EAE7D,KAAK,kBAAkB,UAAU,IAAI,qDAAqD,GAG7E,OAAO,aAAa,eAAe,IAAM,QAE1C,MAAM,OAAS,eAC3B,OAAO,MAAM,EACb,OAAO,iBAAiB,QAAU,GAAM,CAClC,EAAE,MAAQ,UACZ,KAAK,aAAa,CAAC,CAEvB,CAAC,EAEL,CAEA,aAAa,MAAO,CAClB,MAAM,eAAe,EACrB,MAAM,cAAgB,KAAK,kBAAkB,SAAS,MAAM,aAAa,EACnE,eAAiB,KAAK,YAAY,SAAS,MAAM,aAAa,EAE9D,OAAS,KAAK,mBAAqB,KAAK,IAAI,QAAU,KAAK,kBAAoB,KAAK,iBAEtF,CAAC,eAAiB,CAAC,iBACrB,OAAO,aAAa,gBAAiB,OAAO,EAC5C,OAAO,UAAU,OAAO,qCAAqC,EAC7D,KAAK,YAAY,aAAa,SAAU,EAAE,EAC1C,KAAK,kBAAkB,UAAU,OAAO,qDAAqD,GAG/F,KAAK,wBAA0B,EACjC,CACF,CACF",
+  "names": []
+}

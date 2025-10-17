@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: text/css
+Content-Length: 413
+Connection: keep-alive
+CF-RAY: 98fe05657b72ce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-search.css>; rel="canonical"
+Server-Timing: imagery;dur=117.963, imageryFetch;dur=114.411
+Server-Timing: cfRequestDuration;dur=17.999887
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: aabc0401-cc2f-4073-afbc-e8e1438c8086-1752903343
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Sat, 19 Jul 2025 05:35:43 GMT
+CF-Cache-Status: HIT
+Age: 3556442
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=07R0n4AvaRF6NKZg8oiJCV2PtXGUyz3J9wMT4WGEY%2BcVcxGEts%2BLtqxaL0nN7%2F1fTtRJaYHweYVSkYy6VZgqZVzaC9ynXwzuxvCTHm1nefONCgbQVx2Aw3nMuilc"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.search__input.field__input{padding-right:9.8rem}.search__button{right:var(--inputs-border-width);top:var(--inputs-border-width)}.reset__button{right:calc(var(--inputs-border-width) + 4.4rem);top:var(--inputs-border-width)}.reset__button:not(:focus-visible):after{border-right:.1rem solid rgba(var(--color-foreground),.08);display:block;height:calc(100% - 1.6rem);content:"";position:absolute;right:0}.reset__button:not(:focus):after{border-right:.1rem solid rgba(var(--color-foreground),.08);display:block;height:calc(100% - 1.8rem);content:"";position:absolute;right:0}.search__button:focus-visible,.reset__button:focus-visible{background-color:rgb(var(--color-background));z-index:4}.search__button:focus,.reset__button:focus{background-color:rgb(var(--color-background));z-index:4}.search__button:not(:focus-visible):not(.focused),.reset__button:not(:focus-visible):not(.focused){box-shadow:inherit;background-color:inherit}.search__button:hover .icon,.reset__button:hover .icon{transform:scale(1.07)}.search__button .icon{height:1.8rem;width:1.8rem}.reset__button .icon.icon-close{height:1.8rem;width:1.8rem;stroke-width:.1rem}input::-webkit-search-decoration{-webkit-appearance:none}.template-search__results{position:relative}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-search.css.map?v=165164710990765432851745916367 */

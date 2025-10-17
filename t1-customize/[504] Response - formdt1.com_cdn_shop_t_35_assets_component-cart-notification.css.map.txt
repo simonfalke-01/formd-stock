@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1286
+Connection: keep-alive
+CF-RAY: 98fe0567bc3740fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-cart-notification.css.map>; rel="canonical"
+Server-Timing: imagery;dur=84.425, imageryFetch;dur=78.960
+Server-Timing: cfRequestDuration;dur=21.999836
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: b990fea4-d462-4678-8050-df16356a24e8-1760151458
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+Last-Modified: Sat, 11 Oct 2025 02:57:38 GMT
+CF-Cache-Status: HIT
+Age: 108019
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=G%2FiSimMNO4H0hchNL75yCgaOBz0KKleJbc6ap4Xnf4WDpJrebymD6XV9f%2FDkX03F3GmoqEoF0Ns%2BI7pfwzk6NofSWUkkbKjtoiK4pSQhQXGaGjhv11ylrxKbCrug"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-cart-notification.css?v=54116361853792938221745916367"
+  ],
+  "sourcesContent": [
+    ".cart-notification-wrapper {\n  position: relative;\n}\n\n.cart-notification-wrapper .cart-notification {\n  display: block;\n}\n\n.cart-notification {\n  border-bottom-right-radius: var(--popup-corner-radius);\n  border-bottom-left-radius: var(--popup-corner-radius);\n  border-color: rgba(var(--color-foreground), var(--popup-border-opacity));\n  border-style: solid;\n  border-width: 0 0 var(--popup-border-width);\n  padding: 2.5rem 3.5rem;\n  position: absolute;\n  right: 0;\n  transform: translateY(-100%);\n  visibility: hidden;\n  width: 100%;\n  box-shadow: var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)\n    rgba(var(--color-shadow), var(--popup-shadow-opacity));\n  z-index: -1;\n}\n\n.cart-notification.focused {\n  box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3),\n    var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)\n      rgba(var(--color-shadow), var(--popup-shadow-opacity));\n}\n\n.cart-notification:focus-visible {\n  box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3),\n    var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius)\n      rgba(var(--color-shadow), var(--popup-shadow-opacity));\n}\n\n@media screen and (min-width: 750px) {\n  .header-wrapper:not(.header-wrapper--border-bottom) + cart-notification .cart-notification {\n    border-top-width: var(--popup-border-width);\n  }\n\n  .cart-notification {\n    border-width: 0 var(--popup-border-width) var(--popup-border-width);\n    max-width: 36.8rem;\n    right: 2.2rem;\n  }\n}\n\n@media screen and (min-width: 990px) {\n  .cart-notification-wrapper:is(.page-width) > .cart-notification {\n    right: 4rem;\n  }\n}\n\n.cart-notification.animate {\n  transition: transform var(--duration-short) ease, visibility 0s var(--duration-short) ease;\n}\n\n.cart-notification.active {\n  transform: translateY(0);\n  transition: transform var(--duration-default) ease, visibility 0s;\n  visibility: visible;\n}\n\n.cart-notification__header {\n  align-items: flex-start;\n  display: flex;\n}\n\n.cart-notification__heading {\n  align-items: center;\n  display: flex;\n  flex-grow: 1;\n  margin-bottom: 0;\n  margin-top: 0;\n}\n\n.cart-notification__heading .icon-checkmark {\n  color: rgb(var(--color-foreground));\n  margin-right: 1rem;\n  width: 1.3rem;\n}\n\n.cart-notification__close {\n  margin-top: -2rem;\n  margin-right: -3rem;\n}\n\n.cart-notification__links {\n  text-align: center;\n}\n\n.cart-notification__links > * {\n  margin-top: 1rem;\n}\n\n.cart-notification-product {\n  align-items: flex-start;\n  display: flex;\n  padding-bottom: 3rem;\n  padding-top: 2rem;\n}\n\n.cart-notification-product dl {\n  margin-bottom: 0;\n  margin-top: 0;\n}\n\n.cart-notification-product__image {\n  display: inline-flex;\n  margin-right: 1.5rem;\n  margin-top: 0.5rem;\n}\n\n.cart-notification-product__image:after {\n  content: none;\n}\n\n.cart-notification-product__name {\n  margin-bottom: 0.5rem;\n  margin-top: 0;\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,0BACC,SAAU,QACZ,CAEA,CAJC,0BAI0B,CAAC,kBAC1B,QAAS,KACX,CAEA,CAJ4B,kBAK1B,2BAA4B,IAAI,uBAChC,0BAA2B,IAAI,uBAC/B,aAAc,KAAK,IAAI,mBAAmB,CAAE,IAAI,yBAChD,aAAc,MACd,aAAc,EAAE,EAAE,IAAI,sBAbxB,QAcW,OAAO,OAChB,SAAU,SACV,MAAO,EACP,UAAW,WAAW,OACtB,WAAY,OACZ,MAAO,KACP,WAAY,IAAI,kCAAkC,IAAI,gCAAgC,IAAI,4BACxF,KAAK,IAAI,eAAe,CAAE,IAAI,yBAChC,QAAS,EACX,CAEA,CArB4B,iBAqBV,CAAC,QACjB,WAAY,EAAE,EAAE,MAAS,KAAK,IAAI,mBAAmB,CAAE,GAAI,CACzD,IAAI,kCAAkC,IAAI,gCAAgC,IAAI,4BAC5E,KAAK,IAAI,eAAe,CAAE,IAAI,wBACpC,CAEA,CA3B4B,iBA2BV,eAChB,WAAY,EAAE,EAAE,MAAS,KAAK,IAAI,mBAAmB,CAAE,GAAI,CACzD,IAAI,kCAAkC,IAAI,gCAAgC,IAAI,4BAC5E,KAAK,IAAI,eAAe,CAAE,IAAI,wBACpC,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAAC,cAAc,KAAK,CAAC,8BAA+B,CAAE,kBAAkB,CAlC9C,kBAmCxB,iBAAkB,IAAI,qBACxB,CAEA,CAtC0B,kBAuCxB,aAAc,EAAE,IAAI,sBAAsB,IAAI,sBAC9C,UAAW,QACX,MAAO,MACT,CACF,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAlDD,yBAkD2B,IAAI,CAAC,WAAY,CAAE,CA9CnB,kBA+CxB,MAAO,IACT,CACF,CAEA,CAnD4B,iBAmDV,CAAC,QACjB,WAAY,UAAU,IAAI,kBAAkB,IAAI,CAAE,WAAW,GAAG,IAAI,kBAAkB,IACxF,CAEA,CAvD4B,iBAuDV,CAAC,OACjB,UAAW,WAAW,GACtB,WAAY,UAAU,IAAI,oBAAoB,IAAI,CAAE,WAAW,GAC/D,WAAY,OACd,CAEA,CAAC,0BACC,YAAa,WACb,QAAS,IACX,CAEA,CAAC,2BACC,YAAa,OACb,QAAS,KACT,UAAW,EACX,cAAe,EACf,WAAY,CACd,CAEA,CARC,2BAQ2B,CAAC,eAC3B,MAAO,IAAI,IAAI,qBACf,aAAc,KACd,MAAO,MACT,CAEA,CAAC,yBACC,WAAY,MACZ,aAAc,KAChB,CAEA,CAAC,yBACC,WAAY,MACd,CAEA,CAJC,wBAIyB,CAAE,EAC1B,WAAY,IACd,CAEA,CAAC,0BACC,YAAa,WACb,QAAS,KACT,eAAgB,KAChB,YAAa,IACf,CAEA,CAPC,0BAO0B,GACzB,cAAe,EACf,WAAY,CACd,CAEA,CAAC,iCACC,QAAS,YACT,aAAc,OACd,WAAY,KACd,CAEA,CANC,gCAMgC,OAC/B,QAAS,IACX,CAEA,CAAC,gCACC,cAAe,MACf,WAAY,CACd",
+  "names": []
+}

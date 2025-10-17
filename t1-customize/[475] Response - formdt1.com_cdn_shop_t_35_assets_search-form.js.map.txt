@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 871
+Connection: keep-alive
+CF-RAY: 98fe0566ce4b5f2b-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/search-form.js.map>; rel="canonical"
+Server-Timing: imagery;dur=119.649, imageryFetch;dur=115.185
+Server-Timing: cfRequestDuration;dur=20.999908
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 63251543-34a3-48fc-a079-0f64ebc98354-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Fri, 17 Oct 2025 07:14:07 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=x5gEYXCrCo6KgH5HddqoLxqz1tCKnPX5hvb8UW%2Ft3szDOBvprX8ptGgRIJb9wZwBm6PoYPvah7WdKwqnQ8S%2FpGGsQzEs9BRf25PeykWqsamF6iYHrVwAzhpftdnh"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/search-form.js?v=133129549252120666541745916367"
+  ],
+  "sourcesContent": [
+    "class SearchForm extends HTMLElement {\n  constructor() {\n    super();\n    this.input = this.querySelector('input[type=\"search\"]');\n    this.resetButton = this.querySelector('button[type=\"reset\"]');\n\n    if (this.input) {\n      this.input.form.addEventListener('reset', this.onFormReset.bind(this));\n      this.input.addEventListener(\n        'input',\n        debounce((event) => {\n          this.onChange(event);\n        }, 300).bind(this)\n      );\n    }\n  }\n\n  toggleResetButton() {\n    const resetIsHidden = this.resetButton.classList.contains('hidden');\n    if (this.input.value.length > 0 && resetIsHidden) {\n      this.resetButton.classList.remove('hidden');\n    } else if (this.input.value.length === 0 && !resetIsHidden) {\n      this.resetButton.classList.add('hidden');\n    }\n  }\n\n  onChange() {\n    this.toggleResetButton();\n  }\n\n  shouldResetForm() {\n    return !document.querySelector('[aria-selected=\"true\"] a');\n  }\n\n  onFormReset(event) {\n    // Prevent default so the form reset doesn't set the value gotten from the url on page load\n    event.preventDefault();\n    // Don't reset if the user has selected an element on the predictive search dropdown\n    if (this.shouldResetForm()) {\n      this.input.value = '';\n      this.input.focus();\n      this.toggleResetButton();\n    }\n  }\n}\n\ncustomElements.define('search-form', SearchForm);\n"
+  ],
+  "mappings": "AAAA,MAAM,mBAAmB,WAAY,CACnC,aAAc,CACZ,MAAM,EACN,KAAK,MAAQ,KAAK,cAAc,sBAAsB,EACtD,KAAK,YAAc,KAAK,cAAc,sBAAsB,EAExD,KAAK,QACP,KAAK,MAAM,KAAK,iBAAiB,QAAS,KAAK,YAAY,KAAK,IAAI,CAAC,EACrE,KAAK,MAAM,iBACT,QACA,SAAU,OAAU,CAClB,KAAK,SAAS,KAAK,CACrB,EAAG,GAAG,EAAE,KAAK,IAAI,CACnB,EAEJ,CAEA,mBAAoB,CAClB,MAAM,cAAgB,KAAK,YAAY,UAAU,SAAS,QAAQ,EAC9D,KAAK,MAAM,MAAM,OAAS,GAAK,cACjC,KAAK,YAAY,UAAU,OAAO,QAAQ,EACjC,KAAK,MAAM,MAAM,SAAW,GAAK,CAAC,eAC3C,KAAK,YAAY,UAAU,IAAI,QAAQ,CAE3C,CAEA,UAAW,CACT,KAAK,kBAAkB,CACzB,CAEA,iBAAkB,CAChB,MAAO,CAAC,SAAS,cAAc,0BAA0B,CAC3D,CAEA,YAAY,MAAO,CAEjB,MAAM,eAAe,EAEjB,KAAK,gBAAgB,IACvB,KAAK,MAAM,MAAQ,GACnB,KAAK,MAAM,MAAM,EACjB,KAAK,kBAAkB,EAE3B,CACF,CAEA,eAAe,OAAO,cAAe,UAAU",
+  "names": []
+}

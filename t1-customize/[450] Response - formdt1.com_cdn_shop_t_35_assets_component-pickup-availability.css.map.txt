@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1628
+Connection: keep-alive
+CF-RAY: 98fe0565fada40fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-pickup-availability.css.map>; rel="canonical"
+Server-Timing: imagery;dur=155.009, imageryFetch;dur=147.938
+Server-Timing: cfRequestDuration;dur=25.000095
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 342e4e41-9565-4ddd-a5e0-9223d4408a40-1760455470
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Tue, 14 Oct 2025 15:24:30 GMT
+CF-Cache-Status: HIT
+Age: 251
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2Bals0GoMk8kSAC%2B0Nyh8VLd6SKpWqifYdEZV7lamebopv%2BpYVnauiLHUbsVXylk6TVlQ%2F3%2F6P2kzInFUDhWLqEQg%2B%2FZbRhks0QNEAZMJU7eO3614kt3J6qXeMr3%2F"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-pickup-availability.css?v=34645222959864780961745916367"
+  ],
+  "sourcesContent": [
+    "pickup-availability {\n  display: block;\n}\n\npickup-availability[available] {\n  min-height: 8rem;\n}\n\n.pickup-availability-preview {\n  align-items: flex-start;\n  display: flex;\n  gap: 0.2rem;\n  padding: 1rem 2rem 0 0;\n}\n\n.pickup-availability-preview .icon {\n  flex-shrink: 0;\n  height: 1.8rem;\n}\n\n.pickup-availability-preview .icon-unavailable {\n  height: 1.6rem;\n  margin-top: 0.1rem;\n}\n\n.pickup-availability-button {\n  background-color: transparent;\n  color: rgba(var(--color-foreground), 0.75);\n  letter-spacing: 0.06rem;\n  padding: 0 0 0.2rem;\n  text-align: left;\n  text-decoration: underline;\n}\n\n.pickup-availability-button:hover {\n  color: rgb(var(--color-foreground));\n}\n\n.pickup-availability-info * {\n  margin: 0 0 0.6rem;\n}\n\npickup-availability-drawer {\n  background-color: rgb(var(--color-background));\n  height: 100%;\n  opacity: 0;\n  overflow-y: auto;\n  padding: 2rem;\n  position: fixed;\n  top: 0;\n  right: 0;\n  z-index: 4;\n  transition: opacity var(--duration-default) ease, transform var(--duration-default) ease;\n  transform: translateX(100%);\n  width: 100%;\n  border-width: 0 0 0 var(--drawer-border-width);\n  border-color: rgba(var(--color-foreground), var(--drawer-border-opacity));\n  border-style: solid;\n  filter: drop-shadow(\n    var(--drawer-shadow-horizontal-offset) var(--drawer-shadow-vertical-offset) var(--drawer-shadow-blur-radius)\n      rgba(var(--color-shadow), var(--drawer-shadow-opacity))\n  );\n}\n\npickup-availability-drawer[open] {\n  transform: translateX(0);\n  opacity: 1;\n}\n\n@media screen and (min-width: 750px) {\n  pickup-availability-drawer {\n    transform: translateX(100%);\n    width: 37.5rem;\n  }\n\n  pickup-availability-drawer[open] {\n    opacity: 1;\n    transform: translateX(0);\n    animation: animateDrawerOpen var(--duration-default) ease;\n  }\n}\n\n.pickup-availability-header {\n  align-items: flex-start;\n  display: flex;\n  justify-content: space-between;\n  margin-bottom: 1.2rem;\n}\n\n.pickup-availability-drawer-title {\n  margin: 0.5rem 0 0;\n}\n\n.pickup-availability-header .icon {\n  width: 2rem;\n}\n\n.pickup-availability-drawer-button {\n  background-color: transparent;\n  border: none;\n  color: rgb(var(--color-foreground));\n  cursor: pointer;\n  display: block;\n  height: 4.4rem;\n  padding: 1.2rem;\n  width: 4.4rem;\n}\n\n.pickup-availability-drawer-button:hover {\n  color: rgba(var(--color-foreground), 0.75);\n}\n\n.pickup-availability-variant {\n  font-size: 1.3rem;\n  line-height: calc(1 + 0.2 / var(--font-body-scale));\n  margin: 0 0 1.2rem;\n  text-transform: capitalize;\n}\n\n.pickup-availability-variant > * + strong {\n  margin-left: 1rem;\n}\n\n.pickup-availability-list__item {\n  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);\n  padding: 2rem 0;\n}\n\n.pickup-availability-list__item:first-child {\n  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);\n}\n\n.pickup-availability-list__item > * {\n  margin: 0;\n}\n\n.pickup-availability-list__item > * + * {\n  margin-top: 1rem;\n}\n\n.pickup-availability-address {\n  font-style: normal;\n  font-size: 1.2rem;\n  line-height: calc(1 + 0.5 / var(--font-body-scale));\n}\n\n.pickup-availability-address p {\n  margin: 0;\n}\n\n@keyframes animateDrawerOpen {\n  @media screen and (max-width: 749px) {\n    0% {\n      opacity: 0;\n      transform: translateX(100%);\n    }\n\n    100% {\n      opacity: 1;\n      transform: translateX(0);\n    }\n  }\n\n  @media screen and (min-width: 750px) {\n    0% {\n      opacity: 0;\n      transform: translateX(100%);\n    }\n\n    100% {\n      opacity: 1;\n      transform: translateX(0);\n    }\n  }\n}\n"
+  ],
+  "mappings": "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",
+  "names": []
+}

@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 437
+Connection: keep-alive
+CF-RAY: 98fe0566af3e5fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Wed, 15 Oct 2025 15:14:58 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/pubsub.js.map>; rel="canonical"
+Server-Timing: imagery;dur=176.871, imageryFetch;dur=174.123
+Server-Timing: cfRequestDuration;dur=23.000002
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 06b79d4d-6c4b-4def-bf6f-bd1c79364391-1760541298
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0AAery1p4d%2BLmCYXaJOPrIgP3%2FAh7tB21dNOdXIhVcUUEdxSxsG9HaD5slBXwmNbVbSphkKUIkPI08z0PBF4gmdR%2BuKscA5269fGHCC4So4wjjbE%2FJThYumFNUnT"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/pubsub.js?v=158357773527763999511745916367"
+  ],
+  "sourcesContent": [
+    "let subscribers = {};\n\nfunction subscribe(eventName, callback) {\n  if (subscribers[eventName] === undefined) {\n    subscribers[eventName] = [];\n  }\n\n  subscribers[eventName] = [...subscribers[eventName], callback];\n\n  return function unsubscribe() {\n    subscribers[eventName] = subscribers[eventName].filter((cb) => {\n      return cb !== callback;\n    });\n  };\n}\n\nfunction publish(eventName, data) {\n  if (subscribers[eventName]) {\n    subscribers[eventName].forEach((callback) => {\n      callback(data);\n    });\n  }\n}\n"
+  ],
+  "mappings": "AAAA,IAAI,YAAc,CAAC,EAEnB,SAAS,UAAU,UAAW,SAAU,CACtC,OAAI,YAAY,SAAS,IAAM,SAC7B,YAAY,SAAS,EAAI,CAAC,GAG5B,YAAY,SAAS,EAAI,CAAC,GAAG,YAAY,SAAS,EAAG,QAAQ,EAEtD,UAAuB,CAC5B,YAAY,SAAS,EAAI,YAAY,SAAS,EAAE,OAAQ,IAC/C,KAAO,QACf,CACH,CACF,CAEA,SAAS,QAAQ,UAAW,KAAM,CAC5B,YAAY,SAAS,GACvB,YAAY,SAAS,EAAE,QAAS,UAAa,CAC3C,SAAS,IAAI,CACf,CAAC,CAEL",
+  "names": []
+}

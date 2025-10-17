@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: text/javascript; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+CF-RAY: 98fe05677fee5fe6-SIN
+x-sorting-hat-podid: 317
+x-sorting-hat-shopid: 82998395198
+vary: Accept-Encoding,Accept
+x-frame-options: SAMEORIGIN
+x-shopid: 82998395198
+x-shardid: 317
+x-robots-tag: noindex, nofollow
+cache-control: max-age=31536000, public
+strict-transport-security: max-age=7889238
+x-request-id: f9c8b84e-6860-435c-88ee-98a8a0e62622-1760108253
+server-timing: processing;dur=21, spanner_session;desc="count=1";dur=5.4, verdict_flag_enabled;desc="count=15";dur=0.645, _y;desc="31a4a77f-fa75-4b55-830c-4d1ca8593b8b", _s;desc="ce8da08f-5F26-404C-2768-E48C9C96CCF1", _cmp;desc="3.AMPS_MY07___fyUF2I4JQE-0Swlp5Htjdg"
+Server-Timing: cfRequestDuration;dur=25.000095
+content-security-policy: frame-ancestors 'self'; report-uri /csp-report?source%5Baction%5D=web_pixel_javascript_response&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=web_pixels&source%5Bsection%5D=services&source%5Buuid%5D=f9c8b84e-6860-435c-88ee-98a8a0e62622-1760108253; report-to shopify-csp
+x-content-type-options: nosniff
+x-download-options: noopen
+x-permitted-cross-domain-policies: none
+x-xss-protection: 1; mode=block
+reporting-endpoints: shopify-csp="/csp-report?source%5Baction%5D=web_pixel_javascript_response&source%5Bapp%5D=Shopify&source%5Bcontroller%5D=web_pixels&source%5Bsection%5D=services&source%5Buuid%5D=f9c8b84e-6860-435c-88ee-98a8a0e62622-1760108253"
+x-dc: gcp-us-east1,gcp-us-east1,gcp-us-east1
+content-encoding: gzip
+Alt-Svc: h3=":443"; ma=86400
+CF-Cache-Status: HIT
+Age: 577243
+Last-Modified: Fri, 10 Oct 2025 14:57:34 GMT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=UVSb24NZrsitjqW4UoEyxbszIVjzCKliKD0q%2B%2FCwaVGB5Q6oD0SpiAJGVx0dY4NrAcPX5HkSh1L6UjXdoM5RgFM4a%2FTp7FPljSTEb3sEgR3F708DSmhDvuj3am6A"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+
+importScripts('https://formdt1.com/cdn/wpm/s98688ed7w4720d202p17656315m70f274dfm.js');
+globalThis.shopify = self.webPixelsManager.createShopifyExtend('247300414', 'APP');
+importScripts('/web-pixels/strict/app/web-pixel-247300414@d7d64341679fcfe8ca26ee5e4b0b7e78.js');

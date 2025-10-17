@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 738
+Connection: keep-alive
+CF-RAY: 98fe0566992cfe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-volume-pricing.css.map>; rel="canonical"
+Server-Timing: imagery;dur=101.511, imageryFetch;dur=97.612
+Server-Timing: cfRequestDuration;dur=13.999939
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: fd752806-42ca-439d-bcbb-bb4934a315f7-1760260755
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Sun, 12 Oct 2025 09:19:15 GMT
+CF-Cache-Status: HIT
+Age: 251
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=M8t2nt6Zxj9f8c46yhp6swgPg9cd6A1fx1A5BwuUoElwzNMSd0dYcsJMnXH%2B8IhMDYR%2FcgQ4OTHJO61o3QcdEaOHvDl%2FYGfLJSHp7KT816YxWho%2BOVinZCY7H8m0"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-volume-pricing.css?v=111870094811454961941745916367"
+  ],
+  "sourcesContent": [
+    "volume-pricing {\n  display: block;\n  margin-top: 2rem;\n}\n\nvolume-pricing li:nth-child(odd) {\n  background: rgba(var(--color-foreground), 0.04);\n}\n\nvolume-pricing ul {\n  margin-top: 1.2rem;\n}\n\nvolume-pricing li {\n  font-size: 1.4rem;\n  letter-spacing: 0.06rem;\n  padding: 0.6rem 0.8rem;\n  display: flex;\n  justify-content: space-between;\n}\n\ndiv.volume-pricing-note {\n  margin-top: -2.6rem;\n}\n\n.product--no-media .volume-pricing-note {\n  text-align: center;\n}\n\n.product--no-media volume-pricing {\n  width: 30rem;\n}\n\n.volume-pricing-note span,\nvolume-pricing .label-show-more {\n  font-size: 1.2rem;\n  letter-spacing: 0.07rem;\n}\n\nvolume-pricing show-more-button {\n  margin-top: 0.8rem;\n}\n\n.product-form__input price-per-item,\n.price-per-item__container {\n  display: flex;\n  align-items: center;\n  gap: 1rem;\n}\n\n.product-form__input .price-per-item {\n  color: rgba(var(--color-foreground));\n  font-size: 1.4rem;\n  letter-spacing: 0.06rem;\n}\n\n.price-per-item dl {\n  margin: 0;\n}\n\n.price-per-item dd {\n  margin-left: 0;\n}\n\n.price-per-item__container .variant-item__old-price,\n.price__regular .variant-item__old-price {\n  color: rgba(var(--color-foreground), 0.75);\n  font-size: 1.2rem;\n  letter-spacing: 0.07rem;\n}\n"
+  ],
+  "mappings": "AAAA,eACE,QAAS,MACT,WAAY,IACd,CAEA,eAAe,EAAE,gBACf,WAAY,KAAK,IAAI,mBAAmB,CAAE,IAC5C,CAEA,eAAe,GACb,WAAY,MACd,CAEA,eAAe,GACb,UAAW,OACX,eAAgB,OAflB,QAgBW,MAAO,MAChB,QAAS,KACT,gBAAiB,aACnB,CAEA,GAAG,CAAC,oBACF,WAAY,OACd,CAEA,CAAC,kBAAkB,CAJf,oBAKF,WAAY,MACd,CAEA,CAJC,kBAIkB,eACjB,MAAO,KACT,CAEA,CAZI,oBAYiB,KACrB,eAAe,CAAC,gBACd,UAAW,OACX,eAAgB,MAClB,CAEA,eAAe,iBACb,WAAY,KACd,CAEA,CAAC,oBAAoB,eACrB,CAAC,0BACC,QAAS,KACT,YAAa,OACb,IAAK,IACP,CAEA,CAPC,oBAOoB,CAAC,eACpB,MAAO,KAAK,IAAI,qBAChB,UAAW,OACX,eAAgB,MAClB,CAEA,CANsB,eAMN,GAxDhB,OAyDU,CACV,CAEA,CAVsB,eAUN,GACd,YAAa,CACf,CAEA,CApBC,0BAoB0B,CAAC,wBAC5B,CAAC,eAAe,CADY,wBAE1B,MAAO,KAAK,IAAI,mBAAmB,CAAE,KACrC,UAAW,OACX,eAAgB,MAClB",
+  "names": []
+}

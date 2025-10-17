@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/css
+Content-Length: 196
+Connection: keep-alive
+CF-RAY: 98fe05703bd6f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=2592000
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/StackedMerchandisePreview.CKAakmU8.css>; rel="canonical"
+Server-Timing: imagery;dur=19.440, imageryFetch;dur=19.286
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="StackedMerchandisePreview.*.css", id="CKAakmU8"
+X-Content-Type-Options: nosniff
+X-Request-Id: 41047184-895d-4929-bf18-72ede2fb6733-1759399226
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Thu, 02 Oct 2025 10:00:26 GMT
+CF-Cache-Status: HIT
+Age: 1153993
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2BY3ONEVypXKqCGcusliUBu%2FQ4hun78aks1SwyItegIhuNXs1Afn4StSR8DqcVDuXpp1FkKR%2B8uCO2mSt%2BPXhFuR9UuJbY20Uq%2BheFnxyCilnq%2Fm5HRgNkL8fAH4m"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+._17k99eh0{position:absolute;display:flex;align-items:center}._17k99eh1{z-index:3}._17k99eh2{transform:translate(calc(-100% + 4px));z-index:1;background-color:var(--x-default-color-border);-webkit-mask:linear-gradient(to left,white 3px,transparent 3px);mask:linear-gradient(to left,white 3px,transparent 3px)}._17k99eh2+._17k99eh2{transform:translate(calc(-200% + 8px));z-index:0}[dir=rtl] ._17k99eh2{transform:translate(calc(100% - 4px));-webkit-mask:linear-gradient(to right,white 3px,transparent 3px);mask:linear-gradient(to right,white 3px,transparent 3px)}[dir=rtl] ._17k99eh2+._17k99eh2{transform:translate(calc(200% - 8px));z-index:0}

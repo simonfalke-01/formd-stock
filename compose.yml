@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  formd-stock:
+    build: .
+    container_name: formd-stock-monitor
+    restart: unless-stopped
+    environment:
+      - SHOP_URL=${SHOP_URL:-https://formdt1.com}
+      - COLLECTION_PATH=${COLLECTION_PATH:-/collections/all/products.json?limit=250}
+      - POLL_INTERVAL=${POLL_INTERVAL:-15s}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - USER_AGENT=${USER_AGENT:-FormD-Stock-Monitor/1.0}
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

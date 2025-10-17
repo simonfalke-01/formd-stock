@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1432
+Connection: keep-alive
+CF-RAY: 98fe0565de665fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Wed, 15 Oct 2025 15:14:58 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-swatch-input.css.map>; rel="canonical"
+Server-Timing: imagery;dur=101.070, imageryFetch;dur=94.413
+Server-Timing: cfRequestDuration;dur=19.999981
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 9b3726aa-11eb-4b1a-8255-09562893bf73-1760541298
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=nSu8XyJi4iZwzogX4EzJ8eeQ%2B0yWb2GFjPrwxqRt37GS0A%2FBdg1EBTCMvU93iV56e9ze%2BVQ6SJujl7FmVsKFl6uIG7bSL04woQTUPYtMBecaJxZUVosECZKdduwP"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-swatch-input.css?v=61683592951238328641745916367"
+  ],
+  "sourcesContent": [
+    "/* swatch-input lives in its own file for reusability of the swatch in other areas than the product form context */\n.swatch-input__input + .swatch-input__label {\n  --swatch-input--border-radius: 50%;\n  display: inline-block;\n  max-width: 100%;\n  border-radius: var(--swatch-input--border-radius);\n  cursor: pointer;\n  outline-offset: 0.2rem;\n  outline-color: transparent;\n  outline-style: solid;\n  transition-property: outline-color, outline-width, box-shadow;\n  transition-duration: var(--duration-short);\n  transition-timing-function: ease;\n  forced-color-adjust: none;\n}\n\n.swatch-input__input + .swatch-input__label.swatch-input__label--square {\n  --swatch-input--border-radius: 0.2rem;\n}\n\n/* Active state */\n.swatch-input__input:active + .swatch-input__label,\n.swatch-input__input:checked + .swatch-input__label {\n  outline: 0.1rem solid rgb(var(--color-foreground));\n}\n\n/* Hover state */\n.swatch-input__input + .swatch-input__label:hover,\n.swatch-input__input:hover + .swatch-input__label {\n  outline: 0.2rem solid rgba(var(--color-foreground), 0.4);\n}\n\n/* Focus visible */\n.swatch-input__input:focus-visible + .swatch-input__label {\n  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);\n  box-shadow: 0 0 0 0.2rem rgb(var(--color-background)), 0 0 0.1rem 0.5rem rgba(var(--color-foreground), 0.25);\n}\n\n/* Active and focused */\n.swatch-input__input:active:focus-visible + .swatch-input__label,\n.swatch-input__input:checked:focus-visible + .swatch-input__label {\n  outline: 0.1rem solid rgb(var(--color-foreground));\n  box-shadow: 0 0 0 0.2rem rgb(var(--color-background)), 0 0 0.1rem 0.4rem rgba(var(--color-foreground), 0.25);\n}\n\n/* Visually disabled */\n.swatch-input__input.visually-disabled:not(:active):not(:checked) + .swatch-input__label {\n  transition: none;\n}\n.swatch-input__input.visually-disabled:not(:active):not(:checked) + .swatch-input__label:hover {\n  outline: none;\n}\n\n/* Actually disabled */\n.swatch-input__input:disabled + .swatch-input__label {\n  pointer-events: none;\n}\n\n/* Overrides for swatch snippet when used inside disabled swatch-input */\n.swatch-input__input:disabled + .swatch-input__label > .swatch,\n.swatch-input__input.visually-disabled + .swatch-input__label > .swatch {\n  position: relative;\n  overflow: hidden;\n}\n\n/* Disabled styles */\n.swatch-input__input:disabled + .swatch-input__label > .swatch,\n.swatch-input__input.visually-disabled + .swatch-input__label > .swatch {\n  opacity: 0.4;\n}\n\n/* Display crossed out line over swatch when input is disabled */\n.swatch-input__input:disabled + .swatch-input__label > .swatch::after,\n.swatch-input__input.visually-disabled + .swatch-input__label > .swatch::after {\n  /* Diagonal of a square = length of the side * sqrt(2)  */\n  --diagonal--size: calc(var(--swatch-input--size) * 1.414);\n  --crossed-line--size: 0.1rem;\n  content: '';\n  position: absolute;\n  bottom: calc(var(--crossed-line--size) * -0.5);\n  left: 0;\n  width: var(--diagonal--size);\n  height: var(--crossed-line--size);\n  background-color: rgb(var(--color-foreground));\n  transform: rotate(-45deg);\n  transform-origin: left;\n}\n"
+  ],
+  "mappings": "AACA,CAAC,mBAAoB,CAAE,CAAC,oBACtB,+BAA+B,IAC/B,QAAS,aACT,UAAW,KACX,cAAe,IAAI,+BACnB,OAAQ,QACR,eAAgB,MAChB,cAAe,YACf,cAAe,MACf,oBAAqB,aAAa,CAAE,aAAa,CAAE,WACnD,oBAAqB,IAAI,kBACzB,2BAA4B,KAC5B,oBAAqB,IACvB,CAEA,CAfC,mBAeoB,CAAE,CAfC,mBAemB,CAAC,4BAC1C,+BAA+B,KACjC,CAGA,CApBC,mBAoBmB,OAAQ,CAAE,CApBN,oBAqBxB,CArBC,mBAqBmB,QAAS,CAAE,CArBP,oBAsBtB,QAAS,MAAO,MAAM,IAAI,IAAI,oBAChC,CAGA,CA1BC,mBA0BoB,CAAE,CA1BC,mBA0BmB,OAC3C,CA3BC,mBA2BmB,MAAO,CAAE,CA3BL,oBA4BtB,QAAS,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,GACtD,CAGA,CAhCC,mBAgCmB,cAAe,CAAE,CAhCb,oBAiCtB,QAAS,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,IACpD,WAAY,EAAE,EAAE,EAAE,MAAO,IAAI,IAAI,oBAAoB,CAAE,EAAE,EAAE,MAAO,MAAO,KAAK,IAAI,mBAAmB,CAAE,IACzG,CAGA,CAtCC,mBAsCmB,OAAO,cAAe,CAAE,CAtCpB,oBAuCxB,CAvCC,mBAuCmB,QAAQ,cAAe,CAAE,CAvCrB,oBAwCtB,QAAS,MAAO,MAAM,IAAI,IAAI,qBAC9B,WAAY,EAAE,EAAE,EAAE,MAAO,IAAI,IAAI,oBAAoB,CAAE,EAAE,EAAE,MAAO,MAAO,KAAK,IAAI,mBAAmB,CAAE,IACzG,CAGA,CA7CC,mBA6CmB,CAAC,iBAAiB,KAAK,QAAQ,KAAK,SAAU,CAAE,CA7C5C,oBA8CtB,WAAY,IACd,CACA,CAhDC,mBAgDmB,CAHC,iBAGiB,KAAK,QAAQ,KAAK,SAAU,CAAE,CAhD5C,mBAgDgE,OACtF,QAAS,IACX,CAGA,CArDC,mBAqDmB,SAAU,CAAE,CArDR,oBAsDtB,eAAgB,IAClB,CAGA,CA1DC,mBA0DmB,SAAU,CAAE,CA1DR,mBA0D6B,CAAE,CAAC,OACxD,CA3DC,mBA2DmB,CAdC,iBAckB,CAAE,CA3DjB,mBA2DsC,CAAE,CADR,OAEtD,SAAU,SACV,SAAU,MACZ,CAGA,CAjEC,mBAiEmB,SAAU,CAAE,CAjER,mBAiE6B,CAAE,CAPC,OAQxD,CAlEC,mBAkEmB,CArBC,iBAqBkB,CAAE,CAlEjB,mBAkEsC,CAAE,CARR,OAStD,QAAS,EACX,CAGA,CAvEC,mBAuEmB,SAAU,CAAE,CAvER,mBAuE6B,CAAE,CAbC,MAaM,OAC9D,CAxEC,mBAwEmB,CA3BC,iBA2BkB,CAAE,CAxEjB,mBAwEsC,CAAE,CAdR,MAce,OAErE,kBAAkB,KAAK,IAAI,sBAAsB,EAAE,OACnD,sBAAsB,MACtB,QAAS,GACT,SAAU,SACV,OAAQ,KAAK,IAAI,sBAAsB,EAAE,KACzC,KAAM,EACN,MAAO,IAAI,kBACX,OAAQ,IAAI,sBACZ,iBAAkB,IAAI,IAAI,qBAC1B,UAAW,OAAO,QAClB,iBAAkB,IACpB",
+  "names": []
+}

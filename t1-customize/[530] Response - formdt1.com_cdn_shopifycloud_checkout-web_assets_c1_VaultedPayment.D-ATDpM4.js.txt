@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 1756
+Connection: keep-alive
+CF-RAY: 98fe056c7b3bce0e-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/VaultedPayment.D-ATDpM4.js>; rel="canonical"
+Server-Timing: imagery;dur=179.080, imageryFetch;dur=98.822
+Server-Timing: cfRequestDuration;dur=21.999836
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="VaultedPayment.*.js", id="D-ATDpM4"
+X-Content-Type-Options: nosniff
+X-Request-Id: a1a10e05-fb38-4aed-a51f-4769b7828ff4-1760654456
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Thu, 16 Oct 2025 22:40:56 GMT
+CF-Cache-Status: HIT
+Age: 30317
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=U%2BLwY8BQbNCVMXU9IiYKkRNgRef1Xsz9EqK1EfhfLDjTP5SyrOQ%2Bw3c2BU5CzShTfEUerqMVUkQp9%2F0kwpYME4vJLrpjDl7q1WyRu8kL6m2XVRvrptnCQQ%2B%2Bgurn"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{c8 as F,c6 as U,c7 as N,o as w,C as $,bw as E,c9 as j,ca as p,a as o,aE as J,cc as K,aL as V,at as X,hc as q,sg as G,hn as z,iw as H,A as B,iA as Z,q as x,iI as _,iJ as O,T as Q,sh as Y,si as ee,iL as ne,sj as te,sk as ae,cq as oe,g2 as se,cu as re,cs as ie,sl as ce,J as le}from"./app.PV_iB4eS.js";function ue(){const e=F(),n=U(),t=N(),s=w(),c=$(),m=s("review.blocks.change_link_label"),{inMemoryAmazonPayParts:{hasPaymentSheetError:u}}=E();return!j()||n.status!==p.Available?null:o(J,{onClick:()=>{try{n.sdk.buywithprime.changePaymentMethod({amazonPayOptions:{amazonCheckoutSessionId:t(),isDeclined:e}})}catch(d){u.value=!0,c.notify(new K(`Error on changing buyer payment method. Details: ${d}`,{cause:d}))}},children:m})}class r extends Error{name="PortableWalletsSandboxError"}const de="oZdJX",me={PortableWalletsPCIButton:de};function he({wallet:e,isSdkOnly:n=!1}){const{shop:t,errorLogger:s,source:c,environment:m}=V(),u=X(),{id:g}=t,{value:h}=q(),{countryCode:d,presentmentCurrency:v}=h??{},k=G(e)?.configurationParams,i=z(null),{isScrimOpen:y,closePopupWindowsAndScrim:M}=H({endpoint:i,invokingWallet:e}),{inMemoryAmazonPayParts:{buttonStatus:C,sdkStatus:P}}=E(),L=w(),b=B(null),W=B(null),A=Z(),f=x(({errorMessage:a})=>s.notify(new r(a)),[s]),S=z(!1),D=x(async a=>{P.value={status:p.Loading};const l=await a.call.configure({configurationParams:k,buyerCountry:d,buyerCurrency:v,shopId:g,cartId:c.sourceId,onlySdk:n,service:m.services.portableWallets});l?.status===_.Success?(P.value=ye(e,i),n||(C.value={status:"rendered"},u.counter({name:"checkout_wallet_button_rendered",value:1,attributes:{wallet_name:e,status:"success",isPaymentMethodFlow:!1}}))):(l?.status===_.Error&&f({errorMessage:l?.message}),P.value={status:p.Error},n||(C.value={status:"error"},u.counter({name:"checkout_wallet_button_rendered",value:1,attributes:{wallet_name:e,status:"error",isPaymentMethodFlow:!1}})))},[k,d,g,v,c.sourceId,n,e,f,P,C,i,m,u]);S.value&&h?.countryCode&&h?.presentmentCurrency&&i.value&&(S.value=!1,D(i.value));const I=O(),T=Q(()=>({clicked:a=>{y.value=!0,A(W),a&&Pe(a.skus,a.apiClientId)},closed:()=>y.value=!1,redirect:({redirectUrl:a,requestPayload:l})=>{try{if(l){if(!b.current){s.notify(new Y("Form container not found",{groupingHash:"AmazonPaySandboxError::PortableWalletsPCIButton::FormContainerNotFound"}));return}ee({formContainer:b.current,url:a,requestPayload:l}).submit()}else window.location.assign(a)}catch(R){s.notify(R)}},reportError:f,telemetry:I}),[y,f,s,A,I]);return o("div",{className:me.PortableWalletsPCIButton,children:[o("div",{ref:b,style:{display:"none"}}),o(ne,{wallet:e,onConnect:a=>{i.value=a,S.value=!0},onTerminate:()=>i.value=null,hostMethods:T,isSdkOnly:n,ref:W}),o(te,{isOpen:y.value,walletName:L("brand.buy_with_prime"),handleClose:M})]})}function ye(e,n){return{status:p.Available,sdk:{buywithprime:{changePaymentMethod:({amazonPayOptions:t})=>{if(!t.amazonCheckoutSessionId)throw new r("Missing amazonCheckoutSessionId");n.value?.call.changePaymentMethod({wallet:e,changePaymentParams:{amazonCheckoutSessionId:t.amazonCheckoutSessionId,isDeclined:t.isDeclined}})},changeShippingAddress:({amazonPayOptions:t})=>{if(!t.amazonCheckoutSessionId)throw new r("Missing amazonCheckoutSessionId");n.value?.call.changeShippingAddress({wallet:e,changeShippingParams:{amazonCheckoutSessionId:t.amazonCheckoutSessionId}})},initCheckout:()=>{throw new r('Unexpected invocation of "initCheckout"')},renderButton:()=>{throw new r('Unexpected invocation of "renderButton"')}},Pay:{changePaymentMethod:()=>{throw new r('Unexpected invocation of AmazonPay "changePaymentMethod" in BWP flow')},changeShippingAddress:()=>{throw new r('Unexpected invocation of AmazonPay "changeShippingAddress" in BWP flow')},initCheckout:()=>{throw new r('Unexpected invocation of AmazonPay "initCheckout" in BWP flow')},renderButton:()=>{throw new r('Unexpected invocation of AmazonPay "renderButton" in BWP flow')}}}}}function Pe(e,n){window.Shopify?.analytics?.publish&&(window.Shopify.analytics.publish(`shopify:app:pixels:load:${n}`,{},{sendTo:"PIXEL-LOADER"}),window.Shopify.analytics.publish("bwp_checkout_widget_click",{skus:e},{sendTo:n}))}function fe(){const e=w(),{brand:n,descriptor:t}=ae(),s=oe(),c=!t||!s;return o(le,{children:[o(he,{wallet:se.BuyWithPrime,isSdkOnly:!0}),o(re,{id:"buyWithPrimePayDetails",label:e("payment.payment_method"),summary:c?o(ie,{}):o(ce,{brand:n,descriptor:t}),action:o(ue,{})})]})}const Ce=Object.freeze(Object.defineProperty({__proto__:null,default:fe},Symbol.toStringTag,{value:"Module"}));export{he as P,Ce as V};

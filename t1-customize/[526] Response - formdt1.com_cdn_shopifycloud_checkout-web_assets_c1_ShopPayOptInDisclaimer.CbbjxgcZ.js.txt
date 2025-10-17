@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 800
+Connection: keep-alive
+CF-RAY: 98fe056bc870f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/ShopPayOptInDisclaimer.CbbjxgcZ.js>; rel="canonical"
+Server-Timing: imagery;dur=55.608, imageryFetch;dur=55.423
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="ShopPayOptInDisclaimer.*.js", id="CbbjxgcZ"
+X-Content-Type-Options: nosniff
+X-Request-Id: 4422351d-5cf3-4044-bfef-57365a17298f-1760654459
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Thu, 16 Oct 2025 22:40:59 GMT
+CF-Cache-Status: HIT
+Age: 30318
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=MAb3EdAP5scSajmLoEBvZT8DloLvS57kB9ewIIGt3%2F75N%2BsHxJWv2fVSjaAOm7p4DAl0JqtmBAwuqq2wvXd%2BQCQeUwjopIRWuMi%2F%2FGXVasgS4XJ6p68Xz5RQXTDQ"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{dZ as l,bz as O,av as E,fT as k,bj as v,aH as d,fw as T,bT as I,kT as L,bL as p,jT as H,i0 as w,aA as F,s8 as Y,eG as B,s9 as D,kA as K,sa as U,e2 as M,bD as V,o as x,a as n,aE as f,W as G}from"./app.PV_iB4eS.js";function j(){const s=l().isActive,{purchasingCompany:t}=O(),a=E(),r=k(),e=v(),P=d().paymentLines.value,{value:o}=T(),{currentDetour:y}=I(),_=L(),u=!p(H),i=p(w),{shopPayEnabled:m}=F(),{hasSavedCreditCards:S}=Y(),c=B(),{value:C}=D(),g=K().searchParams.get(U),A=M().isStandard(),b=l();return _?.shopPayOptInEnabled===!1||t||!m||a?.__typename==="CustomerProfile"&&r&&(!e||!S)||b.userIdentified||s||g||C||A?!1:y?.type==="thankYou"?o?h({paymentLines:o.lines,isIdealEnabledForShopPay:c,isUsdcEnabled:u,isApplePayFlagEnabled:i}):!1:h({paymentLines:P,isIdealEnabledForShopPay:c,isUsdcEnabled:u,isApplePayFlagEnabled:i})}const h=({paymentLines:s,isIdealEnabledForShopPay:t,isUsdcEnabled:a,isApplePayFlagEnabled:r})=>{if(!s?.length||!s[0].method)return!1;const{method:e}=s[0];return e.type==="customOnsite"?!!(e.paymentBrands?.includes("bogus_app_coin")||a&&e.paymentBrands?.includes("usdc")||t&&e.paymentBrands?.includes("ideal")):!!(e.type==="direct"||e.type===V.CreditCard||t&&e.type==="local"&&e.name==="IDEAL"||r&&e.type==="wallet"&&e.name==="APPLE_PAY")};function N(){return!!d().shopPayArtifact.value?.optIn}function R(){const s=x(),t=j(),a=N();return!t||!a?null:n(G,{color:"subdued",children:s("shop_pay.checkout.sign_up_footer.button_footer",{privacy_href:n(f,{target:"_blank",href:"https://www.shopify.com/legal/privacy/app-users",children:s("shop_pay.checkout.sign_up_footer.privacy_policy")}),terms_href:n(f,{target:"_blank",href:"https://shop.app/terms-of-service",children:s("shop_pay.checkout.sign_up_footer.terms_of_service")})})})}export{R as S,j as u};

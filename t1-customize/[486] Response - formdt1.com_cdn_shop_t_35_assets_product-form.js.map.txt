@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 2082
+Connection: keep-alive
+CF-RAY: 98fe05674abafd6b-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/product-form.js.map>; rel="canonical"
+Server-Timing: imagery;dur=133.577, imageryFetch;dur=120.735
+Server-Timing: cfRequestDuration;dur=18.000126
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 88096b45-cf97-4c75-a367-6ed05102d15c-1759594993
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Sat, 04 Oct 2025 16:23:13 GMT
+CF-Cache-Status: HIT
+Age: 251
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=LjNcv4yYMiCkqCsH%2BoPh3mkoMG5vp0%2BuFbHpcw29vD5hjDweX9FLrHFF6tCNEwNGVuUVoJYNsJNhfT5b%2F%2F3PMI2rdr6K1l3llzw%2BwQt6HUf9qAWIzRkWUhTHFL99"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/product-form.js?v=82553749319723712671745916367"
+  ],
+  "sourcesContent": [
+    "if (!customElements.get('product-form')) {\n  customElements.define(\n    'product-form',\n    class ProductForm extends HTMLElement {\n      constructor() {\n        super();\n\n        this.form = this.querySelector('form');\n        this.variantIdInput.disabled = false;\n        this.form.addEventListener('submit', this.onSubmitHandler.bind(this));\n        this.cart = document.querySelector('cart-notification') || document.querySelector('cart-drawer');\n        this.submitButton = this.querySelector('[type=\"submit\"]');\n        this.submitButtonText = this.submitButton.querySelector('span');\n\n        if (document.querySelector('cart-drawer')) this.submitButton.setAttribute('aria-haspopup', 'dialog');\n\n        this.hideErrors = this.dataset.hideErrors === 'true';\n      }\n\n      onSubmitHandler(evt) {\n        evt.preventDefault();\n        if (this.submitButton.getAttribute('aria-disabled') === 'true') return;\n\n        this.handleErrorMessage();\n\n        this.submitButton.setAttribute('aria-disabled', true);\n        this.submitButton.classList.add('loading');\n        this.querySelector('.loading__spinner').classList.remove('hidden');\n\n        const config = fetchConfig('javascript');\n        config.headers['X-Requested-With'] = 'XMLHttpRequest';\n        delete config.headers['Content-Type'];\n\n        const formData = new FormData(this.form);\n        if (this.cart) {\n          formData.append(\n            'sections',\n            this.cart.getSectionsToRender().map((section) => section.id)\n          );\n          formData.append('sections_url', window.location.pathname);\n          this.cart.setActiveElement(document.activeElement);\n        }\n        config.body = formData;\n\n        fetch(`${routes.cart_add_url}`, config)\n          .then((response) => response.json())\n          .then((response) => {\n            if (response.status) {\n              publish(PUB_SUB_EVENTS.cartError, {\n                source: 'product-form',\n                productVariantId: formData.get('id'),\n                errors: response.errors || response.description,\n                message: response.message,\n              });\n              this.handleErrorMessage(response.description);\n\n              const soldOutMessage = this.submitButton.querySelector('.sold-out-message');\n              if (!soldOutMessage) return;\n              this.submitButton.setAttribute('aria-disabled', true);\n              this.submitButtonText.classList.add('hidden');\n              soldOutMessage.classList.remove('hidden');\n              this.error = true;\n              return;\n            } else if (!this.cart) {\n              window.location = window.routes.cart_url;\n              return;\n            }\n\n            if (!this.error)\n              publish(PUB_SUB_EVENTS.cartUpdate, {\n                source: 'product-form',\n                productVariantId: formData.get('id'),\n                cartData: response,\n              });\n            this.error = false;\n            const quickAddModal = this.closest('quick-add-modal');\n            if (quickAddModal) {\n              document.body.addEventListener(\n                'modalClosed',\n                () => {\n                  setTimeout(() => {\n                    this.cart.renderContents(response);\n                  });\n                },\n                { once: true }\n              );\n              quickAddModal.hide(true);\n            } else {\n              this.cart.renderContents(response);\n            }\n          })\n          .catch((e) => {\n            console.error(e);\n          })\n          .finally(() => {\n            this.submitButton.classList.remove('loading');\n            if (this.cart && this.cart.classList.contains('is-empty')) this.cart.classList.remove('is-empty');\n            if (!this.error) this.submitButton.removeAttribute('aria-disabled');\n            this.querySelector('.loading__spinner').classList.add('hidden');\n          });\n      }\n\n      handleErrorMessage(errorMessage = false) {\n        if (this.hideErrors) return;\n\n        this.errorMessageWrapper =\n          this.errorMessageWrapper || this.querySelector('.product-form__error-message-wrapper');\n        if (!this.errorMessageWrapper) return;\n        this.errorMessage = this.errorMessage || this.errorMessageWrapper.querySelector('.product-form__error-message');\n\n        this.errorMessageWrapper.toggleAttribute('hidden', !errorMessage);\n\n        if (errorMessage) {\n          this.errorMessage.textContent = errorMessage;\n        }\n      }\n\n      toggleSubmitButton(disable = true, text) {\n        if (disable) {\n          this.submitButton.setAttribute('disabled', 'disabled');\n          if (text) this.submitButtonText.textContent = text;\n        } else {\n          this.submitButton.removeAttribute('disabled');\n          this.submitButtonText.textContent = window.variantStrings.addToCart;\n        }\n      }\n\n      get variantIdInput() {\n        return this.form.querySelector('[name=id]');\n      }\n    }\n  );\n}\n"
+  ],
+  "mappings": "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",
+  "names": []
+}

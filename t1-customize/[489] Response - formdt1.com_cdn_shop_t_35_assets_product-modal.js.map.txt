@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 810
+Connection: keep-alive
+CF-RAY: 98fe05673bdd40fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/product-modal.js.map>; rel="canonical"
+Server-Timing: imagery;dur=94.770, imageryFetch;dur=89.976
+Server-Timing: cfRequestDuration;dur=21.000147
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 0772f4ce-f0fd-4b6a-b77a-42d3e86bc7ef-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Fri, 17 Oct 2025 07:14:06 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=HkyMcAWRriUELFEDgKHolqqclwlAe%2FmCAWOBcJxGduqTL4IMSYWsprMg0pSlVDKRFp6ZVAOjxncHm1c2YoaqnvzMAViZLKM4jmYjwLsiyU1XjF46GeXHr6qF0YeP"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/product-modal.js?v=116616134454508949461745916367"
+  ],
+  "sourcesContent": [
+    "if (!customElements.get('product-modal')) {\n  customElements.define(\n    'product-modal',\n    class ProductModal extends ModalDialog {\n      constructor() {\n        super();\n      }\n\n      hide() {\n        super.hide();\n      }\n\n      show(opener) {\n        super.show(opener);\n        this.showActiveMedia();\n      }\n\n      showActiveMedia() {\n        this.querySelectorAll(\n          `[data-media-id]:not([data-media-id=\"${this.openedBy.getAttribute('data-media-id')}\"])`\n        ).forEach((element) => {\n          element.classList.remove('active');\n        });\n        const activeMedia = this.querySelector(`[data-media-id=\"${this.openedBy.getAttribute('data-media-id')}\"]`);\n        const activeMediaTemplate = activeMedia.querySelector('template');\n        const activeMediaContent = activeMediaTemplate ? activeMediaTemplate.content : null;\n        activeMedia.classList.add('active');\n        activeMedia.scrollIntoView();\n\n        const container = this.querySelector('[role=\"document\"]');\n        container.scrollLeft = (activeMedia.width - container.clientWidth) / 2;\n\n        if (\n          activeMedia.nodeName == 'DEFERRED-MEDIA' &&\n          activeMediaContent &&\n          activeMediaContent.querySelector('.js-youtube')\n        )\n          activeMedia.loadContent();\n      }\n    }\n  );\n}\n"
+  ],
+  "mappings": "AAAK,eAAe,IAAI,eAAe,GACrC,eAAe,OACb,gBACA,cAA2B,WAAY,CACrC,aAAc,CACZ,MAAM,CACR,CAEA,MAAO,CACL,MAAM,KAAK,CACb,CAEA,KAAK,OAAQ,CACX,MAAM,KAAK,MAAM,EACjB,KAAK,gBAAgB,CACvB,CAEA,iBAAkB,CAChB,KAAK,iBACH,uCAAuC,KAAK,SAAS,aAAa,eAAe,CAAC,KACpF,EAAE,QAAS,SAAY,CACrB,QAAQ,UAAU,OAAO,QAAQ,CACnC,CAAC,EACD,MAAM,YAAc,KAAK,cAAc,mBAAmB,KAAK,SAAS,aAAa,eAAe,CAAC,IAAI,EACnG,oBAAsB,YAAY,cAAc,UAAU,EAC1D,mBAAqB,oBAAsB,oBAAoB,QAAU,KAC/E,YAAY,UAAU,IAAI,QAAQ,EAClC,YAAY,eAAe,EAE3B,MAAM,UAAY,KAAK,cAAc,mBAAmB,EACxD,UAAU,YAAc,YAAY,MAAQ,UAAU,aAAe,EAGnE,YAAY,UAAY,kBACxB,oBACA,mBAAmB,cAAc,aAAa,GAE9C,YAAY,YAAY,CAC5B,CACF,CACF",
+  "names": []
+}

@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/javascript
+Content-Length: 1058
+Connection: keep-alive
+CF-RAY: 98fe056388f240fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/product-form.js>; rel="canonical"
+Server-Timing: imagery;dur=92.772, imageryFetch;dur=88.203
+Server-Timing: cfRequestDuration;dur=22.000313
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: f8543b58-d3cd-4128-a115-1cd551cc03c7-1750151872
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Tue, 17 Jun 2025 09:17:52 GMT
+CF-Cache-Status: HIT
+Age: 3733901
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=0EebZb5pIADUbu7axRsZwatx%2BrNcpLzymCDGAv6VfXZ0nSwavfpMLDaSKZPIChSdF9en9%2FHwGXM4Kwb2ODs8Z%2B8GS6y3%2BdZzjr%2BjcPlhPPPYMS%2Bz%2BGkTkCd00GeP"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+customElements.get("product-form")||customElements.define("product-form",class extends HTMLElement{constructor(){super(),this.form=this.querySelector("form"),this.variantIdInput.disabled=!1,this.form.addEventListener("submit",this.onSubmitHandler.bind(this)),this.cart=document.querySelector("cart-notification")||document.querySelector("cart-drawer"),this.submitButton=this.querySelector('[type="submit"]'),this.submitButtonText=this.submitButton.querySelector("span"),document.querySelector("cart-drawer")&&this.submitButton.setAttribute("aria-haspopup","dialog"),this.hideErrors=this.dataset.hideErrors==="true"}onSubmitHandler(evt){if(evt.preventDefault(),this.submitButton.getAttribute("aria-disabled")==="true")return;this.handleErrorMessage(),this.submitButton.setAttribute("aria-disabled",!0),this.submitButton.classList.add("loading"),this.querySelector(".loading__spinner").classList.remove("hidden");const config=fetchConfig("javascript");config.headers["X-Requested-With"]="XMLHttpRequest",delete config.headers["Content-Type"];const formData=new FormData(this.form);this.cart&&(formData.append("sections",this.cart.getSectionsToRender().map(section=>section.id)),formData.append("sections_url",window.location.pathname),this.cart.setActiveElement(document.activeElement)),config.body=formData,fetch(`${routes.cart_add_url}`,config).then(response=>response.json()).then(response=>{if(response.status){publish(PUB_SUB_EVENTS.cartError,{source:"product-form",productVariantId:formData.get("id"),errors:response.errors||response.description,message:response.message}),this.handleErrorMessage(response.description);const soldOutMessage=this.submitButton.querySelector(".sold-out-message");if(!soldOutMessage)return;this.submitButton.setAttribute("aria-disabled",!0),this.submitButtonText.classList.add("hidden"),soldOutMessage.classList.remove("hidden"),this.error=!0;return}else if(!this.cart){window.location=window.routes.cart_url;return}this.error||publish(PUB_SUB_EVENTS.cartUpdate,{source:"product-form",productVariantId:formData.get("id"),cartData:response}),this.error=!1;const quickAddModal=this.closest("quick-add-modal");quickAddModal?(document.body.addEventListener("modalClosed",()=>{setTimeout(()=>{this.cart.renderContents(response)})},{once:!0}),quickAddModal.hide(!0)):this.cart.renderContents(response)}).catch(e=>{console.error(e)}).finally(()=>{this.submitButton.classList.remove("loading"),this.cart&&this.cart.classList.contains("is-empty")&&this.cart.classList.remove("is-empty"),this.error||this.submitButton.removeAttribute("aria-disabled"),this.querySelector(".loading__spinner").classList.add("hidden")})}handleErrorMessage(errorMessage=!1){this.hideErrors||(this.errorMessageWrapper=this.errorMessageWrapper||this.querySelector(".product-form__error-message-wrapper"),this.errorMessageWrapper&&(this.errorMessage=this.errorMessage||this.errorMessageWrapper.querySelector(".product-form__error-message"),this.errorMessageWrapper.toggleAttribute("hidden",!errorMessage),errorMessage&&(this.errorMessage.textContent=errorMessage)))}toggleSubmitButton(disable=!0,text){disable?(this.submitButton.setAttribute("disabled","disabled"),text&&(this.submitButtonText.textContent=text)):(this.submitButton.removeAttribute("disabled"),this.submitButtonText.textContent=window.variantStrings.addToCart)}get variantIdInput(){return this.form.querySelector("[name=id]")}});
+//# sourceMappingURL=/cdn/shop/t/35/assets/product-form.js.map?v=82553749319723712671745916367

@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 814
+Connection: keep-alive
+CF-RAY: 98fe05664ee75fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-rating.css.map>; rel="canonical"
+Server-Timing: imagery;dur=158.889, imageryFetch;dur=155.351
+Server-Timing: cfRequestDuration;dur=18.000126
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: fe4ba023-84dd-461f-9f2f-11a8b9b6e9b9-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Fri, 17 Oct 2025 07:14:07 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=tHhnztYbJkyD2J46Rh%2BPjkiWwiFUBxYnPHsQYW2tqToaxZzA3rHc%2FiEnOPNMPlE9DZct%2F70uSu5uXLYe4nq4iicAyhgatcJ1PjiTNst7CcBdBPbRUfTS683KLnSZ"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-rating.css?v=179577762467860590411745916367"
+  ],
+  "sourcesContent": [
+    ".product--no-media .rating-wrapper {\n  text-align: center;\n}\n\n.rating {\n  display: inline-block;\n  margin: 0;\n}\n\n.product .rating-star {\n  --letter-spacing: 0.8;\n  --font-size: 1.7;\n}\n\n.card-wrapper .rating-star {\n  --letter-spacing: 0.7;\n  --font-size: 1.4;\n}\n\n.rating-star {\n  --color-rating-star: rgb(var(--color-foreground));\n  --percent: calc(\n    (\n        var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) /\n          (var(--rating-max) * (var(--letter-spacing) + var(--font-size)))\n      ) * 100%\n  );\n  letter-spacing: calc(var(--letter-spacing) * 1rem);\n  font-size: calc(var(--font-size) * 1rem);\n  line-height: 1;\n  display: inline-block;\n  font-family: Times;\n  margin: 0;\n}\n\n.rating-star::before {\n  content: '★★★★★';\n  background: linear-gradient(\n    90deg,\n    var(--color-rating-star) var(--percent),\n    rgba(var(--color-foreground), 0.15) var(--percent)\n  );\n  -webkit-background-clip: text;\n  -webkit-text-fill-color: transparent;\n}\n\n.rating-text {\n  display: none;\n}\n\n.rating-count {\n  display: inline-block;\n  margin: 0;\n}\n\n@media (forced-colors: active) {\n  .rating {\n    display: none;\n  }\n\n  .rating-text {\n    display: block;\n  }\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,kBAAkB,CAAC,eAClB,WAAY,MACd,CAEA,CAAC,OACC,QAAS,aALX,OAMU,CACV,CAEA,CAAC,QAAQ,CAAC,YACR,kBAAkB,GAClB,aAAa,GACf,CAEA,CAAC,aAAa,CALJ,YAMR,kBAAkB,GAClB,aAAa,GACf,CAEA,CAVU,YAWR,qBAAqB,IAAI,IAAI,qBAC7B,WAAW,MACT,EACI,IAAI,UAAU,EAAE,IAAI,cAAc,EAAE,IAAI,kBAAkB,EAAE,IAAI,aAAa,EAC3E,CAAC,IAAI,cAAc,EAAE,CAAC,IAAI,kBAAkB,EAAE,IAAI,iBACpD,EAAE,OAER,eAAgB,KAAK,IAAI,kBAAkB,EAAE,MAC7C,UAAW,KAAK,IAAI,aAAa,EAAE,MACnC,YAAa,EACb,QAAS,aACT,YAAa,MA/Bf,OAgCU,CACV,CAEA,CA1BU,WA0BE,QACV,QAAS,4BACT,WAAY,gBACV,KAAK,CACL,IAAI,qBAAqB,IAAI,UAAU,CACvC,KAAK,IAAI,mBAAmB,CAAE,KAAM,IAAI,YAE1C,wBAAyB,KACzB,wBAAyB,WAC3B,CAEA,CAAC,YACC,QAAS,IACX,CAEA,CAAC,aACC,QAAS,aAnDX,OAoDU,CACV,CAEA,OAAO,CAAC,aAAa,EAAE,QACrB,CApDD,OAqDG,QAAS,IACX,CAEA,CAdD,YAeG,QAAS,KACX,CACF",
+  "names": []
+}

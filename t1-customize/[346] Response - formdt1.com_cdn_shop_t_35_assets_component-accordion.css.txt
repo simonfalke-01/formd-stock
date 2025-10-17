@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 404
+Connection: keep-alive
+CF-RAY: 98fe05617ebbf91a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 2375176
+last-modified: Fri, 19 Sep 2025 19:32:00 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-accordion.css>; rel="canonical"
+Server-Timing: imagery;dur=118.789, imageryFetch;dur=106.369
+Server-Timing: cfRequestDuration;dur=18.000126
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: f4de8a12-f84f-4d57-bc3e-417200739263-1758310319
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=LXJ8ZsVzaAr3VOfIgO%2BR%2FXMvp1ca2iecFQF%2BWtuhgCRf6D7qJbUpX%2FbtyDfJeCGlls9WK4A8OFgVOMc4KReaKHcWxC8pEV7NB814hW%2Be8BWlUpn0q6HZXv5Qn89W"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.accordion summary{display:flex;position:relative;line-height:1;padding:1.5rem 0}.accordion .summary__title{display:flex;flex:1}.accordion .summary__title+.icon-caret{height:calc(var(--font-heading-scale) * .6rem)}.accordion+.accordion{margin-top:0;border-top:none}.accordion{margin-top:2.5rem;margin-bottom:0;border-top:.1rem solid rgba(var(--color-foreground),.08);border-bottom:.1rem solid rgba(var(--color-foreground),.08)}.accordion__title{display:inline-block;max-width:calc(100% - 6rem);min-height:1.6rem;margin:0;word-break:break-word}.accordion .svg-wrapper{align-self:center;fill:rgb(var(--color-foreground));height:calc(var(--font-heading-scale) * 2rem);margin-right:calc(var(--font-heading-scale) * 1rem);width:calc(var(--font-heading-scale) * 2rem)}.accordion details[open]>summary .icon-caret{transform:rotate(180deg)}.accordion__content{margin-bottom:1.5rem;word-break:break-word;overflow-x:auto;padding:0 .6rem}.accordion__content img{max-width:100%}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-accordion.css.map?v=7971072480289620591745916367 */

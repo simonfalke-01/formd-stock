@@ -1,0 +1,50 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: image/svg+xml
+Content-Length: 462
+Connection: keep-alive
+CF-RAY: 98fe0563ec565fe6-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 290227
+last-modified: Mon, 13 Oct 2025 21:06:15 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Server-Timing: imagery;dur=84.378, imageryFetch;dur=80.257, imageryProcess;dur=0.118;desc="image"
+Server-Timing: cfRequestDuration;dur=20.999908
+Source-Length: 1331
+Source-Type: image/svg+xml
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: e1d2a5c5-1f25-41a0-aa98-72acb02feeda-1760389575
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=qjN8JyU2epDelUfzelJLZdBk%2FG86%2FetsEieFWng66LLAk4kxNdPcply6EhPaebFP5rkYIir03x%2BN6nlfTzma%2B4e%2FPP9lf%2BBAjujCvu%2BWP3r8S%2B4SoBnrd5XDbFAq"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416.9 64.2" id="_图层_1">
+  <defs>
+    <style>.cls-1{stroke-width:0px;}</style>
+  </defs>
+  <rect height="64.2" width="12.8" y="0" x="404.1" class="cls-1"/>
+  <polygon points="391.3 0 391.3 12.9 374 12.9 340 12.9 340 0 391.3 0" class="cls-1"/>
+  <polygon points="374 12.9 374 64.2 361.2 64.2 361.2 25.7 374 12.9" class="cls-1"/>
+  <polygon points="243.8 0 243.8 64.2 230.9 64.2 230.9 18.2 223.4 25.7 205.3 25.7 205.3 64.2 192.4 64.2 192.4 12.9 218.1 12.9 230.9 0 243.8 0" class="cls-1"/>
+  <rect height="25.7" width="12.8" y="38.5" x="166.8" class="cls-1"/>
+  <polygon points="115.4 12.9 115.4 51.3 102.6 64.2 77 64.2 77 51.3 102.6 51.3 102.6 12.9 115.4 12.9" class="cls-1"/>
+  <polygon points="102.6 0 102.6 12.9 77 12.9 77 51.3 64.1 51.3 64.1 12.9 77 0 102.6 0" class="cls-1"/>
+  <polygon points="51.3 0 51.3 12.9 12.8 12.9 12.8 25.7 51.3 25.7 38.5 38.5 12.8 38.5 12.8 64.2 0 64.2 0 12.9 12.8 0 51.3 0" class="cls-1"/>
+  <polygon points="295.1 12.9 295.1 51.3 295.1 51.4 269.4 51.4 269.4 51.3 269.4 12.9 295.1 12.9 295.1 0 256.6 0 256.6 64.2 295.1 64.2 307.9 51.3 307.9 12.9 295.1 12.9" class="cls-1"/>
+  <path d="M128.3,12.9v51.3h12.8v-25.7h25.7l12.8-12.8V.1h-38.5l-12.8,12.8ZM166.8,25.7h-25.7v-12.8h25.7v12.8Z" class="cls-1"/>
+</svg>

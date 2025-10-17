@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: text/css
+Content-Length: 670
+Connection: keep-alive
+CF-RAY: 98fe05659ed1fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-cart-notification.css>; rel="canonical"
+Server-Timing: imagery;dur=103.780, imageryFetch;dur=99.479
+Server-Timing: cfRequestDuration;dur=19.000053
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 1a23f5b2-7ac5-4c3f-b449-33a08884b5ce-1756960745
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Thu, 04 Sep 2025 04:39:05 GMT
+CF-Cache-Status: HIT
+Age: 713954
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Y2mfBL%2F04qCZ6Rh4noC6t42%2B42pI8CxrdGC3pPEuTDqmLBSYjLDO0ed52pqNjdIpt1iuZlmtfFC083kHDYFU8JvSnWPNArdNamP%2BoP58bD2j%2BvjNZVZOh%2FofRW1%2B"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.cart-notification-wrapper{position:relative}.cart-notification-wrapper .cart-notification{display:block}.cart-notification{border-bottom-right-radius:var(--popup-corner-radius);border-bottom-left-radius:var(--popup-corner-radius);border-color:rgba(var(--color-foreground),var(--popup-border-opacity));border-style:solid;border-width:0 0 var(--popup-border-width);padding:2.5rem 3.5rem;position:absolute;right:0;transform:translateY(-100%);visibility:hidden;width:100%;box-shadow:var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow),var(--popup-shadow-opacity));z-index:-1}.cart-notification.focused{box-shadow:0 0 .2rem rgba(var(--color-foreground),.3),var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow),var(--popup-shadow-opacity))}.cart-notification:focus-visible{box-shadow:0 0 .2rem rgba(var(--color-foreground),.3),var(--popup-shadow-horizontal-offset) var(--popup-shadow-vertical-offset) var(--popup-shadow-blur-radius) rgba(var(--color-shadow),var(--popup-shadow-opacity))}@media screen and (min-width: 750px){.header-wrapper:not(.header-wrapper--border-bottom)+cart-notification .cart-notification{border-top-width:var(--popup-border-width)}.cart-notification{border-width:0 var(--popup-border-width) var(--popup-border-width);max-width:36.8rem;right:2.2rem}}@media screen and (min-width: 990px){.cart-notification-wrapper:is(.page-width)>.cart-notification{right:4rem}}.cart-notification.animate{transition:transform var(--duration-short) ease,visibility 0s var(--duration-short) ease}.cart-notification.active{transform:translateY(0);transition:transform var(--duration-default) ease,visibility 0s;visibility:visible}.cart-notification__header{align-items:flex-start;display:flex}.cart-notification__heading{align-items:center;display:flex;flex-grow:1;margin-bottom:0;margin-top:0}.cart-notification__heading .icon-checkmark{color:rgb(var(--color-foreground));margin-right:1rem;width:1.3rem}.cart-notification__close{margin-top:-2rem;margin-right:-3rem}.cart-notification__links{text-align:center}.cart-notification__links>*{margin-top:1rem}.cart-notification-product{align-items:flex-start;display:flex;padding-bottom:3rem;padding-top:2rem}.cart-notification-product dl{margin-bottom:0;margin-top:0}.cart-notification-product__image{display:inline-flex;margin-right:1.5rem;margin-top:.5rem}.cart-notification-product__image:after{content:none}.cart-notification-product__name{margin-bottom:.5rem;margin-top:0}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-cart-notification.css.map?v=54116361853792938221745916367 */

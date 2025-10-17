@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/javascript
+Content-Length: 984
+Connection: keep-alive
+CF-RAY: 98fe05641ab0fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/cart-drawer.js>; rel="canonical"
+Server-Timing: imagery;dur=125.375, imageryFetch;dur=120.384
+Server-Timing: cfRequestDuration;dur=23.999929
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: b78d6178-60b9-4dff-8231-63947d1435ae-1757346254
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Mon, 08 Sep 2025 15:44:15 GMT
+CF-Cache-Status: HIT
+Age: 5064
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Yo5%2F%2BPtRGw2khxtK76XeN%2F%2FnZSVisJ7L2la0B47Vrequn%2BQ0T2WtspGf6RnIbxb%2FFsorL%2BK2zSWy3p6Q9kJd7CL0cEtSYTftvGtg98go9sLyrzRbS%2BOQXCSUQL%2BH"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+class CartDrawer extends HTMLElement{constructor(){super(),this.addEventListener("keyup",evt=>evt.code==="Escape"&&this.close()),this.querySelector("#CartDrawer-Overlay").addEventListener("click",this.close.bind(this)),this.setHeaderCartIconAccessibility()}setHeaderCartIconAccessibility(){const cartLink=document.querySelector("#cart-icon-bubble");cartLink&&(cartLink.setAttribute("role","button"),cartLink.setAttribute("aria-haspopup","dialog"),cartLink.addEventListener("click",event=>{event.preventDefault(),this.open(cartLink)}),cartLink.addEventListener("keydown",event=>{event.code.toUpperCase()==="SPACE"&&(event.preventDefault(),this.open(cartLink))}))}open(triggeredBy){triggeredBy&&this.setActiveElement(triggeredBy);const cartDrawerNote=this.querySelector('[id^="Details-"] summary');cartDrawerNote&&!cartDrawerNote.hasAttribute("role")&&this.setSummaryAccessibility(cartDrawerNote),setTimeout(()=>{this.classList.add("animate","active")}),this.addEventListener("transitionend",()=>{const containerToTrapFocusOn=this.classList.contains("is-empty")?this.querySelector(".drawer__inner-empty"):document.getElementById("CartDrawer"),focusElement=this.querySelector(".drawer__inner")||this.querySelector(".drawer__close");trapFocus(containerToTrapFocusOn,focusElement)},{once:!0}),document.body.classList.add("overflow-hidden")}close(){this.classList.remove("active"),removeTrapFocus(this.activeElement),document.body.classList.remove("overflow-hidden")}setSummaryAccessibility(cartDrawerNote){cartDrawerNote.setAttribute("role","button"),cartDrawerNote.setAttribute("aria-expanded","false"),cartDrawerNote.nextElementSibling.getAttribute("id")&&cartDrawerNote.setAttribute("aria-controls",cartDrawerNote.nextElementSibling.id),cartDrawerNote.addEventListener("click",event=>{event.currentTarget.setAttribute("aria-expanded",!event.currentTarget.closest("details").hasAttribute("open"))}),cartDrawerNote.parentElement.addEventListener("keyup",onKeyUpEscape)}renderContents(parsedState){this.querySelector(".drawer__inner").classList.contains("is-empty")&&this.querySelector(".drawer__inner").classList.remove("is-empty"),this.productId=parsedState.id,this.getSectionsToRender().forEach(section=>{const sectionElement=section.selector?document.querySelector(section.selector):document.getElementById(section.id);sectionElement&&(sectionElement.innerHTML=this.getSectionInnerHTML(parsedState.sections[section.id],section.selector))}),setTimeout(()=>{this.querySelector("#CartDrawer-Overlay").addEventListener("click",this.close.bind(this)),this.open()})}getSectionInnerHTML(html,selector=".shopify-section"){return new DOMParser().parseFromString(html,"text/html").querySelector(selector).innerHTML}getSectionsToRender(){return[{id:"cart-drawer",selector:"#CartDrawer"},{id:"cart-icon-bubble"}]}getSectionDOM(html,selector=".shopify-section"){return new DOMParser().parseFromString(html,"text/html").querySelector(selector)}setActiveElement(element){this.activeElement=element}}customElements.define("cart-drawer",CartDrawer);class CartDrawerItems extends CartItems{getSectionsToRender(){return[{id:"CartDrawer",section:"cart-drawer",selector:".drawer__inner"},{id:"cart-icon-bubble",section:"cart-icon-bubble",selector:".shopify-section"}]}}customElements.define("cart-drawer-items",CartDrawerItems);
+//# sourceMappingURL=/cdn/shop/t/35/assets/cart-drawer.js.map?v=169981311261118214701745916367

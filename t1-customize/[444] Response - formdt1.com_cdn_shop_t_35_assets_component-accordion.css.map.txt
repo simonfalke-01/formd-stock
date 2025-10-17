@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 783
+Connection: keep-alive
+CF-RAY: 98fe0565bc62ce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-accordion.css.map>; rel="canonical"
+Server-Timing: imagery;dur=103.312, imageryFetch;dur=98.872
+Server-Timing: cfRequestDuration;dur=27.000189
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: e3b53a12-cd91-4209-96b0-b50281414797-1760541298
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Wed, 15 Oct 2025 15:14:58 GMT
+CF-Cache-Status: HIT
+Age: 108023
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=nuYeKXIP3Hrz%2BNe1If4WC4n8jLyn60be72qIt%2FG6RKVhGJAL01ncqg5BFx7T%2FcCXEU4JvDCAToMSwgg2XhmSKEi77neNXOXnHOr3ns%2Bsufsnty3BcQrNqizPs12w"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-accordion.css?v=7971072480289620591745916367"
+  ],
+  "sourcesContent": [
+    ".accordion summary {\n  display: flex;\n  position: relative;\n  line-height: 1;\n  padding: 1.5rem 0;\n}\n\n.accordion .summary__title {\n  display: flex;\n  flex: 1;\n}\n\n.accordion .summary__title + .icon-caret {\n  height: calc(var(--font-heading-scale) * 0.6rem);\n}\n\n.accordion + .accordion {\n  margin-top: 0;\n  border-top: none;\n}\n\n.accordion {\n  margin-top: 2.5rem;\n  margin-bottom: 0;\n  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);\n  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);\n}\n\n.accordion__title {\n  display: inline-block;\n  max-width: calc(100% - 6rem);\n  min-height: 1.6rem;\n  margin: 0;\n  word-break: break-word;\n}\n\n.accordion .svg-wrapper {\n  align-self: center;\n  fill: rgb(var(--color-foreground));\n  height: calc(var(--font-heading-scale) * 2rem);\n  margin-right: calc(var(--font-heading-scale) * 1rem);\n  width: calc(var(--font-heading-scale) * 2rem);\n}\n\n.accordion details[open] > summary .icon-caret {\n  transform: rotate(180deg);\n}\n\n.accordion__content {\n  margin-bottom: 1.5rem;\n  word-break: break-word;\n  overflow-x: auto;\n  padding: 0 0.6rem;\n}\n\n.accordion__content img {\n  max-width: 100%;\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,UAAU,QACT,QAAS,KACT,SAAU,SACV,YAAa,EAHf,QAIW,OAAO,CAClB,CAEA,CAPC,UAOU,CAAC,eACV,QAAS,KACT,KAAM,CACR,CAEA,CAZC,UAYU,CALC,cAKe,CAAE,CAAC,WAC5B,OAAQ,KAAK,IAAI,sBAAsB,EAAE,MAC3C,CAEA,CAhBC,SAgBU,CAAE,CAhBZ,UAiBC,WAAY,EACZ,WAAY,IACd,CAEA,CArBC,UAsBC,WAAY,OACZ,cAAe,EACf,WAAY,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,KACvD,cAAe,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,IAC5D,CAEA,CAAC,iBACC,QAAS,aACT,UAAW,KAAK,KAAK,EAAE,MACvB,WAAY,OA/Bd,OAgCU,EACR,WAAY,UACd,CAEA,CApCC,UAoCU,CAAC,YACV,WAAY,OACZ,KAAM,IAAI,IAAI,qBACd,OAAQ,KAAK,IAAI,sBAAsB,EAAE,MACzC,aAAc,KAAK,IAAI,sBAAsB,EAAE,MAC/C,MAAO,KAAK,IAAI,sBAAsB,EAAE,KAC1C,CAEA,CA5CC,UA4CU,OAAO,CAAC,KAAM,CAAE,QAAQ,CAhCL,WAiC5B,UAAW,OAAO,OACpB,CAEA,CAAC,mBACC,cAAe,OACf,WAAY,WACZ,WAAY,KAnDd,QAoDW,EAAE,KACb,CAEA,CAPC,mBAOmB,IAClB,UAAW,IACb",
+  "names": []
+}

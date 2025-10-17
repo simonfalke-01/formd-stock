@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/javascript
+Content-Length: 681
+Connection: keep-alive
+CF-RAY: 98fe05637906fe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 2449947
+last-modified: Thu, 18 Sep 2025 22:32:23 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/cart-notification.js>; rel="canonical"
+Server-Timing: imagery;dur=75.493, imageryFetch;dur=70.741
+Server-Timing: cfRequestDuration;dur=17.999887
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 13d4635c-59ed-457d-8545-3f55d9cdfabd-1758234743
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=PlHyTJUd9sxQxp3p%2BFHbiEQbJeYvLRtBz%2FBPAo83ENn7khIUxyWK7C51rAUjCvfswgw%2B2cpb%2B%2FrHIKSSjj8vicyNq56h7UrTR1MzxEvJZVeR2IFzl8Ui1LzwkBnm"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+class CartNotification extends HTMLElement{constructor(){super(),this.notification=document.getElementById("cart-notification"),this.header=document.querySelector("sticky-header"),this.onBodyClick=this.handleBodyClick.bind(this),this.notification.addEventListener("keyup",evt=>evt.code==="Escape"&&this.close()),this.querySelectorAll('button[type="button"]').forEach(closeButton=>closeButton.addEventListener("click",this.close.bind(this)))}open(){this.notification.classList.add("animate","active"),this.notification.addEventListener("transitionend",()=>{this.notification.focus(),trapFocus(this.notification)},{once:!0}),document.body.addEventListener("click",this.onBodyClick)}close(){this.notification.classList.remove("active"),document.body.removeEventListener("click",this.onBodyClick),removeTrapFocus(this.activeElement)}renderContents(parsedState){this.cartItemKey=parsedState.key,this.getSectionsToRender().forEach(section=>{document.getElementById(section.id).innerHTML=this.getSectionInnerHTML(parsedState.sections[section.id],section.selector)}),this.header&&this.header.reveal(),this.open()}getSectionsToRender(){return[{id:"cart-notification-product",selector:`[id="cart-notification-product-${this.cartItemKey}"]`},{id:"cart-notification-button"},{id:"cart-icon-bubble"}]}getSectionInnerHTML(html,selector=".shopify-section"){return new DOMParser().parseFromString(html,"text/html").querySelector(selector).innerHTML}handleBodyClick(evt){const target=evt.target;if(target!==this.notification&&!target.closest("cart-notification")){const disclosure=target.closest("details-disclosure, header-menu");this.activeElement=disclosure?disclosure.querySelector("summary"):null,this.close()}}setActiveElement(element){this.activeElement=element}}customElements.define("cart-notification",CartNotification);
+//# sourceMappingURL=/cdn/shop/t/35/assets/cart-notification.js.map?v=133508293167896966491745916367

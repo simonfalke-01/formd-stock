@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 872
+Connection: keep-alive
+CF-RAY: 98fe05625cebce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 207709
+last-modified: Tue, 14 Oct 2025 21:18:38 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/section-multicolumn.css>; rel="canonical"
+Server-Timing: imagery;dur=67.284, imageryFetch;dur=62.047
+Server-Timing: cfRequestDuration;dur=19.999981
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: f20c2d94-cdf6-4e0f-a852-136ae2d00305-1760476718
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=bcyW%2BKWkIH7xjMcrD%2FxzY8QwY%2BF9AY0Trr0wEFxoNbcul7tsgdwj1LH4%2FytTHWzU3HqdFpK%2BK24xitsaxpMhc8XtEtmGPS8bR9Gf%2Bjj0wXOx6BrtDA6GR8mJDI6G"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.multicolumn .title{margin:0}.multicolumn.no-heading .title{display:none}.multicolumn .title-wrapper-with-link{margin-top:0}@media screen and (max-width: 749px){.multicolumn .title-wrapper-with-link{margin-bottom:3rem}}@media screen and (min-width: 750px) and (max-width: 989px){.multicolumn__title{padding-left:5rem;padding-right:5rem}}@media screen and (max-width: 989px){.multicolumn .page-width{padding-left:0;padding-right:0}}.multicolumn-card__image-wrapper--third-width{width:33%}.multicolumn-card__image-wrapper--half-width{width:50%}.multicolumn-list__item.center .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),.multicolumn-list__item:only-child{margin-left:auto;margin-right:auto}.multicolumn .button{margin-top:1.5rem}@media screen and (min-width: 750px){.multicolumn .button{margin-top:4rem}}.multicolumn-list{margin-top:0;margin-bottom:0;padding:0}.multicolumn-list__item:only-child{max-width:72rem}.multicolumn-list__item--empty{display:none}.multicolumn:not(.background-none) .multicolumn-card{background:rgb(var(--color-background));height:100%}.multicolumn.background-primary .multicolumn-card{background:rgb(var(--color-background)) linear-gradient(rgba(var(--color-foreground),.04),rgba(var(--color-foreground),.04))}.multicolumn-list h3{line-height:calc(1 + .5/max(1,var(--font-heading-scale)))}.multicolumn-list h3,.multicolumn-list p{margin:0}.multicolumn-card-spacing{padding-top:2.5rem;margin-left:2.5rem;margin-right:2.5rem}.multicolumn-card__info>:nth-child(2){margin-top:1rem}.multicolumn-list__item.center .media--adapt,.multicolumn-list__item .media--adapt .multicolumn-card__image{width:auto}.multicolumn-list__item.center .media--adapt img{left:50%;transform:translate(-50%)}@media screen and (max-width: 749px){.multicolumn-list{margin:0;width:100%}.multicolumn-list:not(.slider){padding-left:1.5rem;padding-right:1.5rem}}@media screen and (min-width: 750px) and (max-width: 989px){.multicolumn-list:not(.slider){padding-left:5rem;padding-right:5rem}}@media screen and (min-width: 750px){.multicolumn-list.slider{padding:0}.multicolumn-list__item,.grid--4-col-desktop .multicolumn-list__item{padding-bottom:0}.background-none .grid--2-col-tablet .multicolumn-list__item{margin-top:4rem}}.background-none .multicolumn-card-spacing{padding:0;margin:0}.multicolumn-card__info{padding:2.5rem}.background-none .multicolumn-card__info{padding-top:0;padding-left:0;padding-right:0}.background-none .slider .multicolumn-card__info{padding-bottom:0}.background-none .multicolumn-card__image-wrapper+.multicolumn-card__info{padding-top:2.5rem}.background-none .slider .multicolumn-card__info{padding-left:.5rem}.background-none .slider .multicolumn-card__image-wrapper+.multicolumn-card__info{padding-left:1.5rem}.background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info{padding-left:2.5rem;padding-right:2.5rem}@media screen and (max-width: 749px){.background-none .slider .multicolumn-card__info{padding-bottom:1rem}.multicolumn.background-none .slider.slider--mobile{margin-bottom:0rem}}@media screen and (min-width: 750px){.background-none .multicolumn-card__image-wrapper{margin-left:1.5rem;margin-right:1.5rem}.background-none .multicolumn-list .multicolumn-card__info,.background-none .multicolumn-list:not(.slider) .center .multicolumn-card__info{padding-left:1.5rem;padding-right:1.5rem}}.multicolumn-card{position:relative;box-sizing:border-box}.multicolumn-card>.multicolumn-card__image-wrapper--full-width:not(.multicolumn-card-spacing){border-top-left-radius:calc(var(--text-boxes-radius) - var(--text-boxes-border-width));border-top-right-radius:calc(var(--text-boxes-radius) - var(--text-boxes-border-width));overflow:hidden}.multicolumn.background-none .multicolumn-card{border-radius:0}.multicolumn-card__info .link{text-decoration:none;font-size:inherit;margin-top:1.5rem}.multicolumn-card__info .icon-wrap{margin-left:.8rem;white-space:nowrap}@media screen and (min-width: 990px){.multicolumn-list__item--empty{display:list-item}}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/section-multicolumn.css.map?v=81420361875458722681745916367 */

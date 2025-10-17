@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/css
+Content-Length: 68
+Connection: keep-alive
+CF-RAY: 98fe056fdae0f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=2592000
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/assets/VaultedPayment.OxMVm7u-.css>; rel="canonical"
+Server-Timing: imagery;dur=20.703, imageryFetch;dur=20.552
+Server-Timing: cfRequestDuration;dur=17.999887
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="VaultedPayment.*.css", id="OxMVm7u-"
+X-Content-Type-Options: nosniff
+X-Request-Id: 059b5bc2-ba31-4439-98e8-5c2c3f211243-1759666039
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Sun, 05 Oct 2025 12:07:19 GMT
+CF-Cache-Status: HIT
+Age: 110665
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2B86Wt2sOsPFL18gwgG84ZQir7pNaiUy5BbAJnlSo12kBMIFDYhM6iFbIiR0wMAZPOesyr4qw5%2BJjPiBOsmZXzmRXamStXSVyAFf4%2B1LnibVBfEovcnnof2xUsEIU"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.oZdJX>*{display:flex;height:inherit;width:inherit}.oZdJX{overflow:hidden}

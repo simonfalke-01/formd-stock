@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 929
+Connection: keep-alive
+CF-RAY: 98fe0566baaaf91a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/details-disclosure.js.map>; rel="canonical"
+Server-Timing: imagery;dur=76.658, imageryFetch;dur=71.777
+Server-Timing: cfRequestDuration;dur=23.000002
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 1698493b-bd83-416b-a1fe-b5313b984143-1759594993
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Sat, 04 Oct 2025 16:23:14 GMT
+CF-Cache-Status: HIT
+Age: 415558
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=4Tflgr8wXei4BoZa43GANS4c7i%2BIIDK48x5C35gYvX%2BOZT81SJXUYMtsCAUHLPFXGBvltbLE%2Fv%2BFCup8xzBZowyrCs85eLoZ%2B9iEhRiMFw7L0ZNB%2F16DfncMouct"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/details-disclosure.js?v=13653116266235556501745916367"
+  ],
+  "sourcesContent": [
+    "class DetailsDisclosure extends HTMLElement {\n  constructor() {\n    super();\n    this.mainDetailsToggle = this.querySelector('details');\n    this.content = this.mainDetailsToggle.querySelector('summary').nextElementSibling;\n\n    this.mainDetailsToggle.addEventListener('focusout', this.onFocusOut.bind(this));\n    this.mainDetailsToggle.addEventListener('toggle', this.onToggle.bind(this));\n  }\n\n  onFocusOut() {\n    setTimeout(() => {\n      if (!this.contains(document.activeElement)) this.close();\n    });\n  }\n\n  onToggle() {\n    if (!this.animations) this.animations = this.content.getAnimations();\n\n    if (this.mainDetailsToggle.hasAttribute('open')) {\n      this.animations.forEach((animation) => animation.play());\n    } else {\n      this.animations.forEach((animation) => animation.cancel());\n    }\n  }\n\n  close() {\n    this.mainDetailsToggle.removeAttribute('open');\n    this.mainDetailsToggle.querySelector('summary').setAttribute('aria-expanded', false);\n  }\n}\n\ncustomElements.define('details-disclosure', DetailsDisclosure);\n\nclass HeaderMenu extends DetailsDisclosure {\n  constructor() {\n    super();\n    this.header = document.querySelector('.header-wrapper');\n  }\n\n  onToggle() {\n    if (!this.header) return;\n    this.header.preventHide = this.mainDetailsToggle.open;\n\n    if (document.documentElement.style.getPropertyValue('--header-bottom-position-desktop') !== '') return;\n    document.documentElement.style.setProperty(\n      '--header-bottom-position-desktop',\n      `${Math.floor(this.header.getBoundingClientRect().bottom)}px`\n    );\n  }\n}\n\ncustomElements.define('header-menu', HeaderMenu);\n"
+  ],
+  "mappings": "AAAA,MAAM,0BAA0B,WAAY,CAC1C,aAAc,CACZ,MAAM,EACN,KAAK,kBAAoB,KAAK,cAAc,SAAS,EACrD,KAAK,QAAU,KAAK,kBAAkB,cAAc,SAAS,EAAE,mBAE/D,KAAK,kBAAkB,iBAAiB,WAAY,KAAK,WAAW,KAAK,IAAI,CAAC,EAC9E,KAAK,kBAAkB,iBAAiB,SAAU,KAAK,SAAS,KAAK,IAAI,CAAC,CAC5E,CAEA,YAAa,CACX,WAAW,IAAM,CACV,KAAK,SAAS,SAAS,aAAa,GAAG,KAAK,MAAM,CACzD,CAAC,CACH,CAEA,UAAW,CACJ,KAAK,aAAY,KAAK,WAAa,KAAK,QAAQ,cAAc,GAE/D,KAAK,kBAAkB,aAAa,MAAM,EAC5C,KAAK,WAAW,QAAS,WAAc,UAAU,KAAK,CAAC,EAEvD,KAAK,WAAW,QAAS,WAAc,UAAU,OAAO,CAAC,CAE7D,CAEA,OAAQ,CACN,KAAK,kBAAkB,gBAAgB,MAAM,EAC7C,KAAK,kBAAkB,cAAc,SAAS,EAAE,aAAa,gBAAiB,EAAK,CACrF,CACF,CAEA,eAAe,OAAO,qBAAsB,iBAAiB,EAE7D,MAAM,mBAAmB,iBAAkB,CACzC,aAAc,CACZ,MAAM,EACN,KAAK,OAAS,SAAS,cAAc,iBAAiB,CACxD,CAEA,UAAW,CACJ,KAAK,SACV,KAAK,OAAO,YAAc,KAAK,kBAAkB,KAE7C,SAAS,gBAAgB,MAAM,iBAAiB,kCAAkC,IAAM,IAC5F,SAAS,gBAAgB,MAAM,YAC7B,mCACA,GAAG,KAAK,MAAM,KAAK,OAAO,sBAAsB,EAAE,MAAM,CAAC,IAC3D,EACF,CACF,CAEA,eAAe,OAAO,cAAe,UAAU",
+  "names": []
+}

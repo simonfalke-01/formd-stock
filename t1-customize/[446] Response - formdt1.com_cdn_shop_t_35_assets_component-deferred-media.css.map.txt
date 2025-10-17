@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1213
+Connection: keep-alive
+CF-RAY: 98fe0565cf4afe8a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-deferred-media.css.map>; rel="canonical"
+Server-Timing: imagery;dur=86.901, imageryFetch;dur=81.304
+Server-Timing: cfRequestDuration;dur=19.000053
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 3b73460d-0489-4a85-82ec-1f07906f1d42-1760455470
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Tue, 14 Oct 2025 15:24:30 GMT
+CF-Cache-Status: HIT
+Age: 108020
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=mQmfc3ujm%2BxoizZ%2BmrVuaBCo6Veka0qaTnPFsM7MCdqVSeJiI9LQ4%2BpI698wln3C%2FWB96BiTcbSBa3kYEa1uxdfCB8sdGGkoFu%2FdjNTJoLHhwTWTVwObEPNz818%2F"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-deferred-media.css?v=14096082462203297471745916367"
+  ],
+  "sourcesContent": [
+    ".deferred-media__poster {\n  background-color: transparent;\n  border: none;\n  cursor: pointer;\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  width: 100%;\n  overflow: hidden;\n  border-radius: calc(var(--border-radius) - var(--border-width));\n}\n\n.media > .deferred-media__poster {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n\n.deferred-media__poster img {\n  width: auto;\n  max-width: 100%;\n  height: 100%;\n}\n\n.deferred-media {\n  overflow: hidden;\n}\n\n.deferred-media:not([loaded]) template {\n  z-index: -1;\n}\n\n.deferred-media[loaded] > .deferred-media__poster {\n  display: none;\n}\n\n.deferred-media__poster:focus-visible {\n  outline: none;\n  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-foreground), var(--media-border-opacity)),\n    0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-background)),\n    0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-foreground), 0.5);\n  border-radius: calc(var(--media-radius) - var(--media-border-width));\n}\n\n.deferred-media__poster:focus {\n  outline: none;\n  box-shadow: 0 0 0 var(--media-border-width) rgba(var(--color-foreground), var(--media-border-opacity)),\n    0 0 0 calc(var(--media-border-width) + 0.3rem) rgb(var(--color-background)),\n    0 0 0 calc(var(--media-border-width) + 0.5rem) rgba(var(--color-foreground), 0.5);\n  border-radius: calc(var(--media-radius) - var(--media-border-width));\n}\n\n.global-media-settings--full-width .deferred-media__poster,\n.global-media-settings--full-width .deferred-media__poster:is(:focus, :focus-visible) {\n  border-radius: 0;\n}\n\n/* outline styling for Windows High Contrast Mode */\n@media (forced-colors: active) {\n  .deferred-media__poster:focus {\n    outline: transparent solid 1px;\n  }\n}\n.deferred-media__poster:focus:not(:focus-visible) {\n  outline: 0;\n  box-shadow: none;\n}\n\n.deferred-media__poster-button {\n  background-color: rgb(var(--color-background));\n  border: 0.1rem solid rgba(var(--color-foreground), 0.1);\n  border-radius: 50%;\n  color: rgb(var(--color-foreground));\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 6.2rem;\n  width: 6.2rem;\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%) scale(1);\n  transition: transform var(--duration-short) ease, color var(--duration-short) ease;\n  z-index: 1;\n}\n\n.deferred-media__poster-button:hover {\n  transform: translate(-50%, -50%) scale(1.1);\n}\n\n.deferred-media__poster-button .icon {\n  width: 2rem;\n  height: 2rem;\n}\n\n.deferred-media__poster-button .icon-play {\n  margin-left: 0.2rem;\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,uBACC,iBAAkB,YAClB,OAAQ,KACR,OAAQ,QAHV,OAIU,EAJV,QAKW,EACT,OAAQ,KACR,MAAO,KACP,SAAU,OACV,cAAe,KAAK,IAAI,iBAAiB,EAAE,IAAI,gBACjD,CAEA,CAAC,KAAM,CAAE,CAZR,uBAaC,QAAS,KACT,YAAa,OACb,gBAAiB,MACnB,CAEA,CAlBC,uBAkBuB,IACtB,MAAO,KACP,UAAW,KACX,OAAQ,IACV,CAEA,CAAC,eACC,SAAU,MACZ,CAEA,CAJC,cAIc,KAAK,CAAC,SAAS,SAC5B,QAAS,EACX,CAEA,CARC,cAQc,CAAC,OAAQ,CAAE,CAhCzB,uBAiCC,QAAS,IACX,CAEA,CApCC,sBAoCsB,eACrB,QAAS,KACT,WAAY,EAAE,EAAE,EAAE,IAAI,sBAAsB,KAAK,IAAI,mBAAmB,CAAE,IAAI,wBAAwB,CACpG,EAAE,EAAE,EAAE,KAAK,IAAI,sBAAsB,EAAE,OAAQ,IAAI,IAAI,oBAAoB,CAC3E,EAAE,EAAE,EAAE,KAAK,IAAI,sBAAsB,EAAE,OAAQ,KAAK,IAAI,mBAAmB,CAAE,IAC/E,cAAe,KAAK,IAAI,gBAAgB,EAAE,IAAI,sBAChD,CAEA,CA5CC,sBA4CsB,OACrB,QAAS,KACT,WAAY,EAAE,EAAE,EAAE,IAAI,sBAAsB,KAAK,IAAI,mBAAmB,CAAE,IAAI,wBAAwB,CACpG,EAAE,EAAE,EAAE,KAAK,IAAI,sBAAsB,EAAE,OAAQ,IAAI,IAAI,oBAAoB,CAC3E,EAAE,EAAE,EAAE,KAAK,IAAI,sBAAsB,EAAE,OAAQ,KAAK,IAAI,mBAAmB,CAAE,IAC/E,cAAe,KAAK,IAAI,gBAAgB,EAAE,IAAI,sBAChD,CAEA,CAAC,kCAAkC,CApDlC,uBAqDD,CADC,kCACkC,CArDlC,sBAqDyD,IAAI,OAAQ,gBArDtE,cAsDiB,CACjB,CAGA,OAAO,CAAC,aAAa,EAAE,QACrB,CA3DD,sBA2DwB,OACrB,QAAS,YAAY,MAAM,GAC7B,CACF,CACA,CA/DC,sBA+DsB,MAAM,KAAK,gBAChC,QAAS,EACT,WAAY,IACd,CAEA,CAAC,8BACC,iBAAkB,IAAI,IAAI,qBAC1B,OAAQ,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,IAtErD,cAuEiB,IACf,MAAO,IAAI,IAAI,qBACf,QAAS,KACT,YAAa,OACb,gBAAiB,OACjB,OAAQ,OACR,MAAO,OACP,SAAU,SACV,KAAM,IACN,IAAK,IACL,UAAW,UAAU,IAAI,CAAE,MAAM,MAAM,GACvC,WAAY,UAAU,IAAI,kBAAkB,IAAI,CAAE,MAAM,IAAI,kBAAkB,KAC9E,QAAS,CACX,CAEA,CAlBC,6BAkB6B,OAC5B,UAAW,UAAU,IAAI,CAAE,MAAM,MAAM,IACzC,CAEA,CAtBC,8BAsB8B,CAAC,KAC9B,MAAO,KACP,OAAQ,IACV,CAEA,CA3BC,8BA2B8B,CAAC,UAC9B,YAAa,KACf",
+  "names": []
+}

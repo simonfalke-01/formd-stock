@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 435
+Connection: keep-alive
+CF-RAY: 98fe0561bf8940fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-rating.css>; rel="canonical"
+Server-Timing: imagery;dur=100.419, imageryFetch;dur=98.287
+Server-Timing: cfRequestDuration;dur=22.000074
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: c773dc93-5377-4e20-9779-09a017c9c769-1759414899
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Thu, 02 Oct 2025 14:21:39 GMT
+CF-Cache-Status: HIT
+Age: 26384
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=k%2BSE%2FRlCYYbVZZzKFB%2FBFQ6T7zlFvJkcC7WCD26SPKpVeXoaupm0Fkgsl6f%2BTP5sFCWABg34Fl6n4IKEJ%2FRFKC1qcnJgSvUDKNQzJGtzkZ4LY8RuB3t6TIKA%2BQZZ"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.product--no-media .rating-wrapper{text-align:center}.rating{display:inline-block;margin:0}.product .rating-star{--letter-spacing: .8;--font-size: 1.7}.card-wrapper .rating-star{--letter-spacing: .7;--font-size: 1.4}.rating-star{--color-rating-star: rgb(var(--color-foreground));--percent: calc( ( var(--rating) / var(--rating-max) + var(--rating-decimal) * var(--font-size) / (var(--rating-max) * (var(--letter-spacing) + var(--font-size))) ) * 100% );letter-spacing:calc(var(--letter-spacing) * 1rem);font-size:calc(var(--font-size) * 1rem);line-height:1;display:inline-block;font-family:Times;margin:0}.rating-star:before{content:"\2605\2605\2605\2605\2605";background:linear-gradient(90deg,var(--color-rating-star) var(--percent),rgba(var(--color-foreground),.15) var(--percent));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.rating-text{display:none}.rating-count{display:inline-block;margin:0}@media (forced-colors: active){.rating{display:none}.rating-text{display:block}}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-rating.css.map?v=179577762467860590411745916367 */

@@ -1,0 +1,36 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 1049
+Connection: keep-alive
+CF-RAY: 98fe056eaf9cce0e-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Age: 30317
+vary: accept-encoding
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/PayButtonSection.BjITM0uC.js>; rel="canonical"
+Server-Timing: imagery;dur=50.068, imageryFetch;dur=23.796
+Server-Timing: cfRequestDuration;dur=16.000032
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="PayButtonSection.*.js", id="BjITM0uC"
+X-Content-Type-Options: nosniff
+X-Request-Id: fe4ce02d-83fc-497c-b149-3809e3e7fc06-1760654447
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+last-modified: Thu, 16 Oct 2025 22:40:47 GMT
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=fGEXzKc4czHat1frYMsi4IjrxNfHkFoKiLqYmR6A0ESbXYfT8vfojJPN%2FbcsQ87ct1KZBc0tJ4Gj6GxBX63lg2S58tTMP8T7OlXMVVncksNEJc78rJ8Ua5JXzT8t"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{E as d,a$ as E,b0 as A,aL as N,b1 as S,a as e,b2 as h,J as P,R as g,a0 as C,B,b3 as m,aN as b,b4 as I,b5 as O,aj as R,b6 as v,X as V,q as L,y as w,aw as M,b7 as U,b8 as D}from"./app.PV_iB4eS.js";import{R as k,S as x}from"./SeparatePaymentsNotice.DFu_dAyO.js";import{S as Y}from"./ShopPayOptInDisclaimer.CbbjxgcZ.js";const W=t=>e(b,{children:t}),X="disable-view-transitions-for-pay-button-section",T="checkout-pay-button-section";function q(){const t=document.createElement("style");return t.setAttribute("id",X),t.textContent=`
+    #${T}, #${T} * {
+      view-transition-name: none !important;
+    }
+  `,document.head.appendChild(t),t}function Z(){const t=d("Checkout::Actions::RenderBefore"),o=E(),{PayButton:a}=A(),{offsitePopupController:p}=N();return S(()=>{if(p.isOpen.value){const u=q();return()=>{u.remove()}}}),e(m,{target:"cart.paymentLines[0]",children:e(h,{impressionType:"pay_now_button",impressionFeatures:[],children:[t.length!==0&&e(P,{children:[e(g,{extensions:t,render:W}),e(C,{spacing:"base"})]}),e(B,{ref:o,id:T,children:[e($,{}),e(k,{children:e(a,{})}),e(Y,{}),e(x,{})]})]})})}const F=new Map([["PAYMENTS_UNACCEPTABLE_PAYMENT_AMOUNT",{status:"warning",priority:-1,negotiationStage:"completion"}],["TAX_NEW_TAX_MUST_BE_ACCEPTED",{status:"warning",priority:-2,negotiationStage:"completion"}]]);function $(){const t=I(),o=G(t.value,F);return e(m,{target:"cart.paymentLines[0]",children:o.map(a=>e(O,{notice:a,errorType:R.PaymentError},a.code))})}function G(t,o){const a=v(),[p,u]=V([]),l=L(({violations:i,negotiationStage:y})=>{const r=[],_=i.some(n=>D.has(n.code));for(const n of i)if(!J(n)&&!(_&&(n.code==="PAYMENTS_UNACCEPTABLE_PAYMENT_AMOUNT"||n.code==="TAX_NEW_TAX_MUST_BE_ACCEPTED"))&&o.has(n.code)){if(_)continue;const c=o.get(n.code);y&&y===c?.negotiationStage&&r.push({...n,tone:c?.tone,priority:c?.priority})}if(r.length>=1){const c=r.map(s=>s.priority??0).reduce((s,f)=>s>f?s:f);return r.filter(s=>(s.priority??0)>=c)}return r},[o]);return w(()=>{t&&u(l({violations:t}))},[l]),M(i=>{i.type==="complete"||i.type==="invalid"||i.type==="failed"||!a.current||u(l({violations:i.violations,negotiationStage:i.negotiationStage}))}),p.filter(U("localizedMessage"))}function J(t){return t.__typename!=="ConfirmChangeViolation"&&t.__typename!=="UnprocessableTermViolation"&&t.__typename!=="RemoveTermViolation"}export{Z as P};

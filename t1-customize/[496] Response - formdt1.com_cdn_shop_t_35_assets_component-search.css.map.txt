@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 854
+Connection: keep-alive
+CF-RAY: 98fe05678b4afd6b-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Tue, 14 Oct 2025 15:18:59 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-search.css.map>; rel="canonical"
+Server-Timing: imagery;dur=92.186, imageryFetch;dur=87.666
+Server-Timing: cfRequestDuration;dur=16.000032
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: bbb7783d-cf2b-4229-842c-8d62f9915f2a-1760455139
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=XeW11tVDJBBtnpAJhw8SWpTq8wPX5kX3zuxXwQG2wCpNjTCjZosk1C3LXKDQBkViNXA9t0s8%2FZMEWoWccsgm0OCbTpMkzCEDpM%2FbdcqFjUG8vxl%2F5jfyhcCoQVUh"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-search.css?v=165164710990765432851745916367"
+  ],
+  "sourcesContent": [
+    ".search__input.field__input {\n  padding-right: 9.8rem;\n}\n\n.search__button {\n  right: var(--inputs-border-width);\n  top: var(--inputs-border-width);\n}\n\n.reset__button {\n  right: calc(var(--inputs-border-width) + 4.4rem);\n  top: var(--inputs-border-width);\n}\n\n.reset__button:not(:focus-visible)::after {\n  border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);\n  display: block;\n  height: calc(100% - 1.6rem);\n  content: '';\n  position: absolute;\n  right: 0;\n}\n\n.reset__button:not(:focus)::after {\n  border-right: 0.1rem solid rgba(var(--color-foreground), 0.08);\n  display: block;\n  height: calc(100% - 1.8rem);\n  content: '';\n  position: absolute;\n  right: 0;\n}\n\n.search__button:focus-visible,\n.reset__button:focus-visible {\n  background-color: rgb(var(--color-background));\n  z-index: 4;\n}\n\n.search__button:focus,\n.reset__button:focus {\n  background-color: rgb(var(--color-background));\n  z-index: 4;\n}\n\n.search__button:not(:focus-visible):not(.focused),\n.reset__button:not(:focus-visible):not(.focused) {\n  box-shadow: inherit;\n  background-color: inherit;\n}\n\n.search__button:hover .icon,\n.reset__button:hover .icon {\n  transform: scale(1.07);\n}\n\n.search__button .icon {\n  height: 1.8rem;\n  width: 1.8rem;\n}\n\n.reset__button .icon.icon-close {\n  height: 1.8rem;\n  width: 1.8rem;\n  stroke-width: 0.1rem;\n}\n\n/* Remove extra spacing for search inputs in Safari */\ninput::-webkit-search-decoration {\n  -webkit-appearance: none;\n}\n\n.template-search__results {\n  position: relative;\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,aAAa,CAAC,aACb,cAAe,MACjB,CAEA,CAAC,eACC,MAAO,IAAI,uBACX,IAAK,IAAI,sBACX,CAEA,CAAC,cACC,MAAO,KAAK,IAAI,uBAAuB,EAAE,QACzC,IAAK,IAAI,sBACX,CAEA,CALC,aAKa,KAAK,eAAe,OAChC,aAAc,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,KACzD,QAAS,MACT,OAAQ,KAAK,KAAK,EAAE,QACpB,QAAS,GACT,SAAU,SACV,MAAO,CACT,CAEA,CAdC,aAca,KAAK,OAAO,OACxB,aAAc,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,KACzD,QAAS,MACT,OAAQ,KAAK,KAAK,EAAE,QACpB,QAAS,GACT,SAAU,SACV,MAAO,CACT,CAEA,CA5BC,cA4Bc,eACf,CAxBC,aAwBa,eACZ,iBAAkB,IAAI,IAAI,qBAC1B,QAAS,CACX,CAEA,CAlCC,cAkCc,OACf,CA9BC,aA8Ba,OACZ,iBAAkB,IAAI,IAAI,qBAC1B,QAAS,CACX,CAEA,CAxCC,cAwCc,KAAK,eAAe,KAAK,CAAC,SACzC,CApCC,aAoCa,KAAK,eAAe,KAAK,CADE,SAEvC,WAAY,QACZ,iBAAkB,OACpB,CAEA,CA9CC,cA8Cc,OAAO,CAAC,KACvB,CA1CC,aA0Ca,OAAO,CADE,KAErB,UAAW,MAAM,KACnB,CAEA,CAnDC,eAmDe,CALO,KAMrB,OAAQ,OACR,MAAO,MACT,CAEA,CAnDC,cAmDc,CAVQ,IAUH,CAAC,WACnB,OAAQ,OACR,MAAO,OACP,aAAc,KAChB,CAGA,KAAK,4BACH,mBAAoB,IACtB,CAEA,CAAC,yBACC,SAAU,QACZ",
+  "names": []
+}

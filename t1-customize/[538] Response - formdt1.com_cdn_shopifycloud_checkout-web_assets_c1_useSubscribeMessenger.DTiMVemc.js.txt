@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 1181
+Connection: keep-alive
+CF-RAY: 98fe056e2e96ce0e-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/useSubscribeMessenger.DTiMVemc.js>; rel="canonical"
+Server-Timing: imagery;dur=36.197, imageryFetch;dur=36.012
+Server-Timing: cfRequestDuration;dur=23.000002
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="useSubscribeMessenger.*.js", id="DTiMVemc"
+X-Content-Type-Options: nosniff
+X-Request-Id: c5368f20-3267-44a1-a2d7-c090925c55cb-1760654447
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Thu, 16 Oct 2025 22:40:47 GMT
+CF-Cache-Status: HIT
+Age: 30317
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=lXeH9r5mXiOpE9%2F01dY9pTg0UrVZRtE3TuVmOxD0O7FEitVULZDaOH1zThlbPqEeCTVxwzywlzHT9JMnrgF2f%2FvBuAPpStvb6jJm%2Fyirw9cijFaybbJg7NMHS7Um"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{aA as S,b9 as w,ba as x,bb as p,q as g,bc as v,y as L}from"./app.PV_iB4eS.js";const U=()=>{const{myshopifyDomain:e}=S(),{checkoutSessionIdentifier:r}=w(),a=x(),{services:{shopServer:t}}=p();return{exchangeSessionTokenForCookie:g(async({token:d,origin:h,analytics_trace_id:i})=>{const o=new URLSearchParams({token:d,origin:h,shopify_domain:e});r&&o.set("checkout_token",r),i&&o.set("analytics_trace_id",i);const u=new URL(a.shopPaySession(),t.url);return u.search=o.toString(),fetch(u.href,{method:"POST",keepalive:!0})},[r,e,a,t.url])}},B=()=>{const e=S(),r=parseInt(v(e.id),10),{services:{shopServer:a}}=p();return{extendBuyerIdentity:g(async()=>{await fetch(new URL(`/checkout/${r}/shopify_pay/extend_buyer_identity`,a.url),{method:"GET",keepalive:!0})},[r,a.url])}},b="shopify_pay",l=":";var n=(e=>(e.Closed="closed",e.EmailChanged="emailChanged",e.Error="error",e.Hidden="hidden",e.Loaded="loaded",e.LoggedIn="loggedIn",e.Ready="ready",e.RedirectWithEmailOnly="redirectWithEmailOnly",e.Resized="resized",e.ShareCaptchaToken="shareCaptchaToken",e))(n||{}),T=(e=>(e.AllowNoInitialEmail="allowNoInitialEmail",e.Create="create",e.Hidden="hidden",e.OriginChanged="originChanged",e.Ready="ready",e.CheckoutQueueToken="checkoutQueueToken",e))(T||{}),M=(e=>(e.ShopifyPayUserNotFound="shopify_pay_user_not_found",e))(M||{}),N=(e=>(e.FraudGuard="fraud_guard",e.InvalidEmail="invalid_email",e.InvalidPhone="invalid_phone",e.LimitExceeded="limit_exceeded",e.PhoneBlocked="phone_blocked",e.RecordNotFound="record_not_found",e))(N||{});function O(e,r={delimiter:l,messageKey:b}){return[r.messageKey,r.delimiter,JSON.stringify(e)].join("")}function F(e){return O(e)}function z(e,r){e&&e.contentWindow?.postMessage(F(r),"*")}function G({targetId:e,onLoaded:r,onClosed:a,onHidden:t,onError:y,onLoggedIn:d,onReady:h,onResized:i,onRedirectUserWithEmailOnly:o,onShareCaptchaToken:u,onEmailChange:f}){const k=g(s=>{switch(s.action){case n.Closed:return a?.();case n.Hidden:return t?.();case n.Error:return y?.(s.message,s.apiError,s.email);case n.Loaded:return r?.();case n.LoggedIn:return d?.(s.token,s.shop_pay_access_token);case n.Ready:return h?.(s.phoneNumber);case n.Resized:return i?.(parseInt(s.height,10));case n.RedirectWithEmailOnly:return o?.(s.email);case n.ShareCaptchaToken:return u?.(s.token);case n.EmailChanged:return f?.(s.email,s.isUserFound)}},[a,t,y,r,d,h,i,o,u,f]),_=p().services.payShopifyCom.url;L(()=>{const s=({data:c,origin:E})=>{if(E!==_||!c||typeof c!="string"||!c.includes(l))return;const[C,...I]=c.split(l);if(C===b)try{const m=JSON.parse(I.join(l));(e&&m.targetId===e||!e)&&k(m)}catch{}};return window.addEventListener("message",s),()=>{window.removeEventListener("message",s)}},[k,_,e])}export{N as A,M,T as S,B as a,G as b,z as p,U as u};

@@ -1,0 +1,57 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 165
+Connection: keep-alive
+CF-RAY: 98fe05629950f91a-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-list-payment.css>; rel="canonical"
+Server-Timing: imagery;dur=140.379, imageryFetch;dur=137.895
+Server-Timing: cfRequestDuration;dur=19.000053
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 2c820eb4-b8c7-4874-84e0-a5267a5f35ac-1752056923
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Wed, 09 Jul 2025 10:28:44 GMT
+CF-Cache-Status: HIT
+Age: 3899867
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=VIHFeG7YFzpNILyeNL4khZmZtMmVPE0mMghsd823dadOk1cyw%2FddPBrblWse2ke6e5mDAacVW7mNEpck7qxaEYQT8IgYg0TvYtiqvheOe8Hna8gnpIjVVK8dzv6M"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.list-payment {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -0.5rem 0;
+  padding-top: 1rem;
+  padding-left: 0;
+}
+
+@media screen and (min-width: 750px) {
+  .list-payment {
+    justify-content: flex-end;
+    margin: -0.5rem;
+    padding-top: 0;
+  }
+}
+
+.list-payment__item {
+  align-items: center;
+  display: flex;
+  padding: 0.5rem;
+}

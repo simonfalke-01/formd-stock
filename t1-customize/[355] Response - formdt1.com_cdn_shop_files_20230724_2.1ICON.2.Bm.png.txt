@@ -1,0 +1,35 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: image/webp
+Content-Length: 315246
+Connection: keep-alive
+CF-RAY: 98fe05620fbe40fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 180192
+last-modified: Tue, 14 Oct 2025 22:32:18 GMT
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Server-Timing: imagery;dur=534.082, imageryFetch;dur=92.627, imageryProcess;dur=440.520;desc="image"
+Server-Timing: cfRequestDuration;dur=24.000168
+Source-Length: 1507875
+Source-Type: image/png
+Timing-Allow-Origin: *
+Vary: Accept, Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 9f7c11b8-6da3-44a7-afd0-01004388384c-1760481137
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=VLWB1UHVdpcmZK7b%2BNpibYZp3eac%2BXGlh0meatwpKYUjEQxOGn3aF02zIHOze9bfpXnJPPVK0ouuUfEozKN8288mWwwR2wAS43h2v%2FDIhB3d8eYVFtwZ7ojcgsCX"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+<Image Binary>

@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1745
+Connection: keep-alive
+CF-RAY: 98fe0566cb9840fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Sat, 11 Oct 2025 02:57:38 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/animations.js.map>; rel="canonical"
+Server-Timing: imagery;dur=148.478, imageryFetch;dur=139.679
+Server-Timing: cfRequestDuration;dur=22.000074
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: ed6376d9-051f-4c75-9477-5fd31a06bcc5-1760151458
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=8Y2HlfkwRoPhHEZaeNSr26gAWNzENm0%2BPEymO4xuOGCd6FduNxS2QEOhBKJj%2BLv7PnI31I%2F%2BTX37F4cdxVN0Lz%2BjxDpV%2B%2FtEdqw0eTCYtv%2BGwKD%2FJTxXErD0Z1gM"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/animations.js?v=88693664871331136111745916367"
+  ],
+  "sourcesContent": [
+    "const SCROLL_ANIMATION_TRIGGER_CLASSNAME = 'scroll-trigger';\nconst SCROLL_ANIMATION_OFFSCREEN_CLASSNAME = 'scroll-trigger--offscreen';\nconst SCROLL_ZOOM_IN_TRIGGER_CLASSNAME = 'animate--zoom-in';\nconst SCROLL_ANIMATION_CANCEL_CLASSNAME = 'scroll-trigger--cancel';\n\n// Scroll in animation logic\nfunction onIntersection(elements, observer) {\n  elements.forEach((element, index) => {\n    if (element.isIntersecting) {\n      const elementTarget = element.target;\n      if (elementTarget.classList.contains(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME)) {\n        elementTarget.classList.remove(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);\n        if (elementTarget.hasAttribute('data-cascade'))\n          elementTarget.setAttribute('style', `--animation-order: ${index};`);\n      }\n      observer.unobserve(elementTarget);\n    } else {\n      element.target.classList.add(SCROLL_ANIMATION_OFFSCREEN_CLASSNAME);\n      element.target.classList.remove(SCROLL_ANIMATION_CANCEL_CLASSNAME);\n    }\n  });\n}\n\nfunction initializeScrollAnimationTrigger(rootEl = document, isDesignModeEvent = false) {\n  const animationTriggerElements = Array.from(rootEl.getElementsByClassName(SCROLL_ANIMATION_TRIGGER_CLASSNAME));\n  if (animationTriggerElements.length === 0) return;\n\n  if (isDesignModeEvent) {\n    animationTriggerElements.forEach((element) => {\n      element.classList.add('scroll-trigger--design-mode');\n    });\n    return;\n  }\n\n  const observer = new IntersectionObserver(onIntersection, {\n    rootMargin: '0px 0px -50px 0px',\n  });\n  animationTriggerElements.forEach((element) => observer.observe(element));\n}\n\n// Zoom in animation logic\nfunction initializeScrollZoomAnimationTrigger() {\n  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;\n\n  const animationTriggerElements = Array.from(document.getElementsByClassName(SCROLL_ZOOM_IN_TRIGGER_CLASSNAME));\n\n  if (animationTriggerElements.length === 0) return;\n\n  const scaleAmount = 0.2 / 100;\n\n  animationTriggerElements.forEach((element) => {\n    let elementIsVisible = false;\n    const observer = new IntersectionObserver((elements) => {\n      elements.forEach((entry) => {\n        elementIsVisible = entry.isIntersecting;\n      });\n    });\n    observer.observe(element);\n\n    element.style.setProperty('--zoom-in-ratio', 1 + scaleAmount * percentageSeen(element));\n\n    window.addEventListener(\n      'scroll',\n      throttle(() => {\n        if (!elementIsVisible) return;\n\n        element.style.setProperty('--zoom-in-ratio', 1 + scaleAmount * percentageSeen(element));\n      }),\n      { passive: true }\n    );\n  });\n}\n\nfunction percentageSeen(element) {\n  const viewportHeight = window.innerHeight;\n  const scrollY = window.scrollY;\n  const elementPositionY = element.getBoundingClientRect().top + scrollY;\n  const elementHeight = element.offsetHeight;\n\n  if (elementPositionY > scrollY + viewportHeight) {\n    // If we haven't reached the image yet\n    return 0;\n  } else if (elementPositionY + elementHeight < scrollY) {\n    // If we've completely scrolled past the image\n    return 100;\n  }\n\n  // When the image is in the viewport\n  const distance = scrollY + viewportHeight - elementPositionY;\n  let percentage = distance / ((viewportHeight + elementHeight) / 100);\n  return Math.round(percentage);\n}\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  initializeScrollAnimationTrigger();\n  initializeScrollZoomAnimationTrigger();\n});\n\nif (Shopify.designMode) {\n  document.addEventListener('shopify:section:load', (event) => initializeScrollAnimationTrigger(event.target, true));\n  document.addEventListener('shopify:section:reorder', () => initializeScrollAnimationTrigger(document, true));\n}\n"
+  ],
+  "mappings": "AAAA,MAAM,mCAAqC,iBACrC,qCAAuC,4BACvC,iCAAmC,mBACnC,kCAAoC,yBAG1C,SAAS,eAAe,SAAU,SAAU,CAC1C,SAAS,QAAQ,CAAC,QAAS,QAAU,CACnC,GAAI,QAAQ,eAAgB,CAC1B,MAAM,cAAgB,QAAQ,OAC1B,cAAc,UAAU,SAAS,oCAAoC,IACvE,cAAc,UAAU,OAAO,oCAAoC,EAC/D,cAAc,aAAa,cAAc,GAC3C,cAAc,aAAa,QAAS,sBAAsB,KAAK,GAAG,GAEtE,SAAS,UAAU,aAAa,CAClC,MACE,QAAQ,OAAO,UAAU,IAAI,oCAAoC,EACjE,QAAQ,OAAO,UAAU,OAAO,iCAAiC,CAErE,CAAC,CACH,CAEA,SAAS,iCAAiC,OAAS,SAAU,kBAAoB,GAAO,CACtF,MAAM,yBAA2B,MAAM,KAAK,OAAO,uBAAuB,kCAAkC,CAAC,EAC7G,GAAI,yBAAyB,SAAW,EAAG,OAE3C,GAAI,kBAAmB,CACrB,yBAAyB,QAAS,SAAY,CAC5C,QAAQ,UAAU,IAAI,6BAA6B,CACrD,CAAC,EACD,MACF,CAEA,MAAM,SAAW,IAAI,qBAAqB,eAAgB,CACxD,WAAY,mBACd,CAAC,EACD,yBAAyB,QAAS,SAAY,SAAS,QAAQ,OAAO,CAAC,CACzE,CAGA,SAAS,sCAAuC,CAC9C,GAAI,OAAO,WAAW,kCAAkC,EAAE,QAAS,OAEnE,MAAM,yBAA2B,MAAM,KAAK,SAAS,uBAAuB,gCAAgC,CAAC,EAE7G,GAAI,yBAAyB,SAAW,EAAG,OAE3C,MAAM,YAAc,GAAM,IAE1B,yBAAyB,QAAS,SAAY,CAC5C,IAAI,iBAAmB,GACN,IAAI,qBAAsB,UAAa,CACtD,SAAS,QAAS,OAAU,CAC1B,iBAAmB,MAAM,cAC3B,CAAC,CACH,CAAC,EACQ,QAAQ,OAAO,EAExB,QAAQ,MAAM,YAAY,kBAAmB,EAAI,YAAc,eAAe,OAAO,CAAC,EAEtF,OAAO,iBACL,SACA,SAAS,IAAM,CACR,kBAEL,QAAQ,MAAM,YAAY,kBAAmB,EAAI,YAAc,eAAe,OAAO,CAAC,CACxF,CAAC,EACD,CAAE,QAAS,EAAK,CAClB,CACF,CAAC,CACH,CAEA,SAAS,eAAe,QAAS,CAC/B,MAAM,eAAiB,OAAO,YACxB,QAAU,OAAO,QACjB,iBAAmB,QAAQ,sBAAsB,EAAE,IAAM,QACzD,cAAgB,QAAQ,aAE9B,GAAI,iBAAmB,QAAU,eAE/B,MAAO,GACF,GAAI,iBAAmB,cAAgB,QAE5C,MAAO,KAKT,IAAI,YADa,QAAU,eAAiB,oBACd,eAAiB,eAAiB,KAChE,OAAO,KAAK,MAAM,UAAU,CAC9B,CAEA,OAAO,iBAAiB,mBAAoB,IAAM,CAChD,iCAAiC,EACjC,qCAAqC,CACvC,CAAC,EAEG,QAAQ,aACV,SAAS,iBAAiB,uBAAyB,OAAU,iCAAiC,MAAM,OAAQ,EAAI,CAAC,EACjH,SAAS,iBAAiB,0BAA2B,IAAM,iCAAiC,SAAU,EAAI,CAAC",
+  "names": []
+}

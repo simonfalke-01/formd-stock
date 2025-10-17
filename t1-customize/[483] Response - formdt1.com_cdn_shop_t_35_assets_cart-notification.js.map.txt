@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1332
+Connection: keep-alive
+CF-RAY: 98fe0566fbba40fa-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/cart-notification.js.map>; rel="canonical"
+Server-Timing: imagery;dur=117.930, imageryFetch;dur=112.849
+Server-Timing: cfRequestDuration;dur=28.000116
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: e0e0bb47-7466-46f8-b968-d32f9796a7d1-1759594993
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Sat, 04 Oct 2025 16:23:13 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=1v3m%2FoZP4Z%2FhVXcsO%2FavA3Z1QOn6IjXkS%2FuaL76qIOng6srp5pwYN2XkrfWRuP2vpl7GJYgp4%2FCL1FYsw2Flu6C6ZoYm8g%2Ble67LRCFW1yQSO%2FbVoei1fsoNRR2a"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/cart-notification.js?v=133508293167896966491745916367"
+  ],
+  "sourcesContent": [
+    "class CartNotification extends HTMLElement {\n  constructor() {\n    super();\n\n    this.notification = document.getElementById('cart-notification');\n    this.header = document.querySelector('sticky-header');\n    this.onBodyClick = this.handleBodyClick.bind(this);\n\n    this.notification.addEventListener('keyup', (evt) => evt.code === 'Escape' && this.close());\n    this.querySelectorAll('button[type=\"button\"]').forEach((closeButton) =>\n      closeButton.addEventListener('click', this.close.bind(this))\n    );\n  }\n\n  open() {\n    this.notification.classList.add('animate', 'active');\n\n    this.notification.addEventListener(\n      'transitionend',\n      () => {\n        this.notification.focus();\n        trapFocus(this.notification);\n      },\n      { once: true }\n    );\n\n    document.body.addEventListener('click', this.onBodyClick);\n  }\n\n  close() {\n    this.notification.classList.remove('active');\n    document.body.removeEventListener('click', this.onBodyClick);\n\n    removeTrapFocus(this.activeElement);\n  }\n\n  renderContents(parsedState) {\n    this.cartItemKey = parsedState.key;\n    this.getSectionsToRender().forEach((section) => {\n      document.getElementById(section.id).innerHTML = this.getSectionInnerHTML(\n        parsedState.sections[section.id],\n        section.selector\n      );\n    });\n\n    if (this.header) this.header.reveal();\n    this.open();\n  }\n\n  getSectionsToRender() {\n    return [\n      {\n        id: 'cart-notification-product',\n        selector: `[id=\"cart-notification-product-${this.cartItemKey}\"]`,\n      },\n      {\n        id: 'cart-notification-button',\n      },\n      {\n        id: 'cart-icon-bubble',\n      },\n    ];\n  }\n\n  getSectionInnerHTML(html, selector = '.shopify-section') {\n    return new DOMParser().parseFromString(html, 'text/html').querySelector(selector).innerHTML;\n  }\n\n  handleBodyClick(evt) {\n    const target = evt.target;\n    if (target !== this.notification && !target.closest('cart-notification')) {\n      const disclosure = target.closest('details-disclosure, header-menu');\n      this.activeElement = disclosure ? disclosure.querySelector('summary') : null;\n      this.close();\n    }\n  }\n\n  setActiveElement(element) {\n    this.activeElement = element;\n  }\n}\n\ncustomElements.define('cart-notification', CartNotification);\n"
+  ],
+  "mappings": "AAAA,MAAM,yBAAyB,WAAY,CACzC,aAAc,CACZ,MAAM,EAEN,KAAK,aAAe,SAAS,eAAe,mBAAmB,EAC/D,KAAK,OAAS,SAAS,cAAc,eAAe,EACpD,KAAK,YAAc,KAAK,gBAAgB,KAAK,IAAI,EAEjD,KAAK,aAAa,iBAAiB,QAAU,KAAQ,IAAI,OAAS,UAAY,KAAK,MAAM,CAAC,EAC1F,KAAK,iBAAiB,uBAAuB,EAAE,QAAS,aACtD,YAAY,iBAAiB,QAAS,KAAK,MAAM,KAAK,IAAI,CAAC,CAC7D,CACF,CAEA,MAAO,CACL,KAAK,aAAa,UAAU,IAAI,UAAW,QAAQ,EAEnD,KAAK,aAAa,iBAChB,gBACA,IAAM,CACJ,KAAK,aAAa,MAAM,EACxB,UAAU,KAAK,YAAY,CAC7B,EACA,CAAE,KAAM,EAAK,CACf,EAEA,SAAS,KAAK,iBAAiB,QAAS,KAAK,WAAW,CAC1D,CAEA,OAAQ,CACN,KAAK,aAAa,UAAU,OAAO,QAAQ,EAC3C,SAAS,KAAK,oBAAoB,QAAS,KAAK,WAAW,EAE3D,gBAAgB,KAAK,aAAa,CACpC,CAEA,eAAe,YAAa,CAC1B,KAAK,YAAc,YAAY,IAC/B,KAAK,oBAAoB,EAAE,QAAS,SAAY,CAC9C,SAAS,eAAe,QAAQ,EAAE,EAAE,UAAY,KAAK,oBACnD,YAAY,SAAS,QAAQ,EAAE,EAC/B,QAAQ,QACV,CACF,CAAC,EAEG,KAAK,QAAQ,KAAK,OAAO,OAAO,EACpC,KAAK,KAAK,CACZ,CAEA,qBAAsB,CACpB,MAAO,CACL,CACE,GAAI,4BACJ,SAAU,kCAAkC,KAAK,WAAW,IAC9D,EACA,CACE,GAAI,0BACN,EACA,CACE,GAAI,kBACN,CACF,CACF,CAEA,oBAAoB,KAAM,SAAW,mBAAoB,CACvD,OAAO,IAAI,UAAU,EAAE,gBAAgB,KAAM,WAAW,EAAE,cAAc,QAAQ,EAAE,SACpF,CAEA,gBAAgB,IAAK,CACnB,MAAM,OAAS,IAAI,OACnB,GAAI,SAAW,KAAK,cAAgB,CAAC,OAAO,QAAQ,mBAAmB,EAAG,CACxE,MAAM,WAAa,OAAO,QAAQ,iCAAiC,EACnE,KAAK,cAAgB,WAAa,WAAW,cAAc,SAAS,EAAI,KACxE,KAAK,MAAM,CACb,CACF,CAEA,iBAAiB,QAAS,CACxB,KAAK,cAAgB,OACvB,CACF,CAEA,eAAe,OAAO,oBAAqB,gBAAgB",
+  "names": []
+}

@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 781
+Connection: keep-alive
+CF-RAY: 98fe0565fcf9ce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/section-rich-text.css.map>; rel="canonical"
+Server-Timing: imagery;dur=111.334, imageryFetch;dur=107.288
+Server-Timing: cfRequestDuration;dur=17.999887
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 6e7a1ded-f8a4-46d8-a8c5-adbf783d87de-1760276150
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-east1
+Last-Modified: Sun, 12 Oct 2025 13:35:51 GMT
+CF-Cache-Status: HIT
+Age: 334978
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=HpFtWQTeHayUfgMHCBGvcO6OL54axlOmxUK7lXcpCQVbTm3eRA0vapDdyKRXb82huGX3fsmLQ%2Fuh%2FesVJ%2F6Aj9Z1BdB2aJxQXxJdNYfmp7PyE9Dfne4NCDkICG15"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/section-rich-text.css?v=155250126305810049721745916367"
+  ],
+  "sourcesContent": [
+    ".rich-text {\n  z-index: 1;\n}\n\n.rich-text__wrapper {\n  display: flex;\n  justify-content: center;\n  width: calc(100% - 4rem / var(--font-body-scale));\n}\n\n.rich-text:not(.rich-text--full-width) .rich-text__wrapper {\n  margin: auto;\n  width: calc(100% - 8rem / var(--font-body-scale));\n}\n\n.rich-text__blocks {\n  width: 100%;\n}\n\n@media screen and (min-width: 750px) {\n  .rich-text__wrapper {\n    width: 100%;\n  }\n\n  .rich-text__wrapper--left {\n    justify-content: flex-start;\n  }\n\n  .rich-text__wrapper--right {\n    justify-content: flex-end;\n  }\n\n  .rich-text__blocks {\n    max-width: 50rem;\n  }\n}\n\n@media screen and (min-width: 990px) {\n  .rich-text__blocks {\n    max-width: 78rem;\n  }\n}\n\n.rich-text__blocks * {\n  overflow-wrap: break-word;\n}\n\n.rich-text__blocks > * {\n  margin-top: 0;\n  margin-bottom: 0;\n}\n\n.rich-text__blocks > * + * {\n  margin-top: 2rem;\n}\n\n.rich-text__blocks > * + a {\n  margin-top: 3rem;\n}\n\n.rich-text__buttons {\n  display: inline-flex;\n  justify-content: center;\n  flex-wrap: wrap;\n  gap: 1rem;\n  width: 100%;\n  max-width: 45rem;\n  word-break: break-word;\n}\n\n.rich-text__buttons--multiple > * {\n  flex-grow: 1;\n  min-width: 22rem;\n}\n\n.rich-text__buttons + .rich-text__buttons {\n  margin-top: 1rem;\n}\n\n.rich-text__blocks.left .rich-text__buttons {\n  justify-content: flex-start;\n}\n\n.rich-text__blocks.right .rich-text__buttons {\n  justify-content: flex-end;\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,UACC,QAAS,CACX,CAEA,CAAC,mBACC,QAAS,KACT,gBAAiB,OACjB,MAAO,KAAK,KAAK,EAAE,KAAK,EAAE,IAAI,mBAChC,CAEA,CAVC,SAUS,KAAK,CAAC,uBAAuB,CANtC,mBAJD,OAWU,KACR,MAAO,KAAK,KAAK,EAAE,KAAK,EAAE,IAAI,mBAChC,CAEA,CAAC,kBACC,MAAO,IACT,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAhBD,mBAiBG,MAAO,IACT,CAEA,CAAC,yBACC,gBAAiB,UACnB,CAEA,CAAC,0BACC,gBAAiB,QACnB,CAEA,CAjBD,kBAkBG,UAAW,KACb,CACF,CAEA,OAAO,OAAO,IAAI,CAAC,SAAS,EAAE,OAC5B,CAvBD,kBAwBG,UAAW,KACb,CACF,CAEA,CA5BC,kBA4BkB,EACjB,cAAe,UACjB,CAEA,CAhCC,iBAgCkB,CAAE,EACnB,WAAY,EACZ,cAAe,CACjB,CAEA,CArCC,iBAqCkB,CAAE,CAAE,CAAE,EACvB,WAAY,IACd,CAEA,CAzCC,iBAyCkB,CAAE,CAAE,CAAE,EACvB,WAAY,IACd,CAEA,CAAC,mBACC,QAAS,YACT,gBAAiB,OACjB,UAAW,KACX,IAAK,KACL,MAAO,KACP,UAAW,MACX,WAAY,UACd,CAEA,CAAC,4BAA6B,CAAE,EAC9B,UAAW,EACX,UAAW,KACb,CAEA,CAfC,kBAemB,CAAE,CAfrB,mBAgBC,WAAY,IACd,CAEA,CAhEC,iBAgEiB,CAAC,KAAK,CAnBvB,mBAoBC,gBAAiB,UACnB,CAEA,CApEC,iBAoEiB,CAAC,MAAM,CAvBxB,mBAwBC,gBAAiB,QACnB",
+  "names": []
+}

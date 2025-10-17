@@ -1,0 +1,37 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:16 GMT
+Content-Type: text/css
+Content-Length: 249
+Connection: keep-alive
+CF-RAY: 98fe056119fbce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-totals.css>; rel="canonical"
+Server-Timing: imagery;dur=109.655, imageryFetch;dur=107.118
+Server-Timing: cfRequestDuration;dur=23.999929
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 3f0be7d4-1f70-416b-b97b-cb5f1c739516-1756926351
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-central1
+Last-Modified: Wed, 03 Sep 2025 19:05:51 GMT
+CF-Cache-Status: HIT
+Age: 3746328
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=yxPOsBdRgbf8oUANsixmjqXzdSnKginxEE5GmOQktgItshlG02wCT62YwyrAZBVERZnS87o%2BlFiHCY4b%2FZOezD6O719oQuq9c7AXhK0bOGmDAuFmyTaKTUwaS5P1"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+.totals{display:flex;justify-content:center;align-items:flex-end}.totals>*{font-size:1.6rem;margin:0}.totals>h2{font-size:calc(var(--font-heading-scale) * 1.6rem)}.totals *{line-height:1}.totals>*+*{margin-left:2rem}.totals__total{margin-top:.5rem}.totals__total-value{font-size:1.8rem}.cart__ctas+.totals{margin-top:2rem}@media all and (min-width: 750px){.totals{justify-content:flex-end}}
+/*# sourceMappingURL=/cdn/shop/t/35/assets/component-totals.css.map?v=15906652033866631521745916367 */

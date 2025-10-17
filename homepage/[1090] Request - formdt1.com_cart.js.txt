@@ -1,0 +1,17 @@
+GET /cart.js HTTP/1.1
+Host: formdt1.com
+Connection: keep-alive
+sec-ch-ua-platform: "macOS"
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36
+sec-ch-ua: "Chromium";v="141", "Not?A_Brand";v="8"
+DNT: 1
+sec-ch-ua-mobile: ?0
+Accept: */*
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://formdt1.com/collections/all
+Accept-Encoding: gzip, deflate, br, zstd
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: localization=SG; cart_currency=USD; _shopify_y=56b0e67c-53f8-4cf9-b2ec-37c96ddd9112; gw-clientId=AIAB1EUE337TS4RCN1A3984Z; gw-subId=TS9837Z3EBMUL42WJG7ZI9BA; gw-vapid-public=BO7EeH6iGNAFYzbu9hy6QIToDd0_JPU7PR4m2VdiFqduArIhZt3ejdppaIsLlQuiLbyMJ06jlLWdtF-tJSX8L0w; _shopify_analytics=:AZnxA5XHAAEAlCYAeDk0ozeEFZMFdV_pkQw8pgOveVGx6QKB8fdtYiFQFgW4jQ:; _shopify_essential=:AZmgKyJLAAEA8PmRG4IJ54Kw_RTpr1-p2YNS3Te4IYadB08JFeYPTFk47JtbYPWHAXUiMZIvJ2RWFS0utdfhJlwsGcp2smx6JinlSe5azOCiDjsw5Ay3_ytsPNsnB1Jb3VmC2mUPaW_qE7e-MC3YD2996Rudg_VgZjlX6Moybfbc8FlAUEVeOqAtMQRRxoVafrSP0pW2iNbU2MaF-HE0s4pPxv9x9OwuuWsFUIzTqo3YDqKp2sr6DrQ6sDV1CeIUigSA3fO9jOymXEqr4_65pdkgc6vjN3vH_axE_JrSGKrdbz2W0fZgnDi2aLV8-Bcwb9HAiOarZaEoFTbnukzo9kVdCDijJMebp1o6sKOWJkcXm_CM4cDVL6EfTEMvQJaTf7d8WgQ6ynx0N6UJP9h6iQ0UqNumGG6YMm0kgU7bS3nn:; _shopify_s=fe38cfd9-8a8b-4f03-ad91-c25dbc2af2af; keep_alive=eyJ2IjoyLCJ0cyI6MTc2MDY4NjA3NzA0NSwiZW52Ijp7IndkIjowLCJ1YSI6MSwiY3YiOjEsImJyIjoxfSwiYmh2Ijp7Im1hIjowLCJjYSI6MCwia2EiOjAsInNhIjowLCJrYmEiOjAsInRhIjowLCJ0IjowLCJubSI6MCwibXMiOjAsIm1qIjowLCJtc3AiOjAsInZjIjowLCJjcCI6MCwicmMiOjAsImtqIjowLCJraSI6MCwic3MiOjAsInNqIjowLCJzc20iOjAsInNwIjowLCJ0cyI6MCwidGoiOjAsInRwIjowLCJ0c20iOjB9LCJzZXMiOnsicCI6MjksInMiOjE3NTkzMjg4MDYyMTgsImQiOjEzNTcyMDd9fQ%3D%3D
+

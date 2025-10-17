@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 1765
+Connection: keep-alive
+CF-RAY: 98fe05672e8e5f2b-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/pickup-availability.js.map>; rel="canonical"
+Server-Timing: imagery;dur=124.395, imageryFetch;dur=115.252
+Server-Timing: cfRequestDuration;dur=33.000231
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: f4d6ff15-a028-4361-8bb5-d100d35a6c83-1760685246
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Fri, 17 Oct 2025 07:14:07 GMT
+CF-Cache-Status: HIT
+Age: 250
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=ZVEgtCp9Vn8%2BudJGQR8GwiuH%2B4S9xKkq7FzxZEYU%2FZWAFeBhkVYcusSr2ZBMHJLn2h3tI19Cx%2FrPWnFn%2B5pylNamQgkxgrWsri%2BxvqWbD%2BOt3q1MhyFy5jAtZ%2FgR"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/pickup-availability.js?v=78418059211521962961745916367"
+  ],
+  "sourcesContent": [
+    "if (!customElements.get('pickup-availability')) {\n  customElements.define(\n    'pickup-availability',\n    class PickupAvailability extends HTMLElement {\n      constructor() {\n        super();\n\n        if (!this.hasAttribute('available')) return;\n\n        this.errorHtml = this.querySelector('template').content.firstElementChild.cloneNode(true);\n        this.onClickRefreshList = this.onClickRefreshList.bind(this);\n        this.fetchAvailability(this.dataset.variantId);\n      }\n\n      fetchAvailability(variantId) {\n        if (!variantId) return;\n\n        let rootUrl = this.dataset.rootUrl;\n        if (!rootUrl.endsWith('/')) {\n          rootUrl = rootUrl + '/';\n        }\n        const variantSectionUrl = `${rootUrl}variants/${variantId}/?section_id=pickup-availability`;\n\n        fetch(variantSectionUrl)\n          .then((response) => response.text())\n          .then((text) => {\n            const sectionInnerHTML = new DOMParser()\n              .parseFromString(text, 'text/html')\n              .querySelector('.shopify-section');\n            this.renderPreview(sectionInnerHTML);\n          })\n          .catch((e) => {\n            const button = this.querySelector('button');\n            if (button) button.removeEventListener('click', this.onClickRefreshList);\n            this.renderError();\n          });\n      }\n\n      onClickRefreshList() {\n        this.fetchAvailability(this.dataset.variantId);\n      }\n\n      update(variant) {\n        if (variant?.available) {\n          this.fetchAvailability(variant.id);\n        } else {\n          this.removeAttribute('available');\n          this.innerHTML = '';\n        }\n      }\n\n      renderError() {\n        this.innerHTML = '';\n        this.appendChild(this.errorHtml);\n\n        this.querySelector('button').addEventListener('click', this.onClickRefreshList);\n      }\n\n      renderPreview(sectionInnerHTML) {\n        const drawer = document.querySelector('pickup-availability-drawer');\n        if (drawer) drawer.remove();\n        if (!sectionInnerHTML.querySelector('pickup-availability-preview')) {\n          this.innerHTML = '';\n          this.removeAttribute('available');\n          return;\n        }\n\n        this.innerHTML = sectionInnerHTML.querySelector('pickup-availability-preview').outerHTML;\n        this.setAttribute('available', '');\n\n        document.body.appendChild(sectionInnerHTML.querySelector('pickup-availability-drawer'));\n        const colorClassesToApply = this.dataset.productPageColorScheme.split(' ');\n        colorClassesToApply.forEach((colorClass) => {\n          document.querySelector('pickup-availability-drawer').classList.add(colorClass);\n        });\n\n        const button = this.querySelector('button');\n        if (button)\n          button.addEventListener('click', (evt) => {\n            document.querySelector('pickup-availability-drawer').show(evt.target);\n          });\n      }\n    }\n  );\n}\n\nif (!customElements.get('pickup-availability-drawer')) {\n  customElements.define(\n    'pickup-availability-drawer',\n    class PickupAvailabilityDrawer extends HTMLElement {\n      constructor() {\n        super();\n\n        this.onBodyClick = this.handleBodyClick.bind(this);\n\n        this.querySelector('button').addEventListener('click', () => {\n          this.hide();\n        });\n\n        this.addEventListener('keyup', (event) => {\n          if (event.code.toUpperCase() === 'ESCAPE') this.hide();\n        });\n      }\n\n      handleBodyClick(evt) {\n        const target = evt.target;\n        if (\n          target != this &&\n          !target.closest('pickup-availability-drawer') &&\n          target.id != 'ShowPickupAvailabilityDrawer'\n        ) {\n          this.hide();\n        }\n      }\n\n      hide() {\n        this.removeAttribute('open');\n        document.body.removeEventListener('click', this.onBodyClick);\n        document.body.classList.remove('overflow-hidden');\n        removeTrapFocus(this.focusElement);\n      }\n\n      show(focusElement) {\n        this.focusElement = focusElement;\n        this.setAttribute('open', '');\n        document.body.addEventListener('click', this.onBodyClick);\n        document.body.classList.add('overflow-hidden');\n        trapFocus(this);\n      }\n    }\n  );\n}\n"
+  ],
+  "mappings": "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",
+  "names": []
+}

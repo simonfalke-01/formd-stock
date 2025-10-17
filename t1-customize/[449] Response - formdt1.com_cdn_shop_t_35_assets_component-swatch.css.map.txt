@@ -1,0 +1,46 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 553
+Connection: keep-alive
+CF-RAY: 98fe0565ed5c5f2b-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-swatch.css.map>; rel="canonical"
+Server-Timing: imagery;dur=86.009, imageryFetch;dur=82.725
+Server-Timing: cfRequestDuration;dur=44.000149
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 26ef4b84-d1fe-46d9-ac98-8eef0a87ba19-1759691854
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Sun, 05 Oct 2025 19:17:35 GMT
+CF-Cache-Status: HIT
+Age: 251
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=BpK0VgNNXpSNLtnfWvEgnU2xSdrIWz9fyEXKdX4JVdZRyj%2Brnhu8WCBKVKDf%2FNoY0%2B5w%2FKfzmwOQvZnwzxQZeDSN4p96K0wdtQlYX1ha%2BV7IZFLo%2FfZQ%2FSTZ3Rev"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-swatch.css?v=6811383713633888781745916367"
+  ],
+  "sourcesContent": [
+    "/* swatch lives in its own file for reusability of the swatch in swatch-input and dropdown */\n.swatch {\n  --swatch--size: var(--swatch-input--size, 4.4rem);\n  --swatch--border-radius: var(--swatch-input--border-radius, 50%);\n\n  display: block;\n  width: var(--swatch--size);\n  max-width: 100%;\n  aspect-ratio: 1 / 1;\n  background: var(--swatch--background);\n  background-position: var(--swatch-focal-point, initial);\n  background-size: cover;\n  background-origin: border-box;\n  border: 0.1rem solid rgba(var(--color-foreground), 0.15);\n  border-radius: var(--swatch--border-radius);\n}\n\n.swatch--square {\n  --swatch--border-radius: var(--swatch-input--border-radius, 0.2rem);\n}\n\n.swatch--unavailable {\n  border-style: dashed;\n  border-color: rgba(var(--color-foreground), 0.5);\n}\n"
+  ],
+  "mappings": "AACA,CAAC,OACC,gBAAgB,IAAI,oBAAoB,EAAE,QAC1C,yBAAyB,IAAI,6BAA6B,EAAE,KAE5D,QAAS,MACT,MAAO,IAAI,gBACX,UAAW,KACX,aAAc,EAAE,EAAE,EAClB,WAAY,IAAI,sBAChB,oBAAqB,IAAI,oBAAoB,EAAE,SAC/C,gBAAiB,MACjB,kBAAmB,WACnB,OAAQ,MAAO,MAAM,KAAK,IAAI,mBAAmB,CAAE,KACnD,cAAe,IAAI,wBACrB,CAEA,CAAC,eACC,yBAAyB,IAAI,6BAA6B,EAAE,MAC9D,CAEA,CAAC,oBACC,aAAc,OACd,aAAc,KAAK,IAAI,mBAAmB,CAAE,GAC9C",
+  "names": []
+}

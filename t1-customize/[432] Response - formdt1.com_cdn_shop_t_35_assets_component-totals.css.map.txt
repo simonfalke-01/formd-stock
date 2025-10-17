@@ -1,0 +1,45 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:17 GMT
+Content-Type: application/json
+Content-Length: 479
+Connection: keep-alive
+CF-RAY: 98fe05655b1dce0e-SIN
+X-Sorting-Hat-PodId: 317
+X-Sorting-Hat-ShopId: 82998395198
+Access-Control-Allow-Origin: *
+Access-Control-Expose-Headers: *
+Cache-Control: public, max-age=31557600
+Age: 250
+last-modified: Tue, 14 Oct 2025 15:18:59 GMT
+Content-Encoding: br
+Content-Security-Policy: sandbox allow-scripts allow-forms allow-modals allow-popups allow-downloads allow-top-navigation-by-user-activation
+Link: <https://cdn.shopify.com/s/files/1/0829/9839/5198/t/35/assets/component-totals.css.map>; rel="canonical"
+Server-Timing: imagery;dur=359.323, imageryFetch;dur=95.248
+Server-Timing: cfRequestDuration;dur=16.999960
+Timing-Allow-Origin: *
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Request-Id: 379164a4-a9ec-4cb2-aac6-21474c5a3d86-1760455139
+X-Shopid: 82998395198
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Tg1IsE%2BjGufJe7Wy8UFKmId04zy1nRejqZTtzq1kcaGm6xEDfagosNoeeGDgh2yFU44Ny7KCAITIgYsjoT7rrh%2BV3oyCqjLuQQnRHwoTSNYP5fPXsOW5zvjNqUFh"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+{
+  "version": 3,
+  "sources": [
+    "/cdn/shop/t/35/assets/component-totals.css?v=15906652033866631521745916367"
+  ],
+  "sourcesContent": [
+    ".totals {\n  display: flex;\n  justify-content: center;\n  align-items: flex-end;\n}\n\n.totals > * {\n  font-size: 1.6rem;\n  margin: 0;\n}\n\n.totals > h2 {\n  font-size: calc(var(--font-heading-scale) * 1.6rem);\n}\n\n.totals * {\n  line-height: 1;\n}\n\n.totals > * + * {\n  margin-left: 2rem;\n}\n\n.totals__total {\n  margin-top: .5rem;\n}\n\n.totals__total-value {\n  font-size: 1.8rem;\n}\n\n.cart__ctas + .totals {\n  margin-top: 2rem;\n}\n\n@media all and (min-width: 750px) {\n  .totals {\n    justify-content: flex-end;\n  }\n}\n"
+  ],
+  "mappings": "AAAA,CAAC,OACC,QAAS,KACT,gBAAiB,OACjB,YAAa,QACf,CAEA,CANC,MAMO,CAAE,EACR,UAAW,OAPb,OAQU,CACV,CAEA,CAXC,MAWO,CAAE,GACR,UAAW,KAAK,IAAI,sBAAsB,EAAE,OAC9C,CAEA,CAfC,OAeO,EACN,YAAa,CACf,CAEA,CAnBC,MAmBO,CAAE,CAAE,CAAE,EACZ,YAAa,IACf,CAEA,CAAC,cACC,WAAY,KACd,CAEA,CAAC,oBACC,UAAW,MACb,CAEA,CAAC,UAAW,CAAE,CA/Bb,OAgCC,WAAY,IACd,CAEA,OAAO,IAAI,IAAI,CAAC,SAAS,EAAE,OACzB,CApCD,OAqCG,gBAAiB,QACnB,CACF",
+  "names": []
+}

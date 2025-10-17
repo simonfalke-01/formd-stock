@@ -1,0 +1,32 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 921
+Connection: keep-alive
+CF-RAY: 98fe056cfbc7f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Age: 30316
+vary: accept-encoding
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/SeparatePaymentsNotice.DFu_dAyO.js>; rel="canonical"
+Server-Timing: imagery;dur=30.187, imageryFetch;dur=30.011
+Server-Timing: cfRequestDuration;dur=19.000053
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="SeparatePaymentsNotice.*.js", id="DFu_dAyO"
+X-Content-Type-Options: nosniff
+X-Request-Id: 8c55493a-cc2b-45f4-8579-702998df6bab-1760654456
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-central1,gcp-us-central1
+last-modified: Thu, 16 Oct 2025 22:40:56 GMT
+cf-cache-status: HIT
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=%2BneiwmTlICVWBmXWQytJiGBh0kyhXOy4xi1jFjHP10asLDYOs2TbMR2FDvAiHTlEWNDSom7MB0eqKoqObcDErFPqlocDO0hdNn4HUHzei1jaiGDpp5n85CCLNgWx"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{as as C,at as k,au as b,av as S,A as f,a3 as L,aw as v,a as e,o as A,ax as P,ay as R,az as N,aA as I,T,aB as w,B as x,J as B,aC as D,n as g,P as M,W as y,aD as q,aE as z,ar as E}from"./app.PV_iB4eS.js";function F(){const{value:o}=C();return!!o}function H({children:o}){const i=k(),u=b(),p=S(),t=f(),s=f(),c=L();v(n=>{t.current=void 0,s.current=void 0,"violations"in n&&(t.current=n.violations.map(m=>m.code)),"reasons"in n&&(s.current=n.reasons)});function l(n){n.detail>2&&(i.counter({name:"pay_now_rage_click",value:1}),i.log("rage_click_capture_pay_now_rage_click_detected","pay_now_rage_click",{customerProfile:p?.__typename,numberOfErrors:u?.numberOfErrors()??"unknown",lastInterceptionReasons:s.current,lastViolations:t.current,blocked:c}))}return e("div",{onClickCapture:l,children:o})}function J(){const o=A(),i=P(),{value:u,loading:p}=R(),t=N(),{name:s,id:c,brandSettings:l,remoteShopsConfigMap:n}=I(),m=T(()=>{const a=[];for(const[r,d]of t){if(!d)continue;if(r===c){a.push({shopName:s,shopLogo:l?.squareLogo?.url,shopId:c,amount:d});continue}const h=n?.get(r);h&&a.push({shopName:h.name,shopId:r,shopLogo:h.brandSettings?.squareLogo?.url,amount:d})}return a},[t,c,s,l?.squareLogo?.url,n]);if(p||!u||u&&t.size<2)return null;const _=e(z,{textDecoration:"none",overlay:e(w,{heading:o("payment.payments"),children:e(x,{spacing:"base",children:m.map((a,r)=>e(B,{children:[e(D,{columns:["auto","fill","auto"],spacing:"base",children:[e(g,{children:e(M,{size:"small",src:a.shopLogo,alt:a.shopName})}),e(g,{blockAlignment:"center",children:e(y,{children:a.shopName})}),e(g,{blockAlignment:"center",children:e(y,{type:"strong",children:i(a.amount.amount,{currency:a.amount.currencyCode,form:"short"})})})]}),r!==m.length-1&&e(q,{direction:"inline",borderWidth:"base"})]},a.shopName||r))})}),children:o("payment.separate_payments_text")});return e(E,{color:"subdued",children:o("payment.separate_payments_label",{separate_payments_link:_})})}export{H as R,J as S,F as u};

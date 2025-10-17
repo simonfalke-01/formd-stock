@@ -1,0 +1,33 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:18:18 GMT
+Content-Type: text/javascript
+Content-Length: 840
+Connection: keep-alive
+CF-RAY: 98fe056ccb34f91a-SIN
+X-Sorting-Hat-PodId: -1
+Access-Control-Allow-Origin: *
+Cache-Control: public, max-age=31536000, immutable
+Content-Encoding: br
+Link: <https://cdn.shopify.com/shopifycloud/checkout-web/assets/c1/Section.4b7Lzhls.js>; rel="canonical"
+Server-Timing: imagery;dur=58.289, imageryFetch;dur=58.117
+Server-Timing: cfRequestDuration;dur=15.999794
+Timing-Allow-Origin: *
+Use-As-Dictionary: match="Section.*.js", id="4b7Lzhls"
+X-Content-Type-Options: nosniff
+X-Request-Id: 63da63c3-bce8-40c3-af3f-e9a9a4c883c6-1760654456
+X-Xss-Protection: 1; mode=block
+Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+X-Dc: gcp-us-east1,gcp-us-east1
+Last-Modified: Thu, 16 Oct 2025 22:40:56 GMT
+CF-Cache-Status: HIT
+Age: 27484
+Accept-Ranges: bytes
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=t623hpH8svsx5fnqNmixZGW0LvuqOycj49Apb%2FWSSvrblQ9ZxAwjxRXqhFLPHSWiMLfa3tCpzbVjRYHPIDUQYP1B4PS1tDgih57j95TCeRPohFfZLV3kHWtlBuIJ"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+alt-svc: h3=":443"; ma=86400
+
+import{aX as y,a as i,aN as W,S as l,J as u,l as k,aY as I,a0 as f,aD as z,n as h,aZ as H,a_ as B}from"./app.PV_iB4eS.js";function g(e){return e?e===!0?"always":e:"never"}const E="_0AAq3",M="gfFXW",p={HideOnEmpty:E,SectionDivider:M};function S({children:e,hideDivider:n,padding:r,dividerDisplay:t,...a}){const{shell:{backgroundImage:s,colorScheme:d},main:{section:o,backgroundImage:c,colorScheme:w}}=y(),D=c||s?void 0:w??d,v=g(n),C=v==="whenEmpty"?p.HideOnEmpty:void 0;return i(u,{children:[i(W,{padding:r??l.default("base large-200").when({viewportInlineSize:{min:"extraSmall"}},"none"),borderRadius:o?.cornerRadius,colorScheme:o?.colorScheme??D,className:C,...a,children:e}),i(O,{hideDivider:v,dividerDisplay:t})]})}function N({condition:e,children:n,...r}){return e?i(S,{...r,children:n}):i(u,{children:n})}function R({min:e,max:n,children:r,...t}){const a=H(),s=b(e?{min:e}:{max:n}),d=b(e?{max:e}:{min:n}),o=b(e?{min:e}:{max:n}),c=B(n?{base:!0,[n]:!1}:{base:!1,[e]:!0});return a?c?i(S,{...t,children:r}):i(h,{children:r}):i(u,{children:[i(S,{...t,display:s,dividerDisplay:o,children:r}),i(h,{display:d,children:r})]})}function V({condition:e,...n}){const{hideDivider:r,children:t}=n,a=g(r);return e?i(S,{...n}):i(u,{children:[t,a!=="always"&&i(m,{})]})}function m({spacing:e,showDivider:n,borderStyle:r,borderWidth:t,display:a}){const{main:{section:s}}=y(),o=I(s)?"base":"small400",c=l.default(e??o).when({viewportInlineSize:{min:"extraSmall"}},e??"large400");return i(h,{display:a,className:p.SectionDivider,children:[i(f,{spacing:c}),n&&i(u,{children:[i(z,{borderStyle:r,borderWidth:t}),i(f,{spacing:c})]})]})}function b(e){if(e.min)switch(e.min){case"base":return l.default("none");default:return l.default("none").when({viewportInlineSize:{min:e.min}},"block")}if(e.max)switch(e.max){case"base":return l.default("block");default:return l.default("block").when({viewportInlineSize:{min:e.max}},"none")}return l.default("none")}function O({hideDivider:e,dividerDisplay:n}){const{divider:{borderStyle:r,borderWidth:t}}=k(),{main:{spacing:a,divider:{visibility:s,borderStyle:d=r,borderWidth:o=t}={}}}=y();return e==="always"?null:n?i(m,{display:n,spacing:a,showDivider:s==="visible",borderStyle:d,borderWidth:o}):i(m,{spacing:a,showDivider:s==="visible",borderStyle:d,borderWidth:o})}export{N as M,S,V as a,R as b};

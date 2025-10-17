@@ -1,0 +1,39 @@
+HTTP/1.1 200 OK
+Date: Fri, 17 Oct 2025 07:27:57 GMT
+Content-Type: text/javascript; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+CF-RAY: 98fe1392bff29d05-SIN
+x-sorting-hat-podid: 317
+x-sorting-hat-shopid: 82998395198
+x-storefront-renderer-rendered: 1
+vary: Accept-Encoding,Accept
+set-cookie: cart_currency=USD; path=/; expires=Fri, 31 Oct 2025 07:27:57 GMT; SameSite=Lax
+set-cookie: _shopify_y=56b0e67c-53f8-4cf9-b2ec-37c96ddd9112; domain=formdt1.com; path=/; expires=Sat, 17 Oct 2026 13:27:57 GMT; SameSite=Lax
+set-cookie: _shopify_s=fe38cfd9-8a8b-4f03-ad91-c25dbc2af2af; domain=formdt1.com; path=/; expires=Fri, 17 Oct 2025 07:57:57 GMT; SameSite=Lax
+x-cartjs-cache: 1
+x-cartjs-updatedat: 0
+shopify-complexity-score: 0
+x-frame-options: DENY
+content-security-policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+strict-transport-security: max-age=7889238
+x-shopid: 82998395198
+x-shardid: 317
+content-language: en-SG
+powered-by: Shopify
+server-timing: processing;dur=29, db;dur=10, db_async;dur=1.748, asn;desc="56300", edge;desc="SIN", country;desc="SG", servedBy;desc="z8jf", requestID;desc="fde8c231-2b9a-449e-9889-04873d233b43-1760686077", _y;desc="56b0e67c-53f8-4cf9-b2ec-37c96ddd9112", _s;desc="fe38cfd9-8a8b-4f03-ad91-c25dbc2af2af", _cmp;desc="3.AMPS_SG_f_f_uqxS7BZmRFePBx912ufB6A_%7B%7D"
+Server-Timing: cfRequestDuration;dur=60.999870
+x-dc: gcp-asia-southeast1,gcp-asia-southeast1,gcp-asia-southeast1
+x-request-id: fde8c231-2b9a-449e-9889-04873d233b43-1760686077
+content-encoding: gzip
+Alt-Svc: h3=":443"; ma=86400
+cf-cache-status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=AaomJy8%2BBJH9VLjQW9gIISo7%2FDL0OeAUMumHByITXpvbZfKhXOnDcevOqVlKJ5Q5kr7XcK5TL08IU7ft1E9%2FLNZH3Atb7cShtUgHauNN7b679RDS3iYzddU2gset"}],"group":"cf-nel","max_age":604800}
+NEL: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-XSS-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+
+{"token":"2f0ed44f7400e2521a84a6f0118d5171","note":null,"attributes":{},"original_total_price":0,"total_price":0,"total_discount":0,"total_weight":0.0,"item_count":0,"items":[],"requires_shipping":false,"currency":"USD","items_subtotal_price":0,"cart_level_discount_applications":[],"discount_codes":[]}
