@@ -44,17 +44,22 @@ func (tn *TelegramNotifier) NotifyStockChange(change StockChange) error {
 
 	// Format message with Markdown
 	message := fmt.Sprintf(
-		"*STOCK ALERT*\n\n"+
-		"Product: %s\n"+
-		"Variant: %s\n"+
-		"Price: $%s\n"+
-		"SKU: %s\n\n"+
-		"[Purchase Link](%s)",
+		"*━━━ STOCK ALERT ━━━*\n\n"+
+		"*Product:* [%s](%s)\n"+
+		"*Variant:* `%s`\n"+
+		"*Price:* *$%s*\n"+
+		"*SKU:* `%s`\n"+
+		"*Product ID:* `%d`\n"+
+		"*Variant ID:* `%d`\n\n"+
+		"*Transition:* OUT OF STOCK → IN STOCK\n\n"+
+		"━━━━━━━━━━━━━━━━━━━━",
 		escapeMarkdown(change.ProductTitle),
+		productURL,
 		escapeMarkdown(change.VariantTitle),
 		change.VariantPrice,
 		change.VariantSKU,
-		productURL,
+		change.ProductID,
+		change.VariantID,
 	)
 
 	msg := tgbotapi.NewMessage(tn.chatID, message)
@@ -90,8 +95,8 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 
 	// Build message
 	var sb strings.Builder
-	sb.WriteString("*STOCK ALERT*\n\n")
-	sb.WriteString(fmt.Sprintf("%d item(s) now available:\n\n", len(newStock)))
+	sb.WriteString("*━━━ STOCK ALERT ━━━*\n\n")
+	sb.WriteString(fmt.Sprintf("*Detection:* %d item(s) transitioned to IN STOCK\n\n", len(newStock)))
 
 	for i, change := range newStock {
 		productURL := fmt.Sprintf("%s/products/%s",
@@ -100,19 +105,23 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 		)
 
 		sb.WriteString(fmt.Sprintf(
-			"%d\\. %s\n"+
-			"   Variant: %s\n"+
-			"   Price: $%s\n"+
-			"   SKU: %s\n"+
-			"   [Purchase Link](%s)\n\n",
+			"*%d\\.* [%s](%s)\n"+
+			"     `%s`\n"+
+			"     *$%s* • SKU: `%s`\n"+
+			"     Product ID: `%d` • Variant ID: `%d`\n\n",
 			i+1,
 			escapeMarkdown(change.ProductTitle),
+			productURL,
 			escapeMarkdown(change.VariantTitle),
 			change.VariantPrice,
 			change.VariantSKU,
-			productURL,
+			change.ProductID,
+			change.VariantID,
 		))
 	}
+
+	sb.WriteString("━━━━━━━━━━━━━━━━━━━━\n")
+	sb.WriteString("State change detected via polling endpoint")
 
 	msg := tgbotapi.NewMessage(tn.chatID, sb.String())
 	msg.ParseMode = "Markdown"
@@ -135,7 +144,7 @@ func (tn *TelegramNotifier) SendMessage(text string) error {
 }
 
 // SendStatusReport sends an initial status report
-func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants int) error {
+func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants int, pollInterval string) error {
 	var inStock, outOfStock int
 	var inStockItems []string
 
@@ -143,10 +152,18 @@ func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants i
 		for _, variant := range product.Variants {
 			if variant.Available {
 				inStock++
-				inStockItems = append(inStockItems, fmt.Sprintf("  - %s (%s) - $%s",
+				productURL := fmt.Sprintf("%s/products/%s",
+					strings.TrimSuffix(tn.shopURL, "/"),
+					product.Handle,
+				)
+				inStockItems = append(inStockItems, fmt.Sprintf(
+					"  • [%s](%s)\n    `%s` — *$%s*\n    ID: `%d` • SKU: `%s`",
 					escapeMarkdown(product.Title),
+					productURL,
 					escapeMarkdown(variant.Title),
 					variant.Price,
+					variant.ID,
+					variant.SKU,
 				))
 			} else {
 				outOfStock++
@@ -155,24 +172,33 @@ func (tn *TelegramNotifier) SendStatusReport(products []Product, totalVariants i
 	}
 
 	var sb strings.Builder
-	sb.WriteString("*Stock Monitor Status Report*\n\n")
-	sb.WriteString(fmt.Sprintf("Monitoring: %d products (%d variants)\n", len(products), totalVariants))
-	sb.WriteString(fmt.Sprintf("In Stock: %d\n", inStock))
-	sb.WriteString(fmt.Sprintf("Out of Stock: %d\n\n", outOfStock))
+	sb.WriteString("*━━━ Stock Monitor Status ━━━*\n\n")
+	sb.WriteString(fmt.Sprintf("*Endpoint:* `%s`\n", tn.shopURL))
+	sb.WriteString(fmt.Sprintf("*Poll Interval:* `%s`\n", pollInterval))
+	sb.WriteString(fmt.Sprintf("*Products:* %d (%d variants tracked)\n", len(products), totalVariants))
+	sb.WriteString(fmt.Sprintf("*Available:* %d | *Out of Stock:* %d\n", inStock, outOfStock))
+
+	availabilityRate := 0.0
+	if totalVariants > 0 {
+		availabilityRate = (float64(inStock) / float64(totalVariants)) * 100
+	}
+	sb.WriteString(fmt.Sprintf("*Availability Rate:* %.1f%%\n\n", availabilityRate))
 
 	if len(inStockItems) > 0 {
-		sb.WriteString("Currently Available:\n")
+		sb.WriteString("*Currently In Stock:*\n\n")
 		for _, item := range inStockItems {
-			sb.WriteString(item + "\n")
+			sb.WriteString(item + "\n\n")
 		}
 	} else {
-		sb.WriteString("No items currently in stock\\.\n")
+		sb.WriteString("_No items currently available_\n\n")
 	}
 
-	sb.WriteString("\nMonitoring active\\.")
+	sb.WriteString("━━━━━━━━━━━━━━━━━━━━\n")
+	sb.WriteString("Monitor initialized • ETag caching enabled")
 
 	msg := tgbotapi.NewMessage(tn.chatID, sb.String())
 	msg.ParseMode = "Markdown"
+	msg.DisableWebPagePreview = true
 
 	_, err := tn.bot.Send(msg)
 	return err

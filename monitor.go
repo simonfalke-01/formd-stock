@@ -57,7 +57,7 @@ func (m *Monitor) Start(ctx context.Context) error {
 	} else {
 		// Send status report
 		if m.notifier != nil {
-			if err := m.notifier.SendStatusReport(products, m.state.Size()); err != nil {
+			if err := m.notifier.SendStatusReport(products, m.state.Size(), m.config.PollInterval.String()); err != nil {
 				log.Printf("Failed to send status report: %v", err)
 			}
 		}
