@@ -104,7 +104,7 @@ func (tn *TelegramNotifier) NotifyMultiple(changes []StockChange) error {
 		)
 
 		sb.WriteString(fmt.Sprintf(
-			"*%d\\.* [%s](%s)\n"+
+			"*%d.* [%s](%s)\n"+
 			"     `%s`\n"+
 			"     *$%s* • SKU: `%s`\n"+
 			"     Product ID: `%d` • Variant ID: `%d`\n\n",
